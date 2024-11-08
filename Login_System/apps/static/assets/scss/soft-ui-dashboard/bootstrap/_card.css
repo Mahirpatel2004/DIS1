@@ -1,0 +1,191 @@
+
+ /* Base styles */
+
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--card-height);
+  word-wrap: break-word;
+  background-color: var(--card-bg);
+  background-clip: border-box;
+  border: var(--card-border-width) solid var(--card-border-color);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+}
+
+.card > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card > .list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+
+.card > .list-group:first-child {
+  border-top-width: 0;
+  border-top-left-radius: var(--card-inner-border-radius);
+  border-top-right-radius: var(--card-inner-border-radius);
+}
+
+.card > .list-group:last-child {
+  border-bottom-width: 0;
+  border-bottom-left-radius: var(--card-inner-border-radius);
+  border-bottom-right-radius: var(--card-inner-border-radius);
+}
+
+.card > .card-header + .list-group,
+.card > .list-group + .card-footer {
+  border-top: 0;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--card-spacer-y) var(--card-spacer-x);
+  color: var(--card-color);
+}
+
+.card-title {
+  margin-bottom: var(--card-title-spacer-y);
+}
+
+.card-subtitle {
+  margin-top: calc(-.5 * var(--card-title-spacer-y));
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link:hover {
+  /* Replace with actual logic for link hover decoration if using SCSS */
+  text-decoration: none;
+}
+
+.card-link + .card-link {
+  margin-left: var(--card-spacer-x);
+}
+
+
+
+ /* Optional textual caps */
+
+.card-header {
+  padding: var(--card-cap-padding-y) var(--card-cap-padding-x);
+  margin-bottom: 0;
+  color: var(--card-cap-color);
+  background-color: var(--card-cap-bg);
+  border-bottom: var(--card-border-width) solid var(--card-border-color);
+}
+
+.card-header:first-child {
+  border-top-left-radius: var(--card-inner-border-radius);
+  border-top-right-radius: var(--card-inner-border-radius);
+}
+
+.card-footer {
+  padding: var(--card-cap-padding-y) var(--card-cap-padding-x);
+  color: var(--card-cap-color);
+  background-color: var(--card-cap-bg);
+  border-top: var(--card-border-width) solid var(--card-border-color);
+}
+
+.card-footer:last-child {
+  border-bottom-left-radius: var(--card-inner-border-radius);
+  border-bottom-right-radius: var(--card-inner-border-radius);
+}
+
+
+
+ /* Header navs */
+
+
+.card-header-tabs {
+  margin-right: calc(-.5 * var(--card-cap-padding-x));
+  margin-bottom: calc(-1 * var(--card-cap-padding-y));
+  margin-left: calc(-.5 * var(--card-cap-padding-x));
+  border-bottom: 0;
+}
+
+.card-header-tabs .nav-link.active {
+  background-color: var(--card-bg);
+  border-bottom-color: var(--card-bg);
+}
+
+.card-header-pills {
+  margin-right: calc(-.5 * var(--card-cap-padding-x));
+  margin-left: calc(-.5 * var(--card-cap-padding-x));
+}
+
+
+
+ /* Card image */
+
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--card-img-overlay-padding);
+  border-radius: var(--card-inner-border-radius);
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%; /* Required because we use flexbox and this inherently applies align-self: stretch */
+}
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: var(--card-inner-border-radius);
+  border-top-right-radius: var(--card-inner-border-radius);
+}
+
+.card-img,
+.card-img-bottom {
+  border-bottom-left-radius: var(--card-inner-border-radius);
+  border-bottom-right-radius: var(--card-inner-border-radius);
+}
+
+
+
+ /* Card groups */
+
+
+.card-group > .card {
+  margin-bottom: var(--card-group-margin);
+}
+
+@media (min-width: 576px) {
+  .card-group {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .card-group > .card {
+    flex: 1 0 0%;
+    margin-bottom: 0;
+  }
+
+  .card-group > .card + .card {
+    margin-left: 0;
+    border-left: 0;
+  }
+
+  /* Replace $enable-rounded with actual logic if using SCSS */
+  .card-group > .card:not(:last-child) {
+    border-bottom-right-radius: 0;
+  }
+
+  .card-group > .card:not(:first-child) {
+    border-bottom-left-radius: 0;
+  }
+}

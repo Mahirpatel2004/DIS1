@@ -1,0 +1,32 @@
+/* Example CSS with fixed calc() expressions */
+
+.form-label {
+  margin-bottom: 10px; /* Replace with $form-label-margin-bottom */
+  font-size: 16px; /* Replace with $form-label-font-size */
+  font-style: normal; /* Replace with $form-label-font-style */
+  font-weight: bold; /* Replace with $form-label-font-weight */
+  color: #333; /* Replace with $form-label-color */
+}
+
+.col-form-label {
+  padding-top: calc(10px + 1px); /* Replace with calculation for padding-top */
+  padding-bottom: calc(10px + 1px); /* Replace with calculation for padding-bottom */
+  margin-bottom: 0;
+  font-size: inherit;
+  font-style: normal; /* Replace with $form-label-font-style */
+  font-weight: bold; /* Replace with $form-label-font-weight */
+  line-height: 1.5; /* Replace with $input-line-height */
+  color: #333; /* Replace with $form-label-color */
+}
+
+.col-form-label-lg {
+  padding-top: calc(10px + 1px); /* Replace with calculation for padding-top-lg */
+  padding-bottom: calc(10px + 1px); /* Replace with calculation for padding-bottom-lg */
+  font-size: 18px; /* Replace with $input-font-size-lg */
+}
+
+.col-form-label-sm {
+  padding-top: calc(10px + 1px); /* Replace with calculation for padding-top-sm */
+  padding-bottom: calc(10px + 1px); /* Replace with calculation for padding-bottom-sm */
+  font-size: 14px; /* Replace with $input-font-size-sm */
+}

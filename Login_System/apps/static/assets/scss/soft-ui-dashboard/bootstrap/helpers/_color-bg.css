@@ -1,0 +1,43 @@
+/* Assuming $theme-colors is predefined somewhere */
+
+/* Manually write out each .text-bg-* class */
+.text-bg-primary {
+  color: #ffffff !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(0, 123, 255, 1) !important; /* Example: Replace with precomputed RGBA value */
+}
+
+.text-bg-secondary {
+  color: #ffffff !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(108, 117, 125, 1) !important; /* Example: Replace with precomputed RGBA value */
+}
+
+.text-bg-success {
+  color: #ffffff !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(40, 167, 69, 1) !important; /* Example: Replace with precomputed RGBA value */
+}
+
+/* Repeat for other theme colors */
+.text-bg-danger {
+  color: #ffffff !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(220, 53, 69, 1) !important; /* Example: Replace with precomputed RGBA value */
+}
+
+.text-bg-warning {
+  color: #000000 !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(255, 193, 7, 1) !important; /* Example: Replace with precomputed RGBA value */
+}
+
+.text-bg-info {
+  color: #ffffff !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(23, 162, 184, 1) !important; /* Example: Replace with precomputed RGBA value */
+}
+
+.text-bg-light {
+  color: #000000 !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(248, 249, 250, 1) !important; /* Example: Replace with precomputed RGBA value */
+}
+
+.text-bg-dark {
+  color: #ffffff !important; /* Example: Calculate color contrast manually */
+  background-color: rgba(52, 58, 64, 1) !important; /* Example: Replace with precomputed RGBA value */
+}

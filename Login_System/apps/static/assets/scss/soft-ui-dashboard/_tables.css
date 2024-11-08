@@ -1,0 +1,44 @@
+/* General styles for table */
+.table {
+  border-collapse: collapse;
+}
+
+.table thead th {
+  padding: 10px 15px; /* Example padding values */
+  text-transform: uppercase; /* Example text-transform value */
+  letter-spacing: 1px; /* Example letter-spacing value */
+  border-bottom: 1px solid #ccc; /* Example border-bottom value */
+  font-weight: bold; /* Example font-weight value */
+}
+
+.table td {
+  white-space: nowrap;
+}
+
+.table th,
+.table td {
+  /* Replace with your values */
+}
+
+/* Progress styles */
+.table td .progress {
+  height: 10px; /* Example height value */
+  width: 100px; /* Example width value */
+  margin: 5px; /* Example margin value */
+}
+
+/* Vertical alignment */
+.table.align-items-center td,
+.table.align-items-center th {
+  vertical-align: middle;
+}
+
+/* Remove bottom border */
+.table tbody tr:last-child td {
+  border-width: 0;
+}
+
+/* Bottom border color */
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: lightgray; /* Example border-bottom-color value */
+}

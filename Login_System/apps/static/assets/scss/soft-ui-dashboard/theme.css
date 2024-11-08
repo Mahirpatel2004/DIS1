@@ -1,0 +1,59 @@
+/*!
+=========================================================
+* Soft UI Dashboard - v1.0.5
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (site.license)
+
+* Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+
+/* Importing Components */
+
+/* Variables */
+@import url("variables/navbar-vertical.css");
+@import url("variables/social-buttons.css");
+@import url("variables/breadcrumb.css");
+
+/* Mixin */
+@import url("mixins/mixins.css");
+
+/* Core Components - extra styling */
+@import url("alert.css");
+@import url("avatars.css");
+@import url("badge.css");
+@import url("buttons.css");
+@import url("breadcrumbs.css");
+@import url("cards.css");
+@import url("dropdown.css");
+@import url("dropup.css");
+@import url("header.css");
+@import url("fixed-plugin.css");
+@import url("forms/forms.css");
+@import url("footer.css");
+@import url("gradients.css");
+@import url("info-areas.css");
+@import url("misc.css");
+@import url("navbar.css");
+@import url("navbar-vertical.css");
+@import url("nav.css");
+@import url("pagination.css");
+@import url("popovers.css");
+@import url("progress.css");
+@import url("rtl.css");
+@import url("social-buttons.css");
+@import url("tables.css");
+@import url("timeline.css");
+@import url("tilt.css");
+@import url("tooltips.css");
+@import url("typography.css");
+
+/* Plugins */
+@import url("plugins/free/plugins.css");

@@ -1,0 +1,98 @@
+/* Headings */
+.h1 {
+  /* Assuming h1 is a predefined HTML tag in your CSS or HTML */
+}
+
+.h2 {
+  /* Assuming h2 is a predefined HTML tag in your CSS or HTML */
+}
+
+.h3 {
+  /* Assuming h3 is a predefined HTML tag in your CSS or HTML */
+}
+
+.h4 {
+  /* Assuming h4 is a predefined HTML tag in your CSS or HTML */
+}
+
+.h5 {
+  /* Assuming h5 is a predefined HTML tag in your CSS or HTML */
+}
+
+.h6 {
+  /* Assuming h6 is a predefined HTML tag in your CSS or HTML */
+}
+
+/* Lead */
+.lead {
+  font-size: 1.25rem; /* Adjust as per your design */
+  font-weight: 500; /* Adjust as per your design */
+}
+
+/* Display classes */
+.display-1 {
+  font-size: 2.5rem; /* Adjust as per your design */
+  font-weight: 700; /* Adjust as per your design */
+  line-height: 1.2; /* Adjust as per your design */
+}
+
+.display-2 {
+  font-size: 2rem; /* Adjust as per your design */
+  font-weight: 500; /* Adjust as per your design */
+  line-height: 1.2; /* Adjust as per your design */
+}
+
+/* Emphasis */
+.small {
+  /* Assuming small is a predefined HTML tag in your CSS or HTML */
+}
+
+.mark {
+  /* Assuming mark is a predefined HTML tag in your CSS or HTML */
+}
+
+/* Lists */
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem; /* Adjust as per your design */
+}
+
+/* Misc */
+.initialism {
+  font-size: 0.875rem; /* Adjust as per your design */
+  text-transform: uppercase;
+}
+
+/* Blockquotes */
+.blockquote {
+  margin-bottom: 1rem; /* Adjust as per your design */
+  font-size: 1.25rem; /* Adjust as per your design */
+}
+
+.blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.blockquote-footer {
+  margin-top: -1rem; /* Adjust as per your design */
+  margin-bottom: 1rem; /* Adjust as per your design */
+  font-size: 0.875rem; /* Adjust as per your design */
+  color: #6c757d; /* Adjust as per your design */
+}
+
+.blockquote-footer::before {
+  content: "\2014\00A0"; /* em dash, nbsp */
+}

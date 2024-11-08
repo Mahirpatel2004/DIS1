@@ -1,0 +1,310 @@
+/* General Font Smoothing */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body Typography */
+body {
+  font-weight: normal;
+  line-height: 1.6; /* Adjust according to your $p-line-height value */
+}
+
+/* Headings */
+h1, .h1 {
+  font-size: 2.5rem; /* Adjust according to your $h1-font-size value */
+  line-height: 3rem; /* Adjust according to your $h1-line-height value */
+  letter-spacing: 0.05em; /* Adjust according to your $btn-letter-spacing value */
+
+  @media (max-width: 576px) {
+      font-size: 2rem; /* Adjust for smaller screens */
+  }
+}
+
+h2, .h2 {
+  font-size: 2rem; /* Adjust according to your $h2-font-size value */
+  line-height: 2.5rem; /* Adjust according to your $h2-line-height value */
+  letter-spacing: 0.1em; /* Adjust according to your $letter-wider value */
+
+  @media (max-width: 576px) {
+      font-size: 1.75rem; /* Adjust for smaller screens */
+  }
+}
+
+h3, .h3 {
+  font-size: 1.5rem; /* Adjust according to your $h3-font-size value */
+  line-height: 2rem; /* Adjust according to your $h3-line-height value */
+
+  @media (max-width: 576px) {
+      font-size: 1.25rem; /* Adjust for smaller screens */
+  }
+}
+
+h4, .h4 {
+  font-size: 1.25rem; /* Adjust according to your $h4-font-size value */
+  line-height: 1.75rem; /* Adjust according to your $h4-line-height value */
+
+  @media (max-width: 576px) {
+      font-size: 1.125rem; /* Adjust for smaller screens */
+  }
+}
+
+h5, .h5 {
+  font-size: 1rem; /* Adjust according to your $h5-font-size value */
+  line-height: 1.5rem; /* Adjust according to your $h5-line-height value */
+
+  @media (max-width: 576px) {
+      font-size: 0.875rem; /* Adjust for smaller screens */
+  }
+}
+
+h6, .h6 {
+  font-size: 0.875rem; /* Adjust according to your $h6-font-size value */
+  line-height: 1.25rem; /* Adjust according to your $h6-line-height value */
+}
+
+/* Paragraphs */
+p, .p {
+  font-size: 1rem; /* Adjust according to your $font-size-base value */
+  font-weight: normal; /* Adjust according to your $p-font-weight value */
+  line-height: 1.6; /* Adjust according to your $p-line-height value */
+}
+
+.lead {
+  font-size: 1.25rem; /* Adjust according to your $lead-font-size value */
+  font-weight: bold; /* Adjust according to your $lead-font-weight value */
+  line-height: 1.6; /* Adjust according to your $lead-line-height value */
+}
+
+/* Additional Heading Styles */
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-weight: bold; /* Adjust according to your $font-weight-bolder value */
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: bold; /* Adjust according to your $font-weight-bold value */
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  letter-spacing: 0.02em; /* Adjust according to your $letter-tighter value */
+}
+
+/* Links */
+a {
+  letter-spacing: 0.05em; /* Adjust according to your $a-letter-spacing value */
+  color: #333; /* Adjust according to your $dark value */
+}
+
+/* Text Sizes */
+.text-sm {
+  font-size: 0.875rem; /* Adjust according to your $font-size-sm value */
+  line-height: 1.4; /* Adjust according to your $text-sm-line-height value */
+}
+
+.text-xs {
+  font-size: 0.75rem; /* Adjust according to your $font-size-xs value */
+  line-height: 1.4; /* Adjust according to your $text-xs-line-height value */
+}
+
+/* Paragraph Specific */
+p {
+  line-height: 1.625; /* Adjust as needed */
+  font-weight: normal; /* Adjust according to your $font-weight-normal value */
+}
+
+/* Text Font Families */
+.text-sans-serif {
+  font-family: 'Arial', sans-serif !important; /* Adjust according to your $font-family-sans-serif value */
+}
+
+.text-monospace {
+  font-family: 'Courier New', monospace !important; /* Adjust according to your $font-family-monospace value */
+}
+
+/* Text Alignment */
+.text-justify {
+  text-align: justify !important;
+}
+/* Text Wrapping */
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Font Weight and Italics */
+.font-weight-light {
+  font-weight: lighter !important; /* Adjust according to your $font-weight-light value */
+}
+
+.font-weight-lighter {
+  font-weight: 300 !important; /* Adjust according to your $font-weight-lighter value */
+}
+
+.font-weight-normal {
+  font-weight: normal !important; /* Adjust according to your $font-weight-normal value */
+}
+
+.font-weight-bold {
+  font-weight: bold !important; /* Adjust according to your $font-weight-bold value */
+}
+
+.font-weight-bolder {
+  font-weight: bolder !important; /* Adjust according to your $font-weight-bolder value */
+}
+
+.font-italic {
+  font-style: italic !important;
+}
+
+/* Contextual Colors */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative; /* Adjust according to your $text-gradient-position value */
+  z-index: 1; /* Adjust according to your $text-gradient-zindex value */
+}
+
+.text-gradient.text-primary {
+  background-image: linear-gradient(45deg, #4e54c8, #8f94fb); /* Adjust according to your $text-gradient-bg-primary value */
+}
+
+.text-gradient.text-info {
+  background-image: linear-gradient(45deg, #1d8cf8, #6ca8fe); /* Adjust according to your $text-gradient-bg-info value */
+}
+
+.text-gradient.text-success {
+  background-image: linear-gradient(45deg, #10dc60, #69f3a6); /* Adjust according to your $text-gradient-bg-success value */
+}
+
+.text-gradient.text-warning {
+  background-image: linear-gradient(45deg, #ffd700, #ffc100); /* Adjust according to your $text-gradient-bg-warning value */
+}
+
+.text-gradient.text-danger {
+  background-image: linear-gradient(45deg, #f5365c, #f56036); /* Adjust according to your $text-gradient-bg-danger value */
+}
+
+.text-gradient.text-dark {
+  background-image: linear-gradient(45deg, #172b4d, #5e72e4); /* Adjust according to your $text-gradient-bg-dark value */
+}
+
+/* Blockquote */
+.blockquote {
+  border-left: 3px solid #6e707e; /* Adjust according to your $text-muted value */
+}
+
+.blockquote > span {
+  font-style: italic;
+}
+
+/* Text Colors */
+.text-muted {
+  color: #6e707e !important; /* Adjust according to your $text-secondary value */
+}
+
+.text-black-50 {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Text Decoration */
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+/* Text Break */
+.text-break {
+  word-wrap: break-word !important;
+}
+
+/* Text Reset */
+.text-reset {
+  color: inherit !important;
+}
+
+/* Letter Spacing */
+.letter-wider {
+  letter-spacing: 0.1em; /* Adjust according to your $letter-wider value */
+}
+
+.letter-normal {
+  letter-spacing: normal; /* Adjust according to your $letter-normal value */
+}
+
+.letter-tighter {
+  letter-spacing: -0.05em; /* Adjust according to your $letter-tighter value */
+}
+
+/* Font Weight */
+.text-lighter {
+  font-weight: lighter;
+}
+
+.text-light {
+  font-weight: lighter;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-bolder {
+  font-weight: bolder;
+}
+
+/* Font Size */
+.text-2xl {
+  font-size: 2rem; /* Adjust according to your $font-size-2xl value */
+}
+
+.text-3xl {
+  font-size: 3rem; /* Adjust according to your $font-size-3xl value */
+}
+
+.text-4xl {
+  font-size: 4rem; /* Adjust according to your $font-size-4xl value */
+}
+
+.text-5xl {
+  font-size: 5rem; /* Adjust according to your $font-size-5xl value */
+}
+
+.text-6xl {
+  font-size: 6rem; /* Adjust according to your $font-size-6xl value */
+}
+
+.text-7xl {
+  font-size: 7rem; /* Adjust according to your $font-size-7xl value */
+}
+
+.text-8xl {
+  font-size: 8rem; /* Adjust according to your $font-size-8xl value */
+}
+
+.text-9xl {
+  font-size: 9rem; /* Adjust according to your $font-size-9xl value */
+}

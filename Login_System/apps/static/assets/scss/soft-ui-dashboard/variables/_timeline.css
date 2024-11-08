@@ -1,0 +1,21 @@
+/* Timeline Variables */
+:root {
+    --timeline-axis-width: 2px;
+    --timeline-axis-color: var(--border-color, #ccc);
+    --timeline-left: 1rem;
+  
+    --timeline-step-bg: var(--white, #fff);
+    --timeline-step-width: 26px;
+    --timeline-step-height: var(--timeline-step-width);
+    --timeline-step-radius: 50%;
+    --timeline-step-transform: translateX(-50%);
+    --timeline-step-line-height: 1.4;
+  
+    --timeline-step-border-width: 2px;
+    --timeline-step-border-color: var(--timeline-axis-color);
+  
+    --timeline-content-margin-left: 45px;
+    --timeline-content-padding-top: .35rem;
+    --timeline-content-top: -6px;
+  }
+  

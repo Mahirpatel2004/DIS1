@@ -1,0 +1,82 @@
+/* Badge */
+/* Small */
+.badge-sm {
+    padding: 0.45em 0.775em;
+    font-size: 0.65em;
+}
+
+/* Medium */
+.badge-md {
+    padding: 0.65em 1em;
+}
+
+/* Large */
+.badge-lg {
+    padding: 0.85em 1.375em;
+}
+
+/* Inline */
+.badge-inline {
+    margin-right: 0.625rem;
+    vertical-align: top;
+    position: relative;
+    top: 2px;
+}
+
+/* Button */
+.badge-btn {
+    margin: 0.5rem;
+}
+
+/* Badge Circle */
+.badge-circle {
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+@media (min-width: 576px) {
+    .badge-circle {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .badge-circle {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Badge Dot */
+.badge-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    margin-right: 0.375rem;
+}
+
+@media (min-width: 576px) {
+    .badge-dot {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .badge-dot {
+        width: 0.625rem;
+        height: 0.625rem;
+    }
+}
+
+/* Badge Floating */
+.badge-floating {
+    position: relative;
+    top: -50%;
+    border: 3px solid transparent;
+    transform: translate(147%, 50%);
+}

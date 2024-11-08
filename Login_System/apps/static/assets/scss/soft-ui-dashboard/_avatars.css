@@ -1,0 +1,104 @@
+/* Avatar Styles */
+.avatar {
+	color: #ffffff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--avatar-font-size);
+	border-radius: var(--border-radius-lg);
+	height: var(--avatar-height);
+	width: var(--avatar-width);
+	transition: all 0.2s ease-in-out;
+  
+  }
+  
+  .avatar img {
+	width: 100%;
+  }
+  
+  .avatar.rounded-circle img {
+	border-radius: 50%;
+  }
+  
+  .avatar + .avatar-content {
+	display: inline-block;
+	margin-left: var(--avatar-content-margin);
+  }
+  
+  .avatar.avatar-raised {
+	margin-top: calc(var(--avatar-height) * -0.5);
+  }
+  
+  .avatar.avatar-scale-up:hover {
+	transform: scale(1.2);
+  }
+  
+  /* Testimonials Carousel Styles */
+  .active .avatar.avatar-scale-up {
+	transform: scale(1.2);
+  }
+  
+  /* Avatar Size Variations */
+  .avatar-xxl {
+	width: var(--avatar-xxl-width) !important;
+	height: var(--avatar-xxl-height) !important;
+  }
+  
+  .avatar-xxl.avatar-raised {
+	margin-top: calc(var(--avatar-xxl-height) * -0.5);
+  }
+  
+  .avatar-xl {
+	width: var(--avatar-xl-width) !important;
+	height: var(--avatar-xl-height) !important;
+  }
+  
+  .avatar-xl.avatar-raised {
+	margin-top: calc(var(--avatar-xl-height) * -0.5);
+  }
+  
+  .avatar-lg {
+	width: var(--avatar-lg-width) !important;
+	height: var(--avatar-lg-height) !important;
+	font-size: var(--font-size-sm);
+  }
+  
+  .avatar-lg.avatar-raised {
+	margin-top: calc(var(--avatar-lg-height) * -0.5);
+  }
+  
+  .avatar-sm {
+	width: var(--avatar-sm-width) !important;
+	height: var(--avatar-sm-height) !important;
+	font-size: var(--font-size-sm);
+  }
+  
+  .avatar-sm.avatar-raised {
+	margin-top: calc(var(--avatar-sm-height) * -0.5);
+  }
+  
+  .avatar-xs {
+	width: var(--avatar-xs-width) !important;
+	height: var(--avatar-xs-height) !important;
+	font-size: var(--font-size-xs);
+  }
+  
+  .avatar-xs.avatar-raised {
+	margin-top: calc(var(--avatar-xs-height) * -0.5);
+  }
+  
+  /* Avatar Group Styles */
+  .avatar-group .avatar {
+	position: relative;
+	z-index: var(--avatar-group-zindex);
+	border: var(--avatar-group-border) solid var(--card-bg);
+  }
+  
+  .avatar-group .avatar:hover {
+	z-index: var(--avatar-group-zindex-hover);
+  }
+  
+  .avatar-group .avatar + .avatar {
+	margin-left: var(--avatar-group-double);
+  }
+  

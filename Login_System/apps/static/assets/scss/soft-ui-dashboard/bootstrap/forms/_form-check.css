@@ -1,0 +1,146 @@
+.form-check {
+  display: block;
+  min-height: 1.5rem; /* replace with $form-check-min-height */
+  padding-left: 1.5rem; /* replace with $form-check-padding-start */
+  margin-bottom: 0.75rem; /* replace with $form-check-margin-bottom */
+}
+
+.form-check .form-check-input {
+  float: left;
+  margin-left: -1.5rem; /* replace with $form-check-padding-start * -1 */
+}
+
+.form-check-reverse {
+  padding-right: 1.5rem; /* replace with $form-check-padding-start */
+  padding-left: 0;
+  text-align: right;
+}
+
+.form-check-reverse .form-check-input {
+  float: right;
+  margin-right: -1.5rem; /* replace with $form-check-padding-start * -1 */
+  margin-left: 0;
+}
+
+.form-check-input {
+  width: 1.25rem; /* replace with $form-check-input-width */
+  height: 1.25rem; /* replace with $form-check-input-width */
+  margin-top: calc(1.5rem - 1.25rem) * 0.5; /* replace with ($line-height-base - $form-check-input-width) * .5 */
+  vertical-align: top;
+  background-color: #fff; /* replace with $form-check-input-bg */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #ddd; /* replace with $form-check-input-border */
+  appearance: none;
+  print-color-adjust: exact;
+  transition: all 0.15s ease-in-out; /* replace with @include transition($form-check-transition); */
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: 0.25rem; /* replace with $form-check-input-border-radius */
+}
+
+.form-check-input[type="radio"] {
+  border-radius: 50%; /* replace with $form-check-radio-border-radius */
+}
+
+.form-check-input:active {
+  filter: brightness(90%); /* replace with $form-check-input-active-filter */
+}
+
+.form-check-input:focus {
+  border-color: #80bdff; /* replace with $form-check-input-focus-border */
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* replace with $form-check-input-focus-box-shadow */
+}
+
+.form-check-input:checked {
+  background-color: #007bff; /* replace with $form-check-input-checked-bg-color */
+  border-color: #007bff; /* replace with $form-check-input-checked-border-color */
+}
+
+.form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M10.97 5.97a.75.75 0 0 1 0 1.06L7.707 10.293a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 0 1 1.06-1.06L7 8.938l2.97-2.97a.75.75 0 0 1 1.06 0z'/%3E%3C/svg%3E"); /* replace with escape-svg($form-check-input-checked-bg-image) */
+}
+
+.form-check-input:checked[type="radio"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z'/%3E%3C/svg%3E"); /* replace with escape-svg($form-check-radio-checked-bg-image) */
+}
+
+.form-check-input[type="checkbox"]:indeterminate {
+  background-color: #007bff; /* replace with $form-check-input-indeterminate-bg-color */
+  border-color: #007bff; /* replace with $form-check-input-indeterminate-border-color */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M5 8a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 8z'/%3E%3C/svg%3E"); /* replace with escape-svg($form-check-input-indeterminate-bg-image) */
+}
+
+.form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.65; /* replace with $form-check-input-disabled-opacity */
+}
+
+.form-check-input[disabled],
+.form-check-input:disabled {
+  ~ .form-check-label {
+    cursor: default;
+    opacity: 0.65; /* replace with $form-check-label-disabled-opacity */
+  }
+}
+
+.form-check-label {
+  color: #212529; /* replace with $form-check-label-color */
+  cursor: pointer; /* replace with $form-check-label-cursor */
+}
+
+.form-switch {
+  padding-left: 2.25rem; /* replace with $form-switch-padding-start */
+}
+
+.form-switch .form-check-input {
+  width: 2rem; /* replace with $form-switch-width */
+  margin-left: -2.25rem; /* replace with $form-switch-padding-start * -1 */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.854 4.646a.5.5 0 0 1 0 .708L5.707 7.5h4.586a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E"); /* replace with escape-svg($form-switch-bg-image) */
+  background-position: left center;
+  border-radius: 1.5rem; /* replace with $form-switch-border-radius */
+  transition: all 0.15s ease-in-out; /* replace with @include transition($form-switch-transition); */
+}
+
+.form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.854 4.646a.5.5 0 0 1 0 .708L5.707 7.5h4.586a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E"); /* replace with escape-svg($form-switch-focus-bg-image) */
+}
+
+.form-switch .form-check-input:checked {
+  background-position: right center; /* replace with $form-switch-checked-bg-position */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8H5.707l2.147-2.146a.5.5 0 0 1 .708-.708z'/%3E%3C/svg%3E"), linear-gradient(to right, #34c38f, #34c38f); /* replace with escape-svg($form-switch-checked-bg-image), var(--#{$prefix}gradient); */
+}
+
+.form-switch.form-check-reverse {
+  padding-right: 2.25rem; /* replace with $form-switch-padding-start */
+  padding-left: 0;
+}
+
+.form-switch.form-check-reverse .form-check-input {
+  margin-right: -2.25rem; /* replace with $form-switch-padding-start * -1 */
+  margin-left: 0;
+}
+
+.form-check-inline {
+  display: inline-block;
+  margin-right: 0.75rem; /* replace with $form-check-inline-margin-end */
+}
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.btn-check[disabled],
+.btn-check:disabled {
+  + .btn {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.65; /* replace with $form-check-btn-check-disabled-opacity */
+  }
+}

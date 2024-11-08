@@ -1,0 +1,10 @@
+/* Tooltip Arrow Positioning */
+.bs-tooltip-auto[x-placement^=right] .tooltip-arrow,
+.bs-tooltip-right .tooltip-arrow {
+  left: 0.25rem; /* Replace with your $tooltip-arrow-left value */
+}
+
+.bs-tooltip-auto[x-placement^=left] .tooltip-arrow,
+.bs-tooltip-left .tooltip-arrow {
+  right: 0.25rem; /* Replace with your $tooltip-arrow-right value */
+}

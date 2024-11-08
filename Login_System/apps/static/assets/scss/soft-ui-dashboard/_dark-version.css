@@ -1,0 +1,334 @@
+/* .dark-version */
+.dark-version {
+  background-color: #333 !important; /* Replace with actual background color */
+
+  /* > div[class*='bg-'] */
+  > div[class*='bg-'] {
+    background-color: #333 !important; /* Replace with actual background color */
+  }
+
+  /* .sidenav */
+  .sidenav {
+    background: #222 !important; /* Replace with actual background color */
+
+    /* &.bg-transparent */
+    &.bg-transparent {
+      background: transparent !important;
+
+      /* .navbar-nav */
+      .navbar-nav {
+        .nav-link {
+          color: #fff !important; /* Replace with actual text color */
+        }
+      }
+
+      /* .nav */
+      .nav {
+        .nav-link {
+          color: #fff !important; /* Replace with actual text color */
+        }
+      }
+    }
+
+    /* &.bg-white */
+    &.bg-white {
+      background: #fff !important; /* Replace with actual background color */
+
+      /* .navbar-nav */
+      .navbar-nav {
+        .nav-link.active:after {
+          color: #ffca28 !important; /* Replace with actual color */
+        }
+      }
+
+      /* .collapse */
+      .collapse {
+        .nav-item {
+          .nav-link:not(.active) i {
+            color: #333 !important; /* Replace with actual color */
+          }
+          h6 {
+            color: #333 !important; /* Replace with actual color */
+          }
+        }
+      }
+    }
+
+    /* .navbar-nav .nav-item */
+    .navbar-nav .nav-item {
+      .collapse,
+      .collapsing {
+        .nav {
+          .nav-item {
+            .nav-link:before {
+              background: #fff !important; /* Replace with actual background color */
+              opacity: .8;
+            }
+
+            &.active {
+              .nav-link:before {
+                background: #fff !important; /* Replace with actual background color */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* .fixed-plugin */
+  .fixed-plugin .btn {
+    &.bg-gradient-dark,
+    &.btn-outline-dark {
+      color: #fff !important; /* Replace with actual text color */
+      border: 1px solid #fff !important; /* Replace with actual border color */
+    }
+    &.active {
+      background: #fff !important; /* Replace with actual background color */
+      color: #0069d9 !important; /* Replace with actual text color */
+    }
+  }
+
+  /* .bg-gradient-dark */
+  .bg-gradient-dark {
+    background-image: linear-gradient(195deg, #333, #444); /* Replace with actual gradient colors */
+  }
+
+  /* .card, .swal2-popup, .dropdown .dropdown-menu, .kanban-board */
+  .card,
+  .swal2-popup,
+  .dropdown .dropdown-menu,
+  .kanban-board {
+    background: #444; /* Replace with actual background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Replace with actual box-shadow values */
+
+    /* .card-header */
+    .card-header {
+      background: transparent;
+    }
+
+    /* p */
+    p {
+      color: #fff !important; /* Replace with actual text color */
+      opacity: .6;
+    }
+  }
+
+  /* .kanban-item */
+  .kanban-item {
+    background: transparent !important;
+    border: 1px solid #333; /* Replace with actual border color */
+  }
+
+  /* .swal2-html-container */
+  .swal2-html-container {
+    color: #fff !important; /* Replace with actual text color */
+    opacity: .6;
+  }
+
+  /* .navbar.blur */
+  .navbar.blur {
+    /* .breadcrumb */
+    .breadcrumb {
+      .breadcrumb-item,
+      h6 {
+        & a {
+          color: #333 !important; /* Replace with actual text color */
+        }
+        color: #333 !important; /* Replace with actual text color */
+      }
+      .breadcrumb-item.active:before {
+        color: #6c757d !important; /* Replace with actual color */
+      }
+    }
+    /* .breadcrumb h6 */
+    .breadcrumb h6 {
+      color: #fff !important; /* Replace with actual text color */
+    }
+  }
+
+  
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6:not(.font-weight-bolder),
+  .h6,
+  a:not(.dropdown-item):not(.choices__item):not(.leaflet-control-zoom-in):not(.leaflet-control-zoom-out):not(.btn):not(.nav-link):not(.fixed-plugin-button):not(.opacity-5),
+  .table thead tr th,
+  .kanban-title-board {
+    color: #fff !important; /* Replace with actual color */
+  }
+  
+  /* .input-group */
+  .input-group.input-group-dynamic .form-control,
+  .input-group.input-group-static .form-control {
+    background-image: none !important; /* Replace with actual background image */
+    background-size: 0 100%, 100% 100%;
+  }
+  .input-group.input-group-dynamic .form-control:focus,
+  .input-group.input-group-static .form-control:focus {
+    background-size: 100% 100%, 100% 100%;
+  }
+  
+  /* .input-group-outline */
+  .input-group.input-group-outline .form-control {
+    border-color: #333 !important; /* Replace with actual border color */
+  }
+  
+  /* .is-valid, .is-invalid */
+  .is-valid,
+  .is-invalid {
+    border-color: #333 !important; /* Replace with actual border color */
+  }
+  
+  /* .accordion */
+  .accordion .accordion-button {
+    border-color: #333 !important; /* Replace with actual border color */
+    color: #fff;
+    opacity: .8;
+  }
+  
+  /* .table > :not(caption) > * > * */
+  .table > :not(caption) > * > * {
+    border-color: #333 !important; /* Replace with actual border color */
+    color: #ccc !important; /* Replace with actual color */
+  }
+  
+  /* label */
+  label {
+    color: #666 !important; /* Replace with actual color */
+  }
+  
+  /* .list-group-item, .multisteps-form__panel */
+  .list-group-item,
+  .multisteps-form__panel {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, .15) !important;
+  }
+  
+  /* .nav.bg-white */
+  .nav.bg-white {
+    background-color: #444 !important; /* Replace with actual background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Replace with actual box shadow */
+  }
+  
+  .nav.bg-white .nav-link[data-scroll]:hover {
+    color: #0069d9 !important; /* Replace with actual color */
+  }
+  
+  /* .toast */
+  .toast {
+    background-color: #444 !important; /* Replace with actual background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Replace with actual box shadow */
+  
+    /* .toast-header */
+    .toast-header {
+      background: transparent;
+    }
+  
+    span {
+      color: #fff;
+    }
+  
+    p {
+      color: #fff !important; /* Replace with actual color */
+      opacity: .6;
+    }
+  }
+  
+  /* .choices */
+  .choices .choices__input {
+    background-color: transparent !important;
+    border-bottom: 1px solid #333; /* Replace with actual border color */
+    color: #fff;
+  }
+  .choices .choices__list.choices__list--dropdown {
+    background: #444 !important; /* Replace with actual background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Replace with actual box shadow */
+  }
+
+   /* Fullcalendar changes */
+/* Fullcalendar changes */
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: #ff0000; /* Example: Replace with your actual color value */
+}
+
+
+/* Datatable changes */
+.dataTable-sorter::after {
+  border-bottom-color: #fff; /* Replace with your actual color value */
+}
+
+.dataTable-sorter::before {
+  border-top-color: #fff; /* Replace with your actual color value */
+}
+
+/* Quill changes */
+.ql-snow .ql-stroke {
+  stroke: #ff0000; /* Example: Replace with your actual color value */
+}
+
+
+.ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
+  fill: #ff0000; /* Example: Replace with your actual color value */
+}
+
+
+.ql-toolbar.ql-snow .ql-picker-label {
+  color: #ff0000; /* Example: Replace with your actual color value */
+}
+
+
+
+.navbar-vertical {
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: #ffffff; /* Replace with your actual color value for white */
+        opacity: 0.8;
+      }
+      
+      .nav-link[data-bs-toggle="collapse"]:after {
+        color: #ffffff; /* Replace with your actual color value for white */
+      }
+      
+      .nav-link.active {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Replace with your actual box-shadow definition */
+        color: #333333; /* Replace with your actual color value for dark */
+      }
+      
+
+      &.collapse,
+      &.collapsing {
+        .nav {
+          .nav-item {
+            .nav-link {
+              color: #ffffff; /* Replace with your actual color value */
+              opacity: 0.6;
+            }
+            
+            .nav-link.active {
+              opacity: 1;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+}
+body.dark-version {
+  color: #333333 !important;
+}
+

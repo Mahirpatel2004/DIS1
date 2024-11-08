@@ -1,0 +1,104 @@
+/* Re-assigned maps */
+
+/* Theme colors converted to RGB */
+:root {
+  --theme-colors-rgb: {
+    /* Define your theme colors and their RGB equivalents */
+    "primary": rgb(0, 123, 255),
+    "secondary": rgb(108, 117, 125),
+    /* Add more colors as needed */
+  };
+}
+
+/* Utilities colors */
+:root {
+  --utilities-colors: var(--theme-colors-rgb); /* Use the RGB converted colors */
+}
+
+
+/* Utilities text colors */
+:root {
+  /* Define utility colors */
+  --utilities-colors: {
+    "black": rgb(0, 0, 0),
+    "white": rgb(255, 255, 255),
+    "body": rgb(128, 128, 128) /* Example: Replace with actual body color */
+    /* Add more colors as needed */
+  };
+  
+  /* Merge utility text colors */
+  --utilities-text: {
+    /* Merge utility colors with specific text-related colors */
+    "black": var(--utilities-colors-black),
+    "white": var(--utilities-colors-white),
+    "body": var(--utilities-colors-body)
+  };
+  
+  /* Loop through utility text colors for rgba conversion */
+  --utilities-text-colors: {
+    "black": rgba(var(--utilities-text-black), 1), /* Example: Adjust opacity as needed */
+    "white": rgba(var(--utilities-text-white), 1),
+    "body": rgba(var(--utilities-text-body), 1)
+    /* Add more colors as needed */
+  };
+}
+
+
+/* Utilities background colors */
+:root {
+  /* Define utility colors */
+  --utilities-colors: {
+    "black": rgb(0, 0, 0),
+    "white": rgb(255, 255, 255),
+    "body": rgb(128, 128, 128) /* Example: Replace with actual body background color */
+    /* Add more colors as needed */
+  };
+  
+  /* Merge utility background colors */
+  --utilities-bg: {
+    /* Merge utility colors with specific background-related colors */
+    "black": var(--utilities-colors-black),
+    "white": var(--utilities-colors-white),
+    "body": var(--utilities-colors-body)
+    /* Add more colors as needed */
+  };
+  
+  /* Convert merged background colors to RGBA */
+  --utilities-bg-colors: {
+    "black": rgba(var(--utilities-bg-black), 1), /* Example: Adjust opacity as needed */
+    "white": rgba(var(--utilities-bg-white), 1),
+    "body": rgba(var(--utilities-bg-body), 1)
+    /* Add more colors as needed */
+  };
+}
+
+
+/* Utilities border colors */
+:root {
+  /* Define utility colors */
+  --utilities-colors: {
+    "white": rgb(255, 255, 255) /* Example: Replace with actual color values */,
+    /* Add more colors as needed */
+  };
+  
+  /* Merge utility border colors */
+  --utilities-border: {
+    /* Merge utility colors with specific border-related colors */
+    "white": var(--utilities-colors-white)
+    /* Add more border colors as needed */
+  };
+  
+  /* Convert merged border colors to RGBA */
+  --utilities-border-colors: {
+    "white": rgba(var(--utilities-border-white), 1) /* Example: Adjust opacity as needed */
+    /* Add more border colors as needed */
+  };
+  
+  /* Define negative spacers */
+  --negative-spacers: /* Example: Use CSS variables for negative spacers */;
+  
+  /* Define gutters */
+  --gutters: /* Example: Use CSS variables for gutters */;
+}
+
+

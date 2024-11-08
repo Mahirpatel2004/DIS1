@@ -1,0 +1,184 @@
+/* Common styles for icon shapes */
+.icon-shape {
+  width: 40px; /* Replace with actual width value */
+  height: 40px; /* Replace with actual height value */
+  background-position: center center; /* Replace with actual background position value */
+  border-radius: 12px; /* Replace with actual border radius value */
+
+  i {
+      color: #ffffff; /* Replace with actual color value */
+      opacity: 0.8; /* Replace with actual opacity value */
+      top: 10px; /* Replace with actual top value */
+      position: relative; /* Replace with actual position value */
+  }
+
+  .ni {
+      top: 14px; /* Replace with actual top value */
+  }
+}
+
+/* Icon sizes */
+.icon-xxs {
+  width: 12px; /* Replace with actual width value */
+  height: 12px; /* Replace with actual height value */
+
+  i {
+      top: 10px; /* Replace with actual top value */
+      font-size: 0.5rem; /* Replace with actual font size value */
+  }
+}
+
+.icon-xs {
+  width: 20px; /* Replace with actual width value */
+  height: 20px; /* Replace with actual height value */
+
+  i {
+      top: 10px; /* Replace with actual top value */
+      font-size: 0.5rem; /* Replace with actual font size value */
+  }
+}
+
+.icon-sm {
+  width: 30px; /* Replace with actual width value */
+  height: 30px; /* Replace with actual height value */
+
+  i {
+      top: 12px; /* Replace with actual top value */
+      font-size: 0.65rem; /* Replace with actual font size value */
+  }
+}
+
+.icon-md {
+  width: 40px; /* Replace with actual width value */
+  height: 40px; /* Replace with actual height value */
+
+  i {
+      top: 14px; /* Replace with actual top value */
+      font-size: 0.8rem; /* Replace with actual font size value */
+  }
+
+  &.icon-striped {
+      background-position: center center; /* Replace with actual background position value */
+
+      i {
+          top: 11%; /* Replace with actual top value */
+          margin-left: -10px; /* Replace with actual margin left value */
+          font-size: 0.8rem; /* Replace with actual font size value */
+      }
+  }
+}
+
+.icon-lg {
+  width: 50px; /* Replace with actual width value */
+  height: 50px; /* Replace with actual height value */
+
+  i {
+      top: 16px; /* Replace with actual top value */
+      font-size: 1.2rem; /* Replace with actual font size value */
+  }
+
+  &.icon-striped {
+      background-position: center center; /* Replace with actual background position value */
+
+      i {
+          top: 21%; /* Replace with actual top value */
+          margin-left: -15px; /* Replace with actual margin left value */
+      }
+  }
+}
+
+.icon-xl {
+  width: 60px; /* Replace with actual width value */
+  height: 60px; /* Replace with actual height value */
+  border-radius: 12px; /* Replace with actual border radius value */
+
+  i {
+      top: 20px; /* Replace with actual top value */
+      font-size: 1.6rem; /* Replace with actual font size value */
+  }
+
+  &.icon-striped {
+      background-position: center center; /* Replace with actual background position value */
+
+      i {
+          top: 30%; /* Replace with actual top value */
+          margin-left: -15px; /* Replace with actual margin left value */
+      }
+  }
+}
+
+/* Horizontal icon info alignment */
+.info-horizontal {
+  text-align: left !important;
+
+  .icon {
+      float: left;
+  }
+  .description {
+      overflow: hidden;
+  }
+}
+
+/* Icon SVG fill color change */
+svg.text-primary {
+  .color-foreground {
+      fill: #007bff; /* Replace with actual color value */
+  }
+  .color-background {
+      fill: #cce5ff; /* Replace with actual color value */
+  }
+}
+
+svg.text-secondary {
+  .color-foreground {
+      fill: #6c757d; /* Replace with actual color value */
+  }
+  .color-background {
+      fill: #e2e3e5; /* Replace with actual color value */
+  }
+}
+
+svg.text-info {
+  .color-foreground {
+      fill: #17a2b8; /* Replace with actual color value */
+  }
+  .color-background {
+      fill: #bee5eb; /* Replace with actual color value */
+  }
+}
+
+svg.text-warning {
+  .color-foreground {
+      fill: #ffc107; /* Replace with actual color value */
+  }
+  .color-background {
+      fill: #ffeeba; /* Replace with actual color value */
+  }
+}
+
+svg.text-danger {
+  .color-foreground {
+      fill: #dc3545; /* Replace with actual color value */
+  }
+  .color-background {
+      fill: #f5c6cb; /* Replace with actual color value */
+  }
+}
+
+svg.text-success {
+  .color-foreground {
+      fill: #28a745; /* Replace with actual color value */
+  }
+  .color-background {
+      fill: #d4edda; /* Replace with actual color value */
+  }
+}
+
+svg.text-dark {
+  .color-foreground {
+      fill: #343a40; /* Replace with actual color value */
+  }
+  .color-background {
+      fill: #d6d8db; /* Replace with actual color value */
+  }
+}

@@ -1,0 +1,99 @@
+/* Base styles */
+
+.btn {
+  --btn-padding-x: 1rem; /* replace with actual value */
+  --btn-padding-y: 0.5rem; /* replace with actual value */
+  --btn-font-family: Arial, sans-serif; /* replace with actual value */
+  --btn-font-size: 1rem; /* replace with actual value */
+  --btn-font-weight: 400; /* replace with actual value */
+  --btn-line-height: 1.5; /* replace with actual value */
+  --btn-color: #333; /* replace with actual value */
+  --btn-bg: transparent;
+  --btn-border-width: 1px; /* replace with actual value */
+  --btn-border-color: transparent;
+  --btn-border-radius: 0.25rem; /* replace with actual value */
+  --btn-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1); /* replace with actual value */
+  --btn-disabled-opacity: 0.5; /* replace with actual value */
+  --btn-focus-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5); /* replace with actual value */
+
+  display: inline-block;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  font-family: var(--btn-font-family);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  line-height: var(--btn-line-height);
+  color: var(--btn-color);
+  text-align: center;
+  white-space: nowrap; /* replace with actual value */
+  vertical-align: middle;
+  cursor: pointer; /* replace with actual value */
+  user-select: none;
+  border: var(--btn-border-width) solid var(--btn-border-color);
+  border-radius: var(--btn-border-radius);
+  box-shadow: var(--btn-box-shadow);
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s; /* replace with actual value */
+
+  &:hover {
+    color: var(--btn-hover-color); /* replace with actual value */
+    text-decoration: none; /* replace with actual value */
+    background-color: var(--btn-hover-bg); /* replace with actual value */
+    border-color: var(--btn-hover-border-color); /* replace with actual value */
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: var(--btn-hover-color); /* replace with actual value */
+    background: var(--btn-hover-bg); /* replace with actual value */
+    border-color: var(--btn-hover-border-color); /* replace with actual value */
+    outline: 0;
+    box-shadow: var(--btn-box-shadow), var(--btn-focus-box-shadow); /* replace with actual value */
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  &.show {
+    color: var(--btn-active-color); /* replace with actual value */
+    background-color: var(--btn-active-bg); /* replace with actual value */
+    border-color: var(--btn-active-border-color); /* replace with actual value */
+    box-shadow: var(--btn-active-shadow); /* replace with actual value */
+
+    &:focus {
+      box-shadow: var(--btn-active-shadow), var(--btn-focus-box-shadow); /* replace with actual value */
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    color: var(--btn-disabled-color); /* replace with actual value */
+    pointer-events: none;
+    background-color: var(--btn-disabled-bg); /* replace with actual value */
+    border-color: var(--btn-disabled-border-color); /* replace with actual value */
+    opacity: var(--btn-disabled-opacity); /* replace with actual value */
+    box-shadow: none;
+  }
+}
+
+/* Alternate buttons */
+
+.btn-primary {
+  --btn-color: #337ab7; /* replace with actual value */
+  --btn-bg: #337ab7; /* replace with actual value */
+  --btn-hover-color: #23527c; /* replace with actual value */
+  --btn-hover-bg: #23527c; /* replace with actual value */
+  --btn-active-color: #23527c; /* replace with actual value */
+  --btn-active-bg: #23527c; /* replace with actual value */
+}
+
+.btn-secondary {
+  --btn-color: #666; /* replace with actual value */
+  --btn-bg: #666; /* replace with actual value */
+  --btn-hover-color: #555; /* replace with actual value */
+  --btn-hover-bg: #555; /* replace with actual value */
+  --btn-active-color: #555; /* replace with actual value */
+  --btn-active-bg: #555; /* replace with actual value */
+}
+
+/* Link buttons

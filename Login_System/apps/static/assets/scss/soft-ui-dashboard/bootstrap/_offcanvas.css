@@ -1,0 +1,133 @@
+/* Define CSS Custom Properties */
+:root {
+  --prefix-offcanvas-width: var(--offcanvas-horizontal-width);
+  --prefix-offcanvas-height: var(--offcanvas-vertical-height);
+  --prefix-offcanvas-padding-x: var(--offcanvas-padding-x);
+  --prefix-offcanvas-padding-y: var(--offcanvas-padding-y);
+  --prefix-offcanvas-color: var(--offcanvas-color);
+  --prefix-offcanvas-bg: var(--offcanvas-bg-color);
+  --prefix-offcanvas-border-width: var(--offcanvas-border-width);
+  --prefix-offcanvas-border-color: var(--offcanvas-border-color);
+  --prefix-offcanvas-box-shadow: var(--offcanvas-box-shadow);
+  --prefix-offcanvas-transition: var(--offcanvas-transition-duration) ease-in-out;
+}
+
+/* Extend placeholders with CSS Custom Properties */
+.offcanvas {
+  position: fixed;
+  bottom: 0;
+  z-index: var(--zindex-offcanvas);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: var(--prefix-offcanvas-color);
+  visibility: hidden;
+  background-color: var(--prefix-offcanvas-bg);
+  background-clip: padding-box;
+  outline: 0;
+  box-shadow: var(--prefix-offcanvas-box-shadow);
+  transition: transform var(--prefix-offcanvas-transition);
+}
+
+.offcanvas.showing,
+.offcanvas.show:not(.hiding) {
+  transform: none;
+  visibility: visible;
+}
+
+.offcanvas.offcanvas-start {
+  top: 0;
+  left: 0;
+  width: var(--prefix-offcanvas-width);
+  border-right: var(--prefix-offcanvas-border-width) solid var(--prefix-offcanvas-border-color);
+  transform: translateX(-100%);
+}
+
+.offcanvas.offcanvas-end {
+  top: 0;
+  right: 0;
+  width: var(--prefix-offcanvas-width);
+  border-left: var(--prefix-offcanvas-border-width) solid var(--prefix-offcanvas-border-color);
+  transform: translateX(100%);
+}
+
+.offcanvas.offcanvas-top {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--prefix-offcanvas-height);
+  max-height: 100%;
+  border-bottom: var(--prefix-offcanvas-border-width) solid var(--prefix-offcanvas-border-color);
+  transform: translateY(-100%);
+}
+
+.offcanvas.offcanvas-bottom {
+  right: 0;
+  left: 0;
+  height: var(--prefix-offcanvas-height);
+  max-height: 100%;
+  border-top: var(--prefix-offcanvas-border-width) solid var(--prefix-offcanvas-border-color);
+  transform: translateY(100%);
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+  .offcanvas {
+    --prefix-offcanvas-height: auto;
+    --prefix-offcanvas-border-width: 0;
+    background-color: transparent !important;
+  }
+
+  .offcanvas-header {
+    display: none;
+  }
+
+  .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+    background-color: transparent !important;
+  }
+}
+
+/* Styles for .offcanvas-backdrop */
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--zindex-offcanvas-backdrop);
+  background-color: var(--offcanvas-backdrop-bg);
+  opacity: var(--offcanvas-backdrop-opacity);
+}
+
+/* Styles for .offcanvas-header */
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--prefix-offcanvas-padding-y) var(--prefix-offcanvas-padding-x);
+}
+
+/* Styles for .offcanvas-title */
+.offcanvas-title {
+  margin-bottom: 0;
+  line-height: var(--offcanvas-title-line-height);
+}
+
+/* Styles for .offcanvas-body */
+.offcanvas-body {
+  flex-grow: 1;
+  padding: var(--prefix-offcanvas-padding-y) var(--prefix-offcanvas-padding-x);
+  overflow-y: auto;
+}
+
+/* Styles for .btn-close within .offcanvas-header */
+.offcanvas-header .btn-close {
+  padding: calc(var(--prefix-offcanvas-padding-y) * 0.5) calc(var(--prefix-offcanvas-padding-x) * 0.5);
+  margin-top: calc(var(--prefix-offcanvas-padding-y) * -0.5);
+  margin-right: calc(var(--prefix-offcanvas-padding-x) * -0.5);
+  margin-bottom: calc(var(--prefix-offcanvas-padding-y) * -0.5);
+}

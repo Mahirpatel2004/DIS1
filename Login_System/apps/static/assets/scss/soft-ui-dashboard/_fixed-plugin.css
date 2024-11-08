@@ -1,0 +1,72 @@
+.fixed-plugin {
+  .fixed-plugin-button {
+    background: #fff; /* Replace with your desired background color */
+    border-radius: 8px; /* Adjust the border radius as needed */
+    bottom: 20px; /* Adjust the bottom position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    font-size: 24px; /* Adjust the font size as needed */
+    z-index: 100; /* Adjust the z-index as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the box shadow as needed */
+    cursor: pointer;
+}
+
+
+  .fixed-plugin-button i {
+    pointer-events: none;
+  }
+
+  .card {
+    position: fixed !important;
+    right: -200px; /* Adjust the value according to your design */
+    top: 0;
+    height: 100%;
+    left: auto !important;
+    transform: unset !important;
+    width: 200px; /* Adjust the value according to your design */
+    border-radius: 0;
+    padding: 0 10px;
+    transition: 0.2s ease;
+    z-index: 100; /* Adjust the value according to your design */
+}
+
+
+  :root {
+    --white-color: #fff;
+    --transition-base: 0.3s; /* Adjust the transition duration as needed */
+}
+
+.badge {
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 23px;
+    margin-right: 5px;
+    position: relative;
+    width: 23px;
+    transition: var(--transition-base);
+}
+}
+
+.badge:hover,
+.badge.active {
+    border-color: #333; /* Replace $dark with an actual color value */
+}
+
+
+  .btn.bg-gradient-primary:not(:disabled):not(.disabled) {
+    border: 1px solid transparent;
+  }
+
+  .btn.bg-gradient-primary:not(:disabled):not(.disabled):not(.active) {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #007bff; /* Replace $primary with an actual color value */
+    color: #007bff; /* Replace $primary with an actual color value */
+  }
+
+
+  &.show .card {
+    right: 0;
+  }
+

@@ -1,0 +1,52 @@
+.input-group {
+  /* Border radius mixin */
+  border-radius: 4px 0; /* Replace with actual border-radius values */
+
+  /* Transition for self and children */
+  transition: all 0.3s ease; /* Replace with actual transition values */
+
+  /* Margin adjustment for children */
+  & > :not(:first-child):not(.dropdown-menu) {
+      margin-left: 0;
+  }
+
+  /* Form control adjustments */
+  .form-control {
+      box-shadow: none;
+      background-image: none;
+
+      &:not(:first-child) {
+          border-left: 0;
+          padding-left: 0;
+      }
+      &:not(:last-child) {
+          border-right: 0;
+          padding-right: 0;
+      }
+
+      /* Border adjustment for adjacent input-group-text */
+      & + .input-group-text {
+          border-left: 0;
+          border-right: 1px solid #ced4da; /* Replace with actual border values */
+      }
+  }
+
+  /* Styling for input-group-text */
+  .input-group-text {
+      border-right: 0;
+  }
+
+  /* Focus state styles */
+  &.focused {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Replace with actual box-shadow values */
+  }
+
+  /* Focus state styles for input-group-text */
+  &.focused .input-group-text {
+      border-color: #80bdff; /* Replace with actual border-color values */
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}

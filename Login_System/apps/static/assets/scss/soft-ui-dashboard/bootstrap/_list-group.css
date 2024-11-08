@@ -1,0 +1,178 @@
+/* Base class */
+.list-group {
+  /* CSS variables for list group */
+  --prefix-list-group-color: #{$list-group-color};
+  --prefix-list-group-bg: #{$list-group-bg};
+  --prefix-list-group-border-color: #{$list-group-border-color};
+  --prefix-list-group-border-width: #{$list-group-border-width};
+  --prefix-list-group-border-radius: #{$list-group-border-radius};
+  --prefix-list-group-item-padding-x: #{$list-group-item-padding-x};
+  --prefix-list-group-item-padding-y: #{$list-group-item-padding-y};
+  --prefix-list-group-action-color: #{$list-group-action-color};
+  --prefix-list-group-action-hover-color: #{$list-group-action-hover-color};
+  --prefix-list-group-action-hover-bg: #{$list-group-hover-bg};
+  --prefix-list-group-action-active-color: #{$list-group-action-active-color};
+  --prefix-list-group-action-active-bg: #{$list-group-action-active-bg};
+  --prefix-list-group-disabled-color: #{$list-group-disabled-color};
+  --prefix-list-group-disabled-bg: #{$list-group-disabled-bg};
+  --prefix-list-group-active-color: #{$list-group-active-color};
+  --prefix-list-group-active-bg: #{$list-group-active-bg};
+  --prefix-list-group-active-border-color: #{$list-group-active-border-color};
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: var(--prefix-list-group-border-radius); /* Applying border-radius */
+}
+
+/* Numbered list group */
+.list-group-numbered {
+  list-style-type: none;
+  counter-reset: section;
+}
+
+.list-group-numbered > .list-group-item::before {
+  content: counters(section, ".") ". ";
+  counter-increment: section;
+}
+
+/* Interactive list items */
+.list-group-item-action {
+  width: 100%;
+  color: var(--prefix-list-group-action-color);
+  text-align: inherit;
+
+  /* Hover state */
+  &:hover,
+  &:focus {
+    z-index: 1;
+    color: var(--prefix-list-group-action-hover-color);
+    text-decoration: none;
+    background-color: var(--prefix-list-group-action-hover-bg);
+  }
+
+  /* Active state */
+  &:active {
+    color: var(--prefix-list-group-action-active-color);
+    background-color: var(--prefix-list-group-action-active-bg);
+  }
+}
+
+ /* Individual list items */
+
+ /* Use on `li`s or `div`s within the `.list-group` parent. */
+
+/* Base class for list group items */
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: var(--prefix-list-group-item-padding-y) var(--prefix-list-group-item-padding-x);
+  color: var(--prefix-list-group-color);
+  text-decoration: none; /* Assuming link-decoration is none */
+  background-color: var(--prefix-list-group-bg);
+  border: var(--prefix-list-group-border-width) solid var(--prefix-list-group-border-color);
+
+  &:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: var(--prefix-list-group-disabled-color);
+    pointer-events: none;
+    background-color: var(--prefix-list-group-disabled-bg);
+  }
+
+  &.active {
+    z-index: 2;
+    color: var(--prefix-list-group-active-color);
+    background-color: var(--prefix-list-group-active-bg);
+    border-color: var(--prefix-list-group-active-border-color);
+  }
+
+  & + & {
+    border-top-width: 0;
+
+    &.active {
+      margin-top: calc(var(--prefix-list-group-border-width) * -1);
+      border-top-width: var(--prefix-list-group-border-width);
+    }
+  }
+}
+
+/* Horizontal layout for list group items */
+@media (min-width: 768px) {
+  .list-group-horizontal {
+    flex-direction: row;
+  }
+
+  .list-group-horizontal > .list-group-item {
+    &:first-child {
+      border-bottom-left-radius: var(--prefix-list-group-border-radius);
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-right-radius: var(--prefix-list-group-border-radius);
+      border-bottom-left-radius: 0;
+    }
+
+    &.active {
+      margin-top: 0;
+    }
+
+    + .list-group-item {
+      border-top-width: var(--prefix-list-group-border-width);
+      border-left-width: 0;
+
+      &.active {
+        margin-left: calc(var(--prefix-list-group-border-width) * -1);
+        border-left-width: var(--prefix-list-group-border-width);
+      }
+    }
+  }
+}
+
+/* Flush list items */
+.list-group-flush {
+  border-radius: 0;
+}
+
+.list-group-flush > .list-group-item {
+  border-width: 0 0 var(--prefix-list-group-border-width);
+
+  &:last-child {
+    border-bottom-width: 0;
+  }
+}
+
+/* Contextual variants for list group items */
+/* Replace $theme-colors, $list-group-item-bg-scale, $list-group-item-color-scale, $min-contrast-ratio with actual values */
+
+/* Example usage (not fully translated):
+.list-group-item-primary {
+  background-color: /* Primary variant background color *//*;
+  color: /* Primary variant text color *//*;
+}
+*/
+
+/* Manual application based on your theme colors */
+.list-group-item-primary {
+  background-color: var(--primary-bg-color); /* Replace with actual calculation or color variable */
+  color: var(--primary-text-color); /* Replace with actual calculation or color variable */
+}
+
+.list-group-item-secondary {
+  background-color: var(--secondary-bg-color); /* Replace with actual calculation or color variable */
+  color: var(--secondary-text-color); /* Replace with actual calculation or color variable */
+}
+
+
+/* Repeat for other states as needed */

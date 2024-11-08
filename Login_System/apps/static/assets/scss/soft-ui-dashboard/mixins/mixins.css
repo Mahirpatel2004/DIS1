@@ -1,0 +1,14 @@
+/* Importing stylesheets */
+@import "badge";
+@import "hover";
+@import "colored-shadows";
+@import "social-buttons";
+
+/* Your custom CSS can follow here */
+/* Example: */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Other custom styles as needed */

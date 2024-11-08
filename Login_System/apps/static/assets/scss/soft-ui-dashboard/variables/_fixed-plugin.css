@@ -1,0 +1,23 @@
+.fixed-plugin {
+    --bottom: 30px;
+    --right: var(--bottom);
+    --radius: 50%;
+    --box-shadow: var(--navbar-box-shadow);
+    --button-z-index: 990;
+    --card-z-index: 1020;
+    --card-width: 360px;
+  }
+  
+  .fixed-plugin {
+    bottom: var(--bottom);
+    right: var(--right);
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    z-index: var(--button-z-index); /* Assuming this is for the button, adjust accordingly */
+  }
+  
+  .fixed-plugin .card {
+    z-index: var(--card-z-index);
+    width: var(--card-width);
+  }
+  

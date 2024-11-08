@@ -1,0 +1,180 @@
+/* Navbar */
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--prefix-navbar-padding-y) var(--prefix-navbar-padding-x);
+  /* Apply gradient background if defined */
+  /* Assuming @include gradient-bg(); is a mixin that applies gradient */
+  /* You may need to manually insert your gradient background style */
+
+  /* Flex properties for nested content */
+  /* These properties ensure nested content behaves properly */
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar > .container,
+.navbar > .container-fluid {
+  /* Extend container flex properties */
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Media queries for different container max-widths */
+/* Assuming $container-max-widths is defined elsewhere in your SCSS */
+@media (max-width: 576px) {
+  .navbar > .container-sm {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Navbar brand */
+.navbar-brand {
+  padding-top: var(--prefix-navbar-brand-padding-y);
+  padding-bottom: var(--prefix-navbar-brand-padding-y);
+  margin-right: var(--prefix-navbar-brand-margin-end);
+  font-size: var(--prefix-navbar-brand-font-size);
+  color: var(--prefix-navbar-brand-color);
+  white-space: nowrap;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--prefix-navbar-brand-hover-color);
+}
+
+/* Navbar nav */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar-nav .show > .nav-link,
+.navbar-nav .nav-link.active {
+  color: var(--prefix-navbar-active-color);
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+}
+
+/* Navbar text */
+.navbar-text {
+  padding-top: var(--prefix-navbar-nav-link-padding-y);
+  padding-bottom: var(--prefix-navbar-nav-link-padding-y);
+  color: var(--prefix-navbar-color);
+}
+
+.navbar-text a,
+.navbar-text a:hover,
+.navbar-text a:focus {
+  color: var(--prefix-navbar-active-color);
+}
+
+/* Responsive navbar */
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.navbar-toggler {
+  padding: var(--prefix-navbar-toggler-padding-y) var(--prefix-navbar-toggler-padding-x);
+  font-size: var(--prefix-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--prefix-navbar-color);
+  background-color: transparent;
+  border: var(--prefix-navbar-toggler-border-width) solid var(--prefix-navbar-toggler-border-color);
+  border-radius: var(--prefix-navbar-toggler-border-radius);
+  transition: var(--prefix-navbar-toggler-transition);
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 var(--prefix-navbar-toggler-focus-width);
+}
+
+
+/* Navbar toggler icon */
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: var(--prefix-navbar-toggler-icon-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* Navbar nav scroll */
+.navbar-nav-scroll {
+  max-height: var(--prefix-scroll-height, 75vh);
+  overflow-y: auto;
+}
+
+/* Responsive navbar expansion */
+/* Generating series of `.navbar-expand-*` responsive classes */
+/* Note: CSS does not have direct support for dynamic media queries as shown in SCSS */
+
+/* Example of what the generated CSS might look like for `.navbar-expand-*` classes */
+@media (min-width: 576px) {
+  .navbar-expand-sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-expand-xl {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+/* Navbar themes */
+/* Styles for switching between navbars with light or dark background */
+
+.navbar-light {
+  /* Deprecated in v5.2.0 */
+}
+
+.navbar-dark {
+  --prefix-navbar-color: #{$navbar-dark-color};
+  --prefix-navbar-hover-color: #{$navbar-dark-hover-color};
+  --prefix-navbar-disabled-color: #{$navbar-dark-disabled-color};
+  --prefix-navbar-active-color: #{$navbar-dark-active-color};
+  --prefix-navbar-brand-color: #{$navbar-dark-brand-color};
+  --prefix-navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
+  --prefix-navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
+  --prefix-navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
+}

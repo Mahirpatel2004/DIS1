@@ -1,0 +1,58 @@
+/* Single side border-radius */
+
+/* Helper function to replace negative values with 0 (not directly translatable to CSS) */
+
+/* CSS for border-radius mixins */
+
+/* Replace $enable-rounded, $border-radius, and other SCSS variables as needed */
+/* Typically, in CSS, you would apply border-radius directly to elements */
+
+/* Example CSS for border-radius mixins (not directly translatable) */
+.element {
+  /* Apply border-radius for all corners */
+  border-radius: 10px;
+}
+
+.element-top {
+  /* Apply border-radius for top corners */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.element-end {
+  /* Apply border-radius for end (right) corners */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.element-bottom {
+  /* Apply border-radius for bottom corners */
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.element-start {
+  /* Apply border-radius for start (left) corners */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.element-top-start {
+  /* Apply border-radius for top-left corner */
+  border-top-left-radius: 10px;
+}
+
+.element-top-end {
+  /* Apply border-radius for top-right corner */
+  border-top-right-radius: 10px;
+}
+
+.element-bottom-end {
+  /* Apply border-radius for bottom-right corner */
+  border-bottom-right-radius: 10px;
+}
+
+.element-bottom-start {
+  /* Apply border-radius for bottom-left corner */
+  border-bottom-left-radius: 10px;
+}

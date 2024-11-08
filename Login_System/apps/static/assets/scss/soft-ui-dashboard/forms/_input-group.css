@@ -1,0 +1,89 @@
+.input-group {
+  /* Replace with computed border-radius values */
+  border-radius: 5px 0; /* Example value, replace with your actual computed value */
+
+  transition: all 0.3s ease; /* Example transition, replace with your actual transition settings */
+
+  /* Margin adjustment for elements inside input-group */
+  &,
+  .input-group-text {
+    transition: all 0.3s ease; /* Example transition, replace with your actual transition settings */
+  }
+
+  /* Adjusting margins for elements inside input-group */
+  & > :not(:first-child):not(.dropdown-menu) {
+    margin-left: 0;
+  }
+
+  /* Styles for form-control inside input-group */
+  .form-control {
+    border-left: 1px solid #cccccc; /* Example color, replace with your actual color */
+
+    &:focus {
+      border-left: 1px solid #007bff !important; /* Example color, replace with your actual color */
+      border-right: 1px solid #007bff !important; /* Example color, replace with your actual color */
+    }
+
+    &:not(:first-child) {
+      border-left: 0;
+      padding-left: 0;
+    }
+
+    &:not(:last-child) {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    /* Styling input-group-text adjacent to form-control */
+    & + .input-group-text {
+      position: absolute;
+      border-left: 0;
+      border-right: 1px solid #cccccc; /* Example color, replace with your actual color */
+    }
+  }
+
+  /* Styles for input-group-text */
+  .input-group-text {
+    z-index: 9999;
+    border-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Styles for form-group */
+.form-group {
+  margin-bottom: 1rem; /* Example value, replace with your actual value */
+}
+
+/* Additional styles for input-group-text */
+.input-group-text {
+  z-index: 9999;
+  border-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Styles for form-control within focused state */
+.focused {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Example shadow, replace with your actual shadow */
+  transition: all 0.3s ease; /* Example transition, replace with your actual transition settings */
+
+  /* Styles for form-control within focused state */
+  .form-control {
+    &:focus {
+      box-shadow: none;
+    }
+
+    /* Adjusting input-group-text border in focused state */
+    + .input-group-text {
+      border-color: #007bff; /* Example color, replace with your actual color */
+      border-right: 1px solid #007bff !important; /* Example color, replace with your actual color */
+    }
+  }
+
+  /* Styles for input-group-text in focused state */
+  .input-group-text {
+    border-color: #007bff; /* Example color, replace with your actual color */
+  }
+}

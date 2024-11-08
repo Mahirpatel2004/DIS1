@@ -1,0 +1,67 @@
+/*!
+ * Bootstrap Grid v5.2.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+/* Configuration */
+@import url("functions.css");
+@import url("variables.css");
+@import url("maps.css");
+
+/* Mixins */
+@import url("mixins/lists.css");
+@import url("mixins/breakpoints.css");
+@import url("mixins/container.css");
+@import url("mixins/grid.css");
+@import url("mixins/utilities.css");
+
+/* Vendor */
+@import url("vendor/rfs.css");
+
+/* Core */
+@import url("root.css");
+@import url("containers.css");
+@import url("grid.css");
+
+/* Utilities */
+/* Only include necessary utilities */
+/* stylelint-disable-next-line scss/dollar-variable-default */
+/* Only include necessary utilities */
+:root {
+  --utilities-display: initial;
+  --utilities-order: initial;
+  --utilities-flex: initial;
+  --utilities-flex-direction: initial;
+  --utilities-flex-grow: initial;
+  --utilities-flex-shrink: initial;
+  --utilities-flex-wrap: initial;
+  --utilities-justify-content: initial;
+  --utilities-align-items: initial;
+  --utilities-align-content: initial;
+  --utilities-align-self: initial;
+  --utilities-margin: initial;
+  --utilities-margin-x: initial;
+  --utilities-margin-y: initial;
+  --utilities-margin-top: initial;
+  --utilities-margin-end: initial;
+  --utilities-margin-bottom: initial;
+  --utilities-margin-start: initial;
+  --utilities-negative-margin: initial;
+  --utilities-negative-margin-x: initial;
+  --utilities-negative-margin-y: initial;
+  --utilities-negative-margin-top: initial;
+  --utilities-negative-margin-end: initial;
+  --utilities-negative-margin-bottom: initial;
+  --utilities-negative-margin-start: initial;
+  --utilities-padding: initial;
+  --utilities-padding-x: initial;
+  --utilities-padding-y: initial;
+  --utilities-padding-top: initial;
+  --utilities-padding-end: initial;
+  --utilities-padding-bottom: initial;
+  --utilities-padding-start: initial;
+}
+
+@import url("utilities/api.css");

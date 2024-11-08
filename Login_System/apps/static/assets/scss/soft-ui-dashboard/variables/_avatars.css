@@ -1,0 +1,59 @@
+/* Avatar */
+.avatar {
+    height: 48px;
+    width: 48px;
+}
+
+@media (max-width: 575.98px) {
+    .avatar {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .avatar {
+        height: 36px;
+        width: 36px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .avatar {
+        height: 58px;
+        width: 58px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .avatar {
+        height: 74px;
+        width: 74px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .avatar {
+        height: 110px;
+        width: 110px;
+    }
+}
+
+.avatar {
+    font-size: 1rem;
+    margin: 0.75rem;
+}
+
+/* Avatar Group */
+.avatar-group {
+    border-width: 2px;
+    z-index: 2;
+}
+
+.avatar-group:hover {
+    z-index: 3;
+}
+
+.avatar-group-double {
+    margin-left: -1rem;
+}

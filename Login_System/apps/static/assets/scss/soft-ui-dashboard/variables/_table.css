@@ -1,0 +1,28 @@
+/* Table Head */
+:root {
+    --table-head-spacer-y:         .75rem;
+    --table-head-spacer-x:         1rem;
+    --table-head-font-size:        .65rem;
+    --table-head-font-weight:      bold;
+    --table-head-text-transform:   uppercase;
+    --table-head-letter-spacing:   1px;
+    --table-head-bg:               #f0f0f0;
+    --table-head-color:            #666666;
+    --table-action-color:          #888888;
+  }
+  
+  /* Table Body */
+  :root {
+    --table-body-font-size:        .8125rem;
+  }
+  
+  /* Table Dark Theme */
+  :root {
+    --table-dark-bg:               #343a40;
+    --table-dark-accent-bg:        rgba(255, 255, 255, 0.05);
+    --table-dark-hover-bg:         rgba(255, 255, 255, 0.075);
+    --table-dark-head-bg:          #3a3f44;
+    --table-dark-head-color:       #8a8a8a;
+    --table-dark-action-color:     #8a8a8a;
+  }
+  

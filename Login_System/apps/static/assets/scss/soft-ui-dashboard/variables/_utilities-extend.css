@@ -1,0 +1,25 @@
+/* Colored Shadow on Cards */
+:root {
+    --colored-shadow-top: 3.5%;
+    --colored-shadow-blur: 12px;
+    --colored-shadow-scale: 0.94;
+    --colored-shadow-scale-avatar: 0.87;
+  
+    /* Card Projects */
+    --card-project-transition: 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    --card-project-avatar-transform: scale(0.8) translateY(-45px);
+    --card-project-hover-transform: translateY(-2px);
+  
+    /* Transform Perspective effect */
+    --transform-perspective: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
+    --transform-perspective-inverse: scale(1) perspective(1040px) rotateY(11deg) rotateX(-2deg) rotate(-2deg);
+  
+    /* Z index */
+    --z-index2: 2;
+  
+    /* Width in PX */
+    --width-32-px: 32px;
+    --width-48-px: 48px;
+    --width-64-px: 64px;
+  }
+  

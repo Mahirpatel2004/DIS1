@@ -1,0 +1,47 @@
+/* Container widths */
+/* Set the container width, and override it for fixed navbars in media queries. */
+
+/* Single container class with breakpoint max-widths */
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Responsive containers that are 100% wide until a breakpoint */
+/* For each breakpoint, extend container-fluid with max-width */
+/* and apply it to container-{breakpoint} */
+@media (min-width: 576px) {
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-md,
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-lg,
+  .container-md,
+  .container,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container,
+  .container-sm {
+    max-width: 1140px;
+  }
+}

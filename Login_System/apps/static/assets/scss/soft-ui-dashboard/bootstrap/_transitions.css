@@ -1,0 +1,26 @@
+/* Fade */
+.fade {
+  transition: opacity 0.3s ease; /* Assuming $transition-fade is 0.3s ease */
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
+
+/* Collapse */
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease; /* Assuming $transition-collapse is 0.35s ease */
+
+  /* Optional: Add transition for horizontal collapse */
+  &.collapse-horizontal {
+    width: 0;
+    height: auto;
+    transition: width 0.35s ease, height 0.35s ease; /* Assuming $transition-collapse-width is 0.35s ease */
+  }
+}

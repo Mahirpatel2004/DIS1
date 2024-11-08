@@ -1,0 +1,83 @@
+/* Navbar Light */
+.navbar-light {
+    --bg: #FBFBFB;
+    --hover-bg: #F5F5F5;
+    --active-bg: #F5F5F5;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --color: rgba(0, 0, 0, 0.6);
+    --hover-color: rgba(0, 0, 0, 0.7);
+    --active-color: rgba(0, 0, 0, 0.9);
+    --disabled-color: rgba(0, 0, 0, 0.3);
+    --toggler-border-color: transparent;
+  }
+  
+  /* Vertical Navbar */
+  .vertical-navbar {
+    --header-width: 4.875rem;
+    --card-opacity: 0.65;
+    --box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+    --border-color: rgba(0, 0, 0, 0.05);
+    --width: 3.875rem;
+    --open-width: 15.625rem;
+    --padding-x: 1rem;
+    --nav-link-padding-x: 1rem;
+    --nav-link-padding-y: 0.675rem;
+    --sidenav-normal-ml: 4.01rem;
+    --m: 1rem;
+    --inner-height: calc(100vh - 360px);
+    --icon-min-width: 1.8rem;
+    --icon-margin-left: 0.15rem;
+    --breadcrumb-padding-y: var(--nav-link-padding-y);
+    --breadcrumb-padding-x: 0;
+    --collapse-dot-size: 5px;
+    --collapse-dot-size-active: 8px;
+    --collapse-margin-left: 1.35rem;
+    --collapse-left: -18px;
+    --collapse-top: 50%;
+    --collapse-translate: translate(0, -50%);
+    --hidden-width: 6rem;
+  }
+  
+  /* Navbar Dark */
+  .navbar-dark {
+    --bg: transparent;
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --active-bg: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --color: rgba(255, 255, 255, 0.95);
+    --hover-color: rgba(255, 255, 255, 0.65);
+    --active-color: rgba(255, 255, 255, 0.65);
+    --disabled-color: rgba(255, 255, 255, 0.25);
+    --toggler-border-color: transparent;
+  }
+  
+  /* Common Variables */
+  :root {
+    --padding-y: 1rem;
+    --padding-x: 1rem;
+    --nav-link-padding-x: 1rem;
+    --nav-link-padding-y: 1rem;
+    --nav-link-font-size: 0.875rem;
+    --nav-link-font-weight: 500;
+    --nav-link-text-transform: normal;
+    --nav-link-letter-spacing: 0;
+    --nav-link-border-radius: 0.25rem; /* Assuming $border-radius-sm is 0.25rem */
+  }
+  
+  /* Font Sizes */
+  .font-size-xs {
+    font-size: calc(var(--font-size-base) * 0.75);
+  }
+  
+  /* Transitions */
+  .transition {
+    --base-time: 0.25s;
+    --cubic-bezier: all var(--base-time) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  /* RTL Page */
+  .rtl-page {
+    --bullet-right: -1.125rem;
+    --hover-padding-right: 2.5rem;
+  }
+  

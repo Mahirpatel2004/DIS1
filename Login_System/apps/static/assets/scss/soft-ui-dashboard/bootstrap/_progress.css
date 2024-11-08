@@ -1,0 +1,50 @@
+/* Disable animation if transitions are disabled */
+
+/* Progress Bar */
+.progress {
+  display: flex;
+  height: var(--prefix-progress-height);
+  overflow: hidden; /* force rounded corners by cropping it */
+  font-size: var(--prefix-progress-font-size);
+  background-color: var(--prefix-progress-bg);
+  border-radius: var(--prefix-progress-border-radius);
+  box-shadow: var(--prefix-progress-box-shadow);
+}
+
+/* Progress Bar Container */
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--prefix-progress-bar-color);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--prefix-progress-bar-bg);
+  transition: var(--prefix-progress-bar-transition);
+}
+
+/* Striped Progress Bar */
+.progress-bar-striped {
+  background-size: var(--prefix-progress-height) var(--prefix-progress-height);
+  /* Include your gradient-striped mixin here if needed */
+}
+
+/* Animated Progress Bar */
+.progress-bar-animated {
+  animation: progress-bar-stripes;
+}
+
+/* Keyframes for Progress Bar Animation */
+@keyframes progress-bar-stripes {
+  0% {
+    background-position-x: var(--prefix-progress-height);
+  }
+}
+
+/* Handle reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar-animated {
+    animation: none;
+  }
+}

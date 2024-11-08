@@ -1,0 +1,88 @@
+/* Styles for .nav with .nav-pills */
+.nav.nav-pills {
+  background: #f0f0f0; /* Example background color */
+  border-radius: 8px; /* Example border radius */
+
+  /* Styles for .nav with .nav-pills and .nav-pills-vertical */
+  &.nav-pills-vertical {
+    border-radius: 12px; /* Example vertical pills border radius */
+  }
+
+  /* Styles for .nav-link within .nav-pills */
+  .nav-link {
+    z-index: 3;
+    color: #333; /* Example dark color */
+    border-radius: 5px; /* Example link border radius */
+    background-color: inherit;
+
+    /* Active link styles */
+    &.active {
+      animation: fadeIn 0.3s ease-in-out; /* Example animation */
+      border-radius: 12px; /* Example vertical link radius */
+    }
+
+    /* Hover styles */
+    &:hover:not(.active) {
+      color: #333; /* Example dark color */
+    }
+  }
+
+  /* Styles for specific variants like .nav-pills-primary */
+  &.nav-pills-primary {
+    background: #ffffff; /* Example primary background */
+    color: #ffffff; /* Example primary color */
+
+    .nav-link.active {
+      background: linear-gradient(to right, #4e54c8, #8f94fb); /* Example primary gradient */
+      color: #ffffff; /* Example primary gradient color */
+    }
+  }
+
+  /* Styles for other variants like .nav-pills-info, .nav-pills-success, etc. */
+  &.nav-pills-info {
+    background: #ffffff; /* Example info background */
+    color: #ffffff; /* Example info color */
+
+    .nav-link.active {
+      background: linear-gradient(to right, #70e1f5, #ffd194); /* Example info gradient */
+      color: #ffffff; /* Example info gradient color */
+    }
+  }
+
+  /* Repeat the above pattern for .nav-pills-success, .nav-pills-warning, .nav-pills-danger, .nav-pills-dark */
+}
+
+/* Additional styles for .moving-tab */
+.moving-tab {
+  z-index: 1 !important;
+
+  .nav-link {
+    color: #ffffff; /* Example white color */
+    transition: 0.2s ease;
+    border-radius: 5px; /* Example link border radius */
+
+    /* Active link styles */
+    &.active {
+      color: #ffffff; /* Example white color */
+      font-weight: bold; /* Example bold font weight */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Example box shadow */
+      animation: fadeIn 0.3s ease-in-out; /* Example active link animation */
+      background: #ffffff; /* Example white background */
+    }
+
+    /* Hover styles */
+    &:hover:not(.active) {
+      color: #333; /* Example dark color */
+    }
+  }
+}
+
+/* Example animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,31 @@
+/* Pagination */
+.pagination {
+    --active-box-shadow: var(--btn-hover-box-shadow);
+  }
+  
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+  }
+  
+  @media (min-width: 992px) {
+    .page-link {
+      width: 46px;
+      height: 46px;
+      line-height: 46px; /* Assuming this was intended for large screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .page-link {
+      width: 30px;
+      height: 30px;
+      line-height: 30px; /* Assuming this was intended for small screens */
+    }
+  }
+  

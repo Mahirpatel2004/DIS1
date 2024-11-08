@@ -1,0 +1,50 @@
+/* Assuming $theme-colors is predefined somewhere */
+
+/* Manually write out each .link-* class */
+.link-primary {
+  color: #007bff !important; /* Example: Replace with precomputed color value */
+}
+
+.link-secondary {
+  color: #6c757d !important; /* Example: Replace with precomputed color value */
+}
+
+.link-success {
+  color: #28a745 !important; /* Example: Replace with precomputed color value */
+}
+
+/* Repeat for other theme colors */
+.link-danger {
+  color: #dc3545 !important; /* Example: Replace with precomputed color value */
+}
+
+.link-warning {
+  color: #ffc107 !important; /* Example: Replace with precomputed color value */
+}
+
+.link-info {
+  color: #17a2b8 !important; /* Example: Replace with precomputed color value */
+}
+
+.link-light {
+  color: #f8f9fa !important; /* Example: Replace with precomputed color value */
+}
+
+.link-dark {
+  color: #343a40 !important; /* Example: Replace with precomputed color value */
+}
+
+/* Add hover/focus states if needed */
+.link-primary:hover,
+.link-primary:focus {
+  /* Example hover/focus state styles */
+  color: #0056b3 !important; /* Example: Replace with hover color */
+}
+
+.link-secondary:hover,
+.link-secondary:focus {
+  /* Example hover/focus state styles */
+  color: #4e5c63 !important; /* Example: Replace with hover color */
+}
+
+/* Repeat for other theme colors as needed */

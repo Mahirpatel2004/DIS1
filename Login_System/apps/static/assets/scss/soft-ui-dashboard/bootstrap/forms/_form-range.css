@@ -1,0 +1,91 @@
+.form-range {
+  width: 100%;
+  height: calc(16px + 4px * 2);
+  padding: 0; /* Need to reset padding */
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-range:focus {
+  outline: 0;
+}
+
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-range::-moz-focus-outer {
+  border: 0;
+}
+
+.form-range::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: calc((8px - 16px) * 0.5); /* Webkit specific */
+  background: linear-gradient(180deg, #fff, #e9ecef);
+  border: 1px solid #dee2e6;
+  border-radius: 1rem;
+  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.15s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-range::-webkit-slider-thumb:active {
+  background: linear-gradient(180deg, #e9ecef, #dee2e6);
+}
+
+.form-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  color: transparent; /* Why? */
+  cursor: pointer;
+  background-color: #dee2e6;
+  border-color: transparent;
+  border-radius: 1rem;
+  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.form-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(180deg, #fff, #e9ecef);
+  border: 1px solid #dee2e6;
+  border-radius: 1rem;
+  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.15s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-range::-moz-range-thumb:active {
+  background: linear-gradient(180deg, #e9ecef, #dee2e6);
+}
+
+.form-range::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  color: transparent;
+  cursor: pointer;
+  background-color: #dee2e6;
+  border-color: transparent; /* Firefox specific? */
+  border-radius: 1rem;
+  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.form-range:disabled {
+  pointer-events: none;
+}
+
+.form-range:disabled::-webkit-slider-thumb {
+  background-color: #e9ecef;
+}
+
+.form-range:disabled::-moz-range-thumb {
+  background-color: #e9ecef;
+}

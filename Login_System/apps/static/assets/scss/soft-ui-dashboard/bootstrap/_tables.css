@@ -1,0 +1,122 @@
+/* Basic Bootstrap table */
+
+.table {
+  --prefix-table-color: #333;
+  --prefix-table-bg: #fff;
+  --prefix-table-border-color: #ccc;
+  --prefix-table-accent-bg: #f8f9fa;
+  --prefix-table-striped-color: #495057;
+  --prefix-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --prefix-table-active-color: #fff;
+  --prefix-table-active-bg: #007bff;
+  --prefix-table-hover-color: #212529;
+  --prefix-table-hover-bg: #f1f1f1;
+
+  width: 100%;
+  margin-bottom: 1rem; /* Replace with your actual spacer value */
+  color: var(--prefix-table-color);
+  vertical-align: middle; /* Replace with your actual value */
+  border-color: var(--prefix-table-border-color);
+}
+
+/* Target th & td */
+.table > :not(caption) > * > * {
+  padding: 0.75rem 1rem; /* Replace with your actual cell padding values */
+  background-color: var(--prefix-table-bg);
+  border-bottom-width: 1px; /* Replace with your actual border width */
+  box-shadow: inset 0 0 0 9999px var(--prefix-table-accent-bg);
+}
+
+.table > tbody {
+  vertical-align: inherit;
+}
+
+.table > thead {
+  vertical-align: bottom;
+}
+
+/* Table Group Divider */
+.table-group-divider {
+  border-top: 2px solid #dee2e6; /* Replace with your actual color */
+}
+
+/* Caption Placement */
+.caption-top {
+  caption-side: top;
+}
+
+/* Condensed Table */
+.table-sm > :not(caption) > * > * {
+  padding: 0.3rem 0.5rem; /* Replace with your actual small padding values */
+}
+
+/* Bordered Table */
+.table-bordered > :not(caption) > * {
+  border-width: 1px 0;
+}
+
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 1px;
+}
+
+/* Borderless Table */
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
+.table-borderless > :not(:first-child) {
+  border-top-width: 0;
+}
+
+/* Zebra-striping for Rows */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  --prefix-table-accent-bg: var(--prefix-table-striped-bg);
+  color: var(--prefix-table-striped-color);
+}
+
+/* Zebra-striping for Columns */
+.table-striped-columns > :not(caption) > tr > :nth-child(odd) {
+  --prefix-table-accent-bg: var(--prefix-table-striped-bg);
+  color: var(--prefix-table-striped-color);
+}
+
+/* Active Table */
+.table-active {
+  --prefix-table-accent-bg: var(--prefix-table-active-bg);
+  color: var(--prefix-table-active-color);
+}
+
+/* Hover Effect */
+.table-hover > tbody > tr:hover > * {
+  --prefix-table-accent-bg: var(--prefix-table-hover-bg);
+  color: var(--prefix-table-hover-color);
+}
+
+/* Responsive Tables */
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

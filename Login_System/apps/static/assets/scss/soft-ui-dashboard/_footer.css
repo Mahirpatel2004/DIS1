@@ -1,0 +1,14 @@
+.footer .nav-link {
+  color: #333; /* Replace $dark with an actual color value */
+  font-weight: normal; /* Replace $font-weight-normal with an actual font weight value */
+  font-size: 14px; /* Replace $font-size-sm with an actual font size value */
+  padding-top: 0;
+  padding-bottom: 10px; /* Replace $nav-link-footer-padding with an actual padding value */
+
+  /* Hover state */
+  transition: opacity 0.3s ease; /* Replace $footer-link-animation with an actual transition value */
+}
+
+.footer .nav-link:hover {
+  opacity: 1;
+}

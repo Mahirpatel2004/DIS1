@@ -1,0 +1,305 @@
+/* Blur effect */
+.blur {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Replace with actual box-shadow value */
+  -webkit-backdrop-filter: blur(10px); /* Replace with actual backdrop-filter value */
+  backdrop-filter: blur(10px); /* Replace with actual backdrop-filter value */
+  background-color: rgba(255, 255, 255, 0.9) !important; /* Replace with actual background-color value */
+
+  &.saturation-less {
+      -webkit-backdrop-filter: grayscale(50%) blur(5px); /* Replace with actual backdrop-filter value */
+      backdrop-filter: grayscale(50%) blur(5px); /* Replace with actual backdrop-filter value */
+  }
+
+  &.blur-rounded {
+      border-radius: 10px; /* Replace with actual border-radius value */
+  }
+
+  &.blur-light {
+      background-color: rgba(255, 255, 255, 0.8); /* Replace with actual background-color value */
+  }
+  &.blur-dark {
+      background-color: rgba(0, 0, 0, 0.8); /* Replace with actual background-color value */
+  }
+}
+
+.shadow-blur {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important; /* Replace with actual box-shadow value */
+}
+
+.shadow-card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important; /* Replace with actual box-shadow value */
+}
+
+.navbar-blur {
+  -webkit-backdrop-filter: blur(10px); /* Replace with actual backdrop-filter value */
+  backdrop-filter: blur(10px); /* Replace with actual backdrop-filter value */
+  background-color: rgba(255, 255, 255, 0.58) !important; /* Replace with actual background-color value */
+}
+
+.blur-section {
+  -webkit-backdrop-filter: blur(10px); /* Replace with actual backdrop-filter value */
+  backdrop-filter: blur(10px); /* Replace with actual backdrop-filter value */
+
+  &.blur-gradient-primary {
+      background: linear-gradient(310deg, rgba(52, 144, 220, 0.95) 0%, rgba(82, 196, 255, 0.95) 100%); /* Replace with actual gradient value */
+  }
+}
+
+/* Transition on hover */
+* {
+  &.move-on-hover {
+      -webkit-transition: all 0.3s ease; /* Replace with actual transition value */
+      transition: all 0.3s ease; /* Replace with actual transition value */
+      overflow: hidden; /* Replace with actual overflow value */
+      -webkit-transform-origin: center; /* Replace with actual transform-origin value */
+      transform-origin: center; /* Replace with actual transform-origin value */
+      -webkit-transform: scale(1); /* Replace with actual transform value */
+      transform: scale(1); /* Replace with actual transform value */
+      -webkit-backface-visibility: hidden; /* Replace with actual backface-visibility value */
+      backface-visibility: hidden; /* Replace with actual backface-visibility value */
+      will-change: transform; /* Replace with actual will-change value */
+
+      &:hover {
+          -webkit-transform: scale(1.1); /* Replace with actual hover transform value */
+          transform: scale(1.1); /* Replace with actual hover transform value */
+      }
+  }
+
+  &.gradient-animation {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(200, 200, 200, 0.9) 100%); /* Replace with actual gradient value */
+      background-size: 200% auto !important; /* Replace with actual background-size value */
+      animation: gradientAnimation 3s ease infinite; /* Replace with actual animation name and duration */
+  }
+}
+
+/* Horizontal lines */
+hr {
+  border: none !important; /* Remove border */
+  height: 1px; /* Set height */
+}
+
+/* Vertical Line */
+hr.vertical {
+  position: absolute;
+  background-color: #eee; /* Replace with actual background-color value */
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 1px;
+
+  &.light {
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%); /* Replace with actual gradient value */
+  }
+
+  &.dark {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); /* Replace with actual gradient value */
+  }
+
+  &.gray-light {
+      background-image: linear-gradient(to bottom, rgba(200, 200, 200, 0.5) 0%, rgba(200, 200, 200, 0.5) 100%); /* Replace with actual gradient value */
+  }
+}
+
+/* Horizontal Line */
+hr.horizontal {
+  background-color: #eee; /* Replace with actual background-color value */
+
+  &.light {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%); /* Replace with actual gradient value */
+  }
+  &.dark {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); /* Replace with actual gradient value */
+  }
+
+  &.gray-light {
+      background-image: linear-gradient(to right, rgba(200, 200, 200, 0.5) 0%, rgba(200, 200, 200, 0.5) 100%); /* Replace with actual gradient value */
+  }
+}
+
+/* Lock style */
+.lock-size {
+  width: 1.7rem; /* Replace with actual width value */
+  height: 1.7rem; /* Replace with actual height value */
+}
+
+
+/* Border radius */
+.border-radius-xs {
+  border-radius: 4px; /* Replace with actual border-radius value */
+}
+
+.border-radius-sm {
+  border-radius: 6px; /* Replace with actual border-radius value */
+}
+
+.border-radius-md {
+  border-radius: 8px; /* Replace with actual border-radius value */
+}
+
+.border-radius-lg {
+  border-radius: 10px; /* Replace with actual border-radius value */
+}
+
+.border-radius-xl {
+  border-radius: 12px; /* Replace with actual border-radius value */
+}
+
+.border-radius-2xl {
+  border-radius: 16px; /* Replace with actual border-radius value */
+}
+
+.border-radius-section {
+  border-radius: 20px; /* Replace with actual border-radius value */
+}
+
+.border-bottom-end-radius-0 {
+  border-bottom-right-radius: 0;
+}
+
+.border-top-end-radius-0 {
+  border-top-right-radius: 0;
+}
+
+.border-bottom-start-radius-0 {
+  border-bottom-left-radius: 0;
+}
+
+.border-top-start-radius-0 {
+  border-top-left-radius: 0;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.z-index-sticky {
+  z-index: 1000; /* Replace with actual z-index value */
+}
+
+/* Moving waves animation */
+.waves {
+  position: absolute; /* Replace with actual position value */
+  width: 100%; /* Replace with actual width value */
+  height: 100px; /* Replace with actual height value */
+  margin-bottom: 20px; /* Replace with actual margin value */
+  min-height: 50px; /* Replace with actual min-height value */
+  max-height: 200px; /* Replace with actual max-height value */
+}
+
+.waves.waves-sm {
+  height: 50px; /* Replace with actual height value */
+  min-height: 30px; /* Replace with actual min-height value */
+}
+
+.waves.no-animation .moving-waves > use {
+  animation: none; /* Disable animation */
+}
+
+.wave-rotate {
+  transform: rotate(45deg); /* Replace with actual rotation value */
+}
+
+.moving-waves > use {
+  animation: move-forever 2s linear infinite; /* Replace with actual animation values */
+}
+
+@keyframes move-forever {
+  0% {
+      transform: translateX(0); /* Replace with actual keyframe values */
+  }
+  100% {
+      transform: translateX(100%); /* Replace with actual keyframe values */
+  }
+}
+
+/* Shrinking for mobile */
+@media (max-width: 991.98px) {
+  .waves {
+      height: 30px; /* Replace with actual mobile height value */
+      min-height: 20px; /* Replace with actual mobile min-height value */
+  }
+
+  hr.horizontal {
+      background-color: #eee; /* Replace with actual background-color value */
+
+      &:not(.dark) {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%); /* Replace with actual gradient value */
+      }
+
+      &.vertical {
+          transform: rotate(90deg); /* Replace with actual rotation value */
+      }
+
+      &.dark {
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); /* Replace with actual gradient value */
+      }
+  }
+}
+
+/* Overflow Visible */
+.overflow-visible {
+  overflow: visible !important;
+}
+
+/* Popover Title */
+.popover .popover-header {
+  font-weight: 600;
+}
+
+/* Background Sizes */
+.bg-cover {
+  background-size: cover;
+}
+
+/* Overflow Directional */
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+/* Mask Class */
+.mask {
+  /* Replace variables with actual values or static values */
+  position: absolute; /* Example: replace with actual position value */
+  background-size: cover; /* Example: replace with actual background size */
+  background-position: center; /* Example: replace with actual background position */
+  top: 0; /* Example: replace with actual top value */
+  left: 0; /* Example: replace with actual left value */
+  width: 100%; /* Example: replace with actual width value */
+  height: 100%; /* Example: replace with actual height value */
+  opacity: 0.5; /* Example: replace with actual opacity value */
+}
+
+
+/* Cursor Pointer Class */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Translate 50% Class */
+.transform-translate-50 {
+  transform: translate(0, -50%);
+}
+
+/* VR Pages */
+@media (min-width: 992px) {
+  .virtual-reality .sidenav {
+    margin-top: 20px; /* Example margin top */
+    animation-name: slide-in; /* Example animation name */
+    animation-fill-mode: forwards; /* Example animation fill mode */
+    animation-duration: 0.5s; /* Example animation duration */
+    transform: scale(1.1); /* Example transform scale */
+    background: #f0f0f0; /* Example background color */
+    left: 10px; /* Example left position */
+    position: absolute !important;
+  }
+}
+

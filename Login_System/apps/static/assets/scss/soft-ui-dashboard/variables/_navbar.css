@@ -1,0 +1,27 @@
+/* Navbar Toggler Icon */
+.navbar-toggler-bar {
+    display: block;
+    position: relative;
+    width: 22px;
+    height: 1px;
+    border-radius: 1px;
+    transition: all 0.2s;
+    margin-top: 7px;
+  }
+  
+  .navbar-toggler-bar-1 {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+    margin-top: 4px;
+  }
+  
+  .navbar-toggler-bar-2 {
+    opacity: 0;
+  }
+  
+  .navbar-toggler-bar-3 {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+    margin-top: 3px;
+  }
+  

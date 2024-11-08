@@ -1,0 +1,34 @@
+.dropdown {
+    --subitem-position: 101%;
+    --transition: visibility 0.25s, opacity 0.25s, transform 0.25s;
+    --transform-origin: 50% 0;
+    --transform: perspective(999px) rotateX(-10deg) translateZ(0) translate3d(0px, 37px, 0px) !important;
+    --transform-show: perspective(999px) rotateX(0deg) translateZ(0) translate3d(0, 37px, 5px) !important;
+    --multilevel-transform: perspective(999px) rotateX(-10deg) translateZ(0) translate3d(0px, 0px, 0px) !important;
+    --multilevel-transform-show: perspective(999px) rotateX(0deg) translateZ(0) translate3d(0, 0px, 5px) !important;
+    --dropup-transform-origin: bottom;
+    --dropup-transform: perspective(999px) rotateX(12deg) translateZ(0) translate3d(0px, 0px, 0px) !important;
+    --dropup-transform-show: perspective(999px) rotateX(0deg) translateZ(0) translate3d(1px, 0px, 5px) !important;
+    --transform-responsive-show: var(--multilevel-transform-show);
+    --icon-margin-right: 0.75rem;
+    --toggle-arrow-transform: rotate(180deg);
+    --toggle-arrow-transition: 0.3s ease;
+    --button-after-margin-top: 3px;
+    --animation-arrow-left-position: 28px;
+    --animation-arrow-bottom-position: 22px;
+    --animation-arrow-font-size: 22px;
+    --animation-arrow-transition: top 0.35s ease;
+    --dropup-animation-arrow-transition: bottom 0.35s ease;
+    --dropup-mb: 0.5rem;
+    --mt: 8px;
+    --hover-after-bottom-pos: -24px;
+    --hover-arrow-active-top: -20px;
+    --subitem-position-right: -197px;
+    --subitem-left-hover: -8px;
+    --subitem-arrow-rotate: rotate(-90deg);
+    --md-min-width: 15rem;
+    --lg-min-width: 23rem;
+    --lg-width-responsive: 19rem;
+    --xl-min-width: 40rem;
+  }
+  

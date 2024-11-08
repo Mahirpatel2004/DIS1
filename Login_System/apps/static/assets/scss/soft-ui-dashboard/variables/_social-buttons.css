@@ -1,0 +1,30 @@
+/* Social Buttons */
+:root {
+    --facebook: #3b5998;
+    --facebook-states: #2d4788; /* Darkened state */
+    --twitter: #55acee;
+    --twitter-states: #4a90db; /* Darkened state */
+    --instagram: #125688;
+    --instagram-states: #0f4e77; /* Darkened state */
+    --linkedin: #0077B5;
+    --linkedin-states: #005c8e; /* Darkened state */
+    --pinterest: #cc2127;
+    --pinterest-states: #b3171d; /* Darkened state */
+    --youtube: #e52d27;
+    --youtube-states: #c82822; /* Darkened state */
+    --dribbble: #ea4c89;
+    --dribbble-states: #d3427c; /* Darkened state */
+    --github: #24292E;
+    --github-states: #1e2226; /* Darkened state */
+    --reddit: #ff4500;
+    --reddit-states: #e33e00; /* Darkened state */
+    --tumblr: #35465c;
+    --tumblr-states: #2b3c50; /* Darkened state */
+    --behance: #1769ff;
+    --behance-states: #1253db; /* Darkened state */
+    --vimeo: #1AB7EA;
+    --vimeo-states: #1599cc; /* Darkened state */
+    --slack: #3aaf85;
+    --slack-states: #32986f; /* Darkened state */
+  }
+  

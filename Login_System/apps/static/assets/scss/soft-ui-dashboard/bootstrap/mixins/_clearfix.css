@@ -1,0 +1,8 @@
+/* Clearfix */
+/* Note: This is a static approximation and won't adjust dynamically */
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}

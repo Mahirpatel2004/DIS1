@@ -1,0 +1,50 @@
+/* Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  --prefix-gutter-x: var(--grid-gutter-width);
+  --prefix-gutter-y: 0;
+  margin-top: calc(-1 * var(--prefix-gutter-y));
+  margin-right: calc(-0.5 * var(--prefix-gutter-x));
+  margin-left: calc(-0.5 * var(--prefix-gutter-x));
+}
+
+/* Column Ready */
+.col {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--prefix-gutter-x) * 0.5);
+  padding-left: calc(var(--prefix-gutter-x) * 0.5);
+  margin-top: var(--prefix-gutter-y);
+}
+
+/* Column Sizes */
+.col-1 { flex: 0 0 8.33333%; width: 8.33333%; }
+.col-2 { flex: 0 0 16.66667%; width: 16.66667%; }
+/* Repeat for col-3 to col-12 or as needed */
+
+/* Column Auto */
+.col-auto { flex: 0 0 auto; width: auto; }
+
+/* Column Offset */
+.offset-1 { margin-left: 8.33333%; }
+.offset-2 { margin-left: 16.66667%; }
+/* Repeat for offset-3 to offset-11 or as needed */
+
+/* Row Columns */
+.row-cols > * { flex: 0 0 auto; }
+.row-cols-1 > * { width: 100%; }
+.row-cols-2 > * { width: 50%; }
+/* Repeat for row-cols-3 to row-cols-12 or as needed */
+
+/* Framework Grid Columns */
+/* Note: This part typically generates classes dynamically and requires preprocessing */
+/* Example: .col-sm-1, .col-md-2, .offset-lg-3, etc. */
+/* You may manually define or use a CSS preprocessor to generate these classes */
+
+/* CSS Grid Columns */
+/* Note: CSS Grid classes are also typically generated dynamically and require preprocessing */
+/* Example: .g-col-sm-1, .g-col-md-2, .g-start-lg-3, etc. */
+/* You may manually define or use a CSS preprocessor to generate these classes */

@@ -1,0 +1,87 @@
+/* Define your breakpoints */
+/* Note: Breakpoints are typically defined in Sass, not CSS */
+/* Example:
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+*/
+
+/* Media query mixins translated into CSS */
+/* These will need to be manually written in CSS */
+
+/* Media of at least the minimum breakpoint width */
+@media (min-width: 576px) {
+  /* Content for min-width sm */
+}
+
+@media (min-width: 768px) {
+  /* Content for min-width md */
+}
+
+@media (min-width: 992px) {
+  /* Content for min-width lg */
+}
+
+@media (min-width: 1200px) {
+  /* Content for min-width xl */
+}
+
+@media (min-width: 1400px) {
+  /* Content for min-width xxl */
+}
+
+/* Media of at most the maximum breakpoint width */
+@media (max-width: 575.98px) {
+  /* Content for max-width xs */
+}
+
+@media (max-width: 767.98px) {
+  /* Content for max-width sm */
+}
+
+@media (max-width: 991.98px) {
+  /* Content for max-width md */
+}
+
+@media (max-width: 1199.98px) {
+  /* Content for max-width lg */
+}
+
+@media (max-width: 1399.98px) {
+  /* Content for max-width xl */
+}
+
+/* Media that spans multiple breakpoint widths */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Content for sm to md */
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Content for md to lg */
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Content for lg to xl */
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* Content for xl to xxl */
+}
+
+/* Media between the breakpoint's minimum and maximum widths */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  /* Content for sm to lg */
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  /* Content for md to xl */
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  /* Content for lg to xxl */
+}

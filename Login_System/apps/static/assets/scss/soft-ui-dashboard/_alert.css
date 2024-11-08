@@ -1,0 +1,26 @@
+/* Gradient Alerts */
+.alert-success {
+  background-image: linear-gradient(310deg, #4CAF50 0%, #388E3C 100%);
+}
+
+.alert-info {
+  background-image: linear-gradient(310deg, #2196F3 0%, #1976D2 100%);
+}
+
+.alert-warning {
+  background-image: linear-gradient(310deg, #FFC107 0%, #FFA000 100%);
+}
+
+.alert-danger {
+  background-image: linear-gradient(310deg, #F44336 0%, #D32F2F 100%);
+}
+
+/* Button Close Focus */
+.btn-close:focus {
+  box-shadow: none;
+}
+
+/* Alert Dismissible Button Close */
+.alert-dismissible .btn-close {
+  background-image: none;
+}

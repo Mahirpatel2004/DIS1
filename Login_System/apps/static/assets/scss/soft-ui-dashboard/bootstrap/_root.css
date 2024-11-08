@@ -1,0 +1,89 @@
+/* stylelint-disable custom-property-empty-line-before */
+
+:root {
+  /* Note: Custom variable values only support SassScript inside `#{}`. */
+
+  /* Colors */
+
+  /* Primary colors */
+  --prefix-primary: #007bff;
+  --prefix-secondary: #6c757d;
+  --prefix-success: #28a745;
+  --prefix-info: #17a2b8;
+  --prefix-warning: #ffc107;
+  --prefix-danger: #dc3545;
+  --prefix-light: #f8f9fa;
+  --prefix-dark: #343a40;
+
+  /* Gray shades */
+  --prefix-gray-100: #f8f9fa;
+  --prefix-gray-200: #e9ecef;
+  --prefix-gray-300: #dee2e6;
+  --prefix-gray-400: #ced4da;
+  --prefix-gray-500: #adb5bd;
+  --prefix-gray-600: #6c757d;
+  --prefix-gray-700: #495057;
+  --prefix-gray-800: #343a40;
+  --prefix-gray-900: #212529;
+
+  /* Theme colors */
+  --prefix-primary: #007bff;
+  --prefix-secondary: #6c757d;
+  --prefix-success: #28a745;
+  --prefix-info: #17a2b8;
+  --prefix-warning: #ffc107;
+  --prefix-danger: #dc3545;
+  --prefix-light: #f8f9fa;
+  --prefix-dark: #343a40;
+
+  /* Theme colors in RGB */
+  --prefix-primary-rgb: rgba(0, 123, 255, 1);
+  --prefix-secondary-rgb: rgba(108, 117, 125, 1);
+  --prefix-success-rgb: rgba(40, 167, 69, 1);
+  --prefix-info-rgb: rgba(23, 162, 184, 1);
+  --prefix-warning-rgb: rgba(255, 193, 7, 1);
+  --prefix-danger-rgb: rgba(220, 53, 69, 1);
+  --prefix-light-rgb: rgba(248, 249, 250, 1);
+  --prefix-dark-rgb: rgba(52, 58, 64, 1);
+
+  /* Other colors */
+  --prefix-white-rgb: rgba(255, 255, 255, 1); /* Replace with your specific `to-rgb()` function */
+  --prefix-black-rgb: rgba(0, 0, 0, 1); /* Replace with your specific `to-rgb()` function */
+  --prefix-body-color-rgb: rgba(33, 37, 41, 1); /* Replace with your specific `to-rgb()` function */
+  --prefix-body-bg-rgb: rgba(248, 249, 250, 1); /* Replace with your specific `to-rgb()` function */
+
+  /* Fonts */
+  --prefix-font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --prefix-font-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+  --prefix-gradient: linear-gradient(to right, #000000, #ffffff); /* Example gradient */
+
+  /* Root and body */
+  /* Root and body variables */
+  --prefix-root-font-size: 16px; /* Adjust as needed */
+  --prefix-body-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --prefix-body-font-size: 1rem; /* Adjust as needed */
+  --prefix-body-font-weight: 400;
+  --prefix-body-line-height: 1.5;
+  --prefix-body-color: #212529;
+  --prefix-body-text-align: left;
+  --prefix-body-bg: #ffffff;
+
+  /* Border variables */
+  --prefix-border-width: 1px;
+  --prefix-border-style: solid;
+  --prefix-border-color: #dee2e6;
+  --prefix-border-color-translucent: rgba(0, 0, 0, 0.1);
+  --prefix-border-radius: 0.25rem;
+  --prefix-border-radius-sm: 0.2rem;
+  --prefix-border-radius-lg: 0.3rem;
+  --prefix-border-radius-xl: 0.5rem;
+  --prefix-border-radius-2xl: 0.75rem;
+  --prefix-border-radius-pill: 50rem;
+
+  /* Other variables */
+  --prefix-heading-color: #212529;
+  --prefix-link-color: #007bff;
+  --prefix-link-hover-color: #0056b3;
+  --prefix-code-color: #e83e8c;
+  --prefix-highlight-bg: #ffeb3b;
+}

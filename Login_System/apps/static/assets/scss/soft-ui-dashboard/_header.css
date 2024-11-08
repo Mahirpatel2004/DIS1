@@ -1,0 +1,27 @@
+.page-header {
+  padding: 20px; /* Replace with actual padding value */
+  position: relative; /* Replace with actual position value */
+  overflow: hidden; /* Replace with actual overflow value */
+  display: flex; /* Replace with actual display value */
+  align-items: center; /* Replace with actual align-items value */
+  background-size: cover; /* Replace with actual background-size value */
+  background-position: center; /* Replace with actual background-position value */
+
+  /* Adjust z-index for .container */
+  .container {
+      z-index: 10; /* Replace with actual z-index value */
+  }
+}
+
+.oblique {
+  transform: skewY(-10deg) rotate(-3deg); /* Replace with actual transform value */
+  overflow: hidden; /* Replace with actual overflow value */
+  width: 120%; /* Replace with actual width value */
+  right: -10%; /* Replace with actual right value */
+  border-bottom-left-radius: 20px; /* Replace with actual border radius value */
+
+  /* Adjust transform for .oblique-image */
+  .oblique-image {
+      transform: skewY(10deg) rotate(3deg); /* Replace with actual transform value */
+  }
+}

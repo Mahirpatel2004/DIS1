@@ -1,0 +1,9 @@
+/* Example CSS file: main.css */
+
+/* Importing stylesheets */
+@import 'input-group.css'; /* Replace with actual file names */
+@import 'form-check.css';
+@import 'form-switch.css';
+@import 'form-select.css';
+@import 'labels.css';
+@import 'inputs.css';

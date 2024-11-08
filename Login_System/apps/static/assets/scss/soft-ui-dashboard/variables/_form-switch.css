@@ -1,0 +1,20 @@
+.slider {
+    --dim: 15px;
+    --position: 2px;
+    --moving-circle: translateX(21px);
+  }
+  
+  .slider {
+    width: var(--dim);
+    height: var(--dim);
+  }
+  
+  .slider-thumb {
+    position: relative;
+    left: var(--position);
+  }
+  
+  .slider-thumb.moving {
+    transform: var(--moving-circle);
+  }
+  

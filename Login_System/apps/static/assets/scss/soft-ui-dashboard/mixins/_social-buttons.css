@@ -1,0 +1,43 @@
+/* Default button styles */
+.social-button {
+  background-color: #fff; /* Replace with actual default color */
+  color: #fff; /* Example white color */
+  transition: background-color 0.3s, color 0.3s; /* Example transition */
+
+  /* Hover and focus states */
+  &:hover,
+  &:focus {
+    background-color: #fff; /* Replace with actual hover/focus color */
+  }
+
+  /* Active state */
+  &:active {
+    color: #ff0000; /* Replace with actual active color */
+    box-shadow: none; /* Example box shadow removal */
+  }
+}
+
+/* Button variation: .btn-simple */
+.social-button.btn-simple {
+  color: #ff0000; /* Replace with actual simple button color */
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Hover, focus, active states for .btn-simple */
+.social-button.btn-simple:hover,
+.social-button.btn-simple:focus,
+.social-button.btn-simple:active {
+  color: #ff0000; /* Replace with actual simple button hover/focus color */
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Button variation: .btn-neutral */
+.social-button.btn-neutral {
+  color: #ff0000; /* Replace with actual neutral button color */
+  background-color: #fff; /* Example white background */
+}
+
+/* Hover, focus, active states

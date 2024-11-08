@@ -1,0 +1,18 @@
+/* Text Reset */
+.text-reset {
+  font-family: "Arial, sans-serif"; /* Replace with actual $font-family-base value */
+  /* We deliberately do NOT reset font-size or overflow-wrap / word-wrap. */
+  font-style: normal;
+  font-weight: 400; /* Replace with actual $font-weight-normal value */
+  line-height: 1.5; /* Replace with actual $line-height-base value */
+  text-align: left; /* Fallback for where `start` is not supported */
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
+}

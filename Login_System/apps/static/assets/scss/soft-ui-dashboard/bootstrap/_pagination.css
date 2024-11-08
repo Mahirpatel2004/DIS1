@@ -1,0 +1,80 @@
+/* stylelint-disable custom-property-empty-line-before */
+
+/* Pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: var(--prefix-pagination-padding-y) var(--prefix-pagination-padding-x);
+  font-size: var(--prefix-pagination-font-size);
+  color: var(--prefix-pagination-color);
+  text-decoration: none;
+  background-color: var(--prefix-pagination-bg);
+  border: var(--prefix-pagination-border-width) solid var(--prefix-pagination-border-color);
+  transition: var(--prefix-pagination-transition);
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: var(--prefix-pagination-hover-color);
+  background-color: var(--prefix-pagination-hover-bg);
+  border-color: var(--prefix-pagination-hover-border-color);
+}
+
+.page-link:focus {
+  z-index: 3;
+  color: var(--prefix-pagination-focus-color);
+  background-color: var(--prefix-pagination-focus-bg);
+  outline: var(--prefix-pagination-focus-outline);
+  box-shadow: var(--prefix-pagination-focus-box-shadow);
+}
+
+.page-link.active,
+.active > .page-link {
+  z-index: 3;
+  color: var(--prefix-pagination-active-color);
+  background-image: var(--prefix-pagination-active-bg);
+  border-color: var(--prefix-pagination-active-border-color);
+}
+
+.page-link.disabled,
+.disabled > .page-link {
+  color: var(--prefix-pagination-disabled-color);
+  pointer-events: none;
+  background-color: var(--prefix-pagination-disabled-bg);
+  border-color: var(--prefix-pagination-disabled-border-color);
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: var(--pagination-margin-start);
+}
+
+
+.page-item:first-child .page-link {
+  @if $pagination-margin-start == (calc($pagination-border-width * -1)) {
+    @include border-start-radius(var(--prefix-pagination-border-radius)); /* Assuming mixin is defined */
+  }
+}
+
+.page-item:last-child .page-link {
+  @if $pagination-margin-start == (calc($pagination-border-width * -1)) {
+    @include border-end-radius(var(--prefix-pagination-border-radius)); /* Assuming mixin is defined */
+  }
+}
+
+.pagination-lg {
+  padding: 10px 20px; /* Example values, replace with your desired padding */
+  font-size: 16px; /* Example value, replace with your desired font size */
+  border-radius: 5px; /* Example value, replace with your desired border radius */
+}
+
+.pagination-sm {
+  padding: 5px 10px; /* Example values, replace with your desired padding */
+  font-size: 12px; /* Example value, replace with your desired font size */
+  border-radius: 3px; /* Example value, replace with your desired border radius */
+}
+

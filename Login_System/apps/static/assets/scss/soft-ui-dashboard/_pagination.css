@@ -1,0 +1,42 @@
+/* General Page Item Styles */
+.page-item.active .page-link {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Example value for pagination-active-box-shadow */
+}
+
+.page-item .page-link,
+.page-item span {
+  display: inline-flex; /* Example value for page-link-display */
+  align-items: center; /* Example value for page-link-align-items */
+  justify-content: center; /* Example value for page-link-justify-content */
+  color: #6c757d; /* Example value for secondary color */
+  padding: 0;
+  margin: 0 0.25rem; /* Example value for page-link-margin */
+  border-radius: 0.25rem !important; /* Example value for page-link-radius */
+  width: 2rem; /* Example value for page-link-width */
+  height: 2rem; /* Example value for page-link-height */
+  font-size: 0.875rem; /* Example value for font-size-sm */
+}
+
+/* Large Pagination Styles */
+.pagination-lg .page-item .page-link,
+.pagination-lg .page-item span {
+  width: 2.5rem; /* Example value for page-link-width-lg */
+  height: 2.5rem; /* Example value for page-link-height-lg */
+  line-height: 2.5rem; /* Example value for page-link-line-height-lg */
+}
+
+/* Small Pagination Styles */
+.pagination-sm .page-item .page-link,
+.pagination-sm .page-item span {
+  width: 1.5rem; /* Example value for page-link-width-sm */
+  height: 1.5rem; /* Example value for page-link-height-sm */
+  line-height: 1.5rem; /* Example value for page-link-line-height-sm */
+}
+
+/* Color Variants */
+.pagination.pagination-theme1 .page-item.active > .page-link,
+.pagination.pagination-theme2 .page-item.active > .page-link,
+.pagination.pagination-theme3 .page-item.active > .page-link {
+  background: linear-gradient(310deg, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 255, 1) 100%); /* Example gradient colors */
+  border: none;
+}

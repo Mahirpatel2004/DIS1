@@ -1,0 +1,20 @@
+/* Progress Bar Styles */
+.progress-bar {
+  height: 1.5rem; /* Example value for progress-bar-height */
+  border-radius: 0.25rem; /* Example value for border-radius */
+  margin-top: -0.095rem;
+  margin-left: -1px;
+}
+
+/* Progress Styles */
+.progress {
+  overflow: visible;
+}
+
+.progress.progress-sm {
+  height: 1rem; /* Example value for progress-height-sm */
+}
+
+.progress.progress-lg {
+  height: 2rem; /* Example value for progress-height-lg */
+}

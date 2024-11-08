@@ -1,0 +1,44 @@
+/* stylelint-disable custom-property-empty-line-before */
+
+/* Base class
+   Requires one of the contextual, color modifier classes for `color` and
+   `background-color`. */
+   .badge {
+    /* scss-docs-start badge-css-vars */
+    /* Replace with actual values */
+    --prefix-badge-padding-x: 10px;
+    --prefix-badge-padding-y: 5px;
+    /* Replace with actual value */
+    --prefix-badge-font-size: 14px;
+    /* Replace with actual value */
+    --prefix-badge-font-weight: bold;
+    /* Replace with actual value */
+    --prefix-badge-color: #fff;
+    /* Replace with actual value */
+    --prefix-badge-border-radius: 4px;
+    /* scss-docs-end badge-css-vars */
+  
+    display: inline-block;
+    padding: var(--prefix-badge-padding-y) var(--prefix-badge-padding-x);
+    font-size: var(--prefix-badge-font-size);
+    font-weight: var(--prefix-badge-font-weight);
+    line-height: 1;
+    color: var(--prefix-badge-color);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: var(--prefix-badge-border-radius, 0); /* stylelint-disable-line property-disallowed-list */
+    /* @include gradient-bg(); */ /* Include gradient background mixin if available */
+  
+    /* Empty badges collapse automatically */
+    &:empty {
+      display: none;
+    }
+  }
+  
+  /* Quick fix for badges in buttons */
+  .btn .badge {
+    position: relative;
+    top: -1px;
+  }
+  

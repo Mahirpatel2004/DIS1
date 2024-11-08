@@ -1,0 +1,112 @@
+/* Card Box Shadow */
+.card {
+    box-shadow: 0 20px 27px 0 rgba(0,0,0,0.05);
+}
+
+.card-background-blur {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-header {
+    padding: 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem; /* Assuming $card-header-padding is 1.5rem */
+}
+
+.card-plain {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.card-footer {
+    padding: 1.5rem; /* Assuming $card-body-padding is used */
+}
+
+.card-title {
+    font-weight: bold; /* Assuming $font-weight-bold is defined elsewhere */
+    line-height: 1.2;
+}
+
+.card-author {
+    display: flex;
+}
+
+.card-author-name {
+    line-height: 1.571;
+    color: #3A416F;
+}
+
+.card-author-stats {
+    color: #5D6494;
+}
+
+.card-avatar {
+    width: 30px;
+    height: 30px; /* Assuming $card-avatar-width is 30px */
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.card-stats-name {
+    margin-top: -4px;
+}
+
+.card-name {
+    margin-left: .25rem;
+}
+
+.card-badge {
+    text-transform: uppercase;
+    background-color: #FAFAFF;
+}
+
+/* Card Background */
+.card-background {
+    align-items: center;
+    position: relative;
+}
+
+.card-background-content {
+    min-height: 330px;
+    max-width: 450px;
+    padding-top: 60px;
+    padding-bottom: 60px; /* Assuming $card-bg-content-pt is used */
+}
+
+.card-background-body {
+    width: 90%;
+}
+
+.card-background-description {
+    margin: 24px;
+}
+
+.card-background-filter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    content: "";
+    background-color: rgba(0,0,0,.4);
+    mask-image: rgba(0,0,0,.2);
+    border-radius: 1rem;
+}
+
+.card-full-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+    background-size: cover;
+    margin-bottom: 30px;
+    border-radius: 1rem; /* Assuming $card-bg-filter-radius is used */
+}

@@ -1,0 +1,22 @@
+/* CSS approximation of mixin badge-variant */
+.badge {
+  /* Replace with computed or hardcoded values */
+  color: #ffffff; /* Example color */
+  background-color: #007bff; /* Example background color */
+
+  /* Adjust styles for anchor tags within badges */
+  &[href] {
+    /* CSS hover and focus effects */
+    color: #ffffff; /* Example color */
+    text-decoration: none; /* Example text-decoration */
+    background-color: #0056b3; /* Example background color */
+
+    /* Simulated hover and focus effects */
+    &:hover,
+    &:focus {
+      color: #ffffff; /* Example color */
+      text-decoration: none; /* Example text-decoration */
+      background-color: #0056b3; /* Example background color */
+    }
+  }
+}

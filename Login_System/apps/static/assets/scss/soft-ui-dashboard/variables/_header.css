@@ -1,0 +1,59 @@
+.page-header {
+    --padding: 0;
+    --position: relative;
+    --overflow: hidden;
+    --display: flex;
+    --align-items: center;
+    --bg-size: cover;
+    --bg-position: 50%;
+  
+    padding: var(--padding);
+    position: var(--position);
+    overflow: var(--overflow);
+    display: var(--display);
+    align-items: var(--align-items);
+    background-size: var(--bg-size);
+    background-position: var(--bg-position);
+  }
+  
+  .mask {
+    --position: absolute;
+    --bg-size: cover;
+    --bg-position: center center;
+    --top: 0;
+    --left: var(--top);
+    --width: 100%;
+    --height: var(--width);
+    --opacity: 0.8;
+  
+    position: var(--position);
+    background-size: var(--bg-size);
+    background-position: var(--bg-position);
+    top: var(--top);
+    left: var(--left);
+    width: var(--width);
+    height: var(--height);
+    opacity: var(--opacity);
+  }
+  
+  .page-header-container {
+    z-index: 1;
+  }
+  
+  .header-oblique {
+    --img-width: 60%;
+    --img-right: -10rem;
+    --transform: skewX(-10deg);
+    --overflow: hidden;
+    --img-transform: skewX(10deg);
+  
+    img {
+      width: var(--img-width);
+      right: var(--img-right);
+      transform: var(--img-transform);
+    }
+  
+    overflow: var(--overflow);
+    transform: var(--transform);
+  }
+  

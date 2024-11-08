@@ -1,0 +1,214 @@
+/* Navbar Styles */
+.navbar {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Example value for navbar-box-shadow */
+
+  /* Navbar Brand */
+  .navbar-brand {
+    color: #343a40; /* Example value for dark color */
+  }
+
+  /* Navbar Links */
+  .nav-link {
+    color: #343a40; /* Example value for dark color */
+    padding: 0.5rem 1rem; /* Example value for navbar-nav-link-padding */
+    font-weight: 400; /* Example value for font-weight-normal */
+    font-size: 0.875rem; /* Example value for font-size-sm */
+  }
+
+  /* Absolute Navbar */
+  &.navbar-absolute {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* Transparent Navbar */
+  &.navbar-transparent {
+    .nav-link,
+    .nav-link i {
+      color: #ffffff; /* Example value for white color */
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: rgba(255, 255, 255, 0.75); /* Example value for semi-transparent white */
+    }
+
+    .navbar-toggler .navbar-toggler-icon .navbar-toggler-bar {
+      background: #ffffff; /* Example value for white */
+    }
+
+    .navbar-collapse {
+      border-radius: 0.75rem; /* Example value for border-radius-xl */
+    }
+  }
+
+  /* Dark Navbar */
+  &.navbar-dark {
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+      .dropdown-header.text-dark {
+        color: #ffffff !important; /* Example value for white color */
+      }
+    }
+  }
+
+  /* Sidenav Toggler Inner */
+  .sidenav-toggler-inner {
+    width: 2rem; /* Example value for sidenav-toggler-width */
+  }
+
+  .sidenav-toggler-inner .sidenav-toggler-line {
+    transition: 0.2s; /* Example value for sidenav-toggler-line-transition */
+    background: #000000; /* Example value for body-color */
+    border-radius: 0.25rem; /* Example value for border-radius-xs */
+    position: relative;
+    display: block;
+    height: 3px; /* Example value for sidenav-toggler-line-height */
+
+    &:not(:last-child) {
+      margin-bottom: 4px; /* Example value for sidenav-toggler-line-margin-bottom */
+    }
+  }
+
+  .g-sidenav-show.g-sidenav-pinned .sidenav-toggler-inner .sidenav-toggler-line:first-child,
+  .g-sidenav-show.g-sidenav-pinned .sidenav-toggler-inner .sidenav-toggler-line:last-child {
+    width: 2.5rem; /* Example value for sidenav-toggler-line-active-width */
+    transform: rotate(45deg); /* Example value for sidenav-toggler-line-transform */
+  }
+}
+
+/* Light Navbar */
+.navbar-light {
+  background-color: #ffffff !important; /* Example value for white */
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: none;
+
+    .navbar-toggler-bar {
+      display: block; /* Example value for navbar-toggler-bar-display */
+      position: relative; /* Example value for navbar-toggler-bar-position */
+      width: 1.5rem; /* Example value for navbar-toggler-bar-width */
+      height: 2px; /* Example value for navbar-toggler-bar-height */
+      border-radius: 1px; /* Example value for navbar-toggler-bar-radius */
+      background: #6c757d; /* Example value for gray-600 */
+      transition: 0.3s; /* Example value for navbar-toggler-bar-transition */
+      margin: 0 auto;
+
+      &.bar2,
+      &.bar3 {
+        margin-top: 4px; /* Example value for navbar-toggler-bar-margin-top */
+      }
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .navbar-toggler-bar.bar1 {
+      transform: rotate(45deg); /* Example value for navbar-toggler-bar-1-transform */
+      transform-origin: 10% 10%; /* Example value for navbar-toggler-bar-1-transform-origin */
+      margin-top: 6px; /* Example value for navbar-toggler-bar-1-margin-top */
+    }
+
+    .navbar-toggler-bar.bar2 {
+      opacity: 0; /* Example value for navbar-toggler-bar-2-opacity */
+    }
+
+    .navbar-toggler-bar.bar3 {
+      transform: rotate(-45deg); /* Example value for navbar-toggler-bar-3-transform */
+      transform-origin: 10% 90%; /* Example value for navbar-toggler-bar-3-transform-origin */
+      margin-top: -6px; /* Example value for navbar-toggler-bar-3-margin-top */
+    }
+  }
+}
+
+
+/* Media Query Breakpoint: lg */
+@media (max-width: 1199.98px) {
+  /* Navbar Transparent Styles */
+  .navbar.navbar-transparent {
+    /* Collapse Padding */
+    .navbar-collapse {
+      padding-top: 0.75rem; /* Example value for $spacer * 0.5 */
+      padding-bottom: 0.75rem; /* Example value for $spacer * 0.5 */
+    }
+
+    /* Collapsing Background */
+    .navbar-collapse.collapsing {
+      background: #ffffff; /* Example value for $white */
+    }
+
+    /* Show Background */
+    .navbar-collapse.show {
+      background: #ffffff; /* Example value for $white */
+    }
+
+    /* Nav Link Color */
+    .navbar-collapse.show .nav-link,
+    .navbar-collapse.show i {
+      color: #343a40; /* Example value for $dark */
+    }
+  }
+
+  /* Sidebar Navigation Show */
+  .g-sidenav-show .navbar:not(.sidenav).navbar-main .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  /* Flex Direction Row */
+  .g-sidenav-show .navbar:not(.sidenav).navbar-main .navbar-nav {
+    flex-direction: row;
+  }
+
+  /* Navbar Transparent Box Shadow */
+  .navbar.navbar-transparent .navbar-collapse {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); /* Example value for $box-shadow-lg */
+  }
+}
+
+/* Media Query Breakpoint: md */
+@media (max-width: 991.98px) {
+  /* Navbar Collapse Position */
+  .navbar-collapse {
+    position: relative;
+  }
+
+  /* Navbar Nav Width */
+  .navbar-collapse .navbar-nav {
+    width: 100%;
+  }
+
+  /* Nav Item Dropdown */
+  .navbar-collapse .navbar-nav .nav-item.dropdown {
+    position: static;
+  }
+
+  /* Dropdown Menu Position */
+  .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu {
+    left: 0;
+    right: 0;
+  }
+
+  /* Show Dropdown Menu */
+  .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu.show:before {
+    content: none;
+  }
+}
+
+/* Media Query Breakpoint: sm */
+@media (max-width: 767.98px) {
+  /* Navbar Nav Item Dropdown */
+  .navbar-collapse .navbar-nav .nav-item.dropdown .dropdown-menu {
+    left: 0;
+    right: auto;
+  }
+}

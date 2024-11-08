@@ -1,0 +1,70 @@
+.icon-shape {
+    --bg-image: linear-gradient(310deg, #7928CA, #FF0080);
+    --bg-position: center;
+    background-image: var(--bg-image);
+    background-position: var(--bg-position);
+  }
+  
+  .icon-striped {
+    --bg-md: 85px;
+    --bg-lg: 111px;
+    --bg-xl: 80px;
+  
+    --icon-mt: 25%;
+    --icon-ml: -24%;
+  }
+  
+  .icon-shape-icon {
+    --opacity: 0.8;
+    opacity: var(--opacity);
+  }
+  
+  .info-icon {
+    --top: 11px;
+    --top-xxs: -4px;
+    --top-xs: -4px;
+    --top-sm: 2px;
+    --top-md: 22%;
+    --top-lg: 31%;
+    --top-xl: 37%;
+    --position: relative;
+    top: var(--top);
+    position: var(--position);
+  
+    &.xxs {
+      top: var(--top-xxs);
+      width: 20px;
+      height: 20px;
+    }
+  
+    &.xs {
+      top: var(--top-xs);
+      width: 24px;
+      height: 24px;
+    }
+  
+    &.sm {
+      top: var(--top-sm);
+      width: 32px;
+      height: 32px;
+    }
+  
+    &.md {
+      top: var(--top-md);
+      width: 48px;
+      height: 48px;
+    }
+  
+    &.lg {
+      top: var(--top-lg);
+      width: 64px;
+      height: 64px;
+    }
+  
+    &.xl {
+      top: var(--top-xl);
+      width: 100px;
+      height: 100px;
+    }
+  }
+  

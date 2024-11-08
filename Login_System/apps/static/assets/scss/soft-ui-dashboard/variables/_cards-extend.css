@@ -1,0 +1,71 @@
+/* Card Profile */
+.card-profile-body {
+    text-align: center;
+    padding: 1.25rem 2rem;
+}
+
+.card-profile-avatar {
+    margin: 0 auto;
+}
+
+.card-profile-img {
+    margin-top: 32px;
+    border-radius: 50%;
+    width: 130px;
+}
+
+.card-profile-btn {
+    margin-top: 24px;
+}
+
+.card-profile-p {
+    line-height: 1.778;
+}
+
+/* Card Pricing */
+.card-pricing-body {
+    padding: 2.25rem;
+    line-height: 1.111;
+}
+
+.card-pricing-title {
+    margin-bottom: 0; /* Replace with your $card-bg-description-margin variable */
+}
+
+.card-pricing-td {
+    line-height: 1.429;
+}
+
+.card-pricing-icon {
+    height: 4rem;
+    width: 4rem; /* Replace with your $card-pricing-icon-width variable */
+    position: absolute;
+    top: -22px;
+    font-size: 1.25rem;
+}
+
+.card-pricing-icon-lg {
+    font-size: 1.75rem;
+}
+
+.card-pricing-i {
+    padding: 18px;
+}
+
+.card-pricing-badge {
+    padding: 5px;
+    font-size: 6px;
+    position: relative;
+    top: -2px;
+}
+
+/* Gradient border color */
+.card-pricing {
+    border: 1px solid;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.card-pricing-dark {
+    border: 1px solid;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+}

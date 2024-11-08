@@ -1,0 +1,50 @@
+/* Caret styles */
+/* Note: This is a static approximation and won't adjust dynamically */
+
+/* Caret down */
+.caret-down::after {
+  display: inline-block;
+  border-top: 5px solid; /* Replace with actual value of $caret-width */
+  border-right: 5px solid transparent; /* Replace with actual value of $caret-width */
+  border-bottom: 0;
+  border-left: 5px solid transparent; /* Replace with actual value of $caret-width */
+  content: "";
+  margin-left: 5px; /* Replace with actual value of $caret-spacing */
+  vertical-align: middle; /* Replace with actual value of $caret-vertical-align */
+}
+
+/* Caret up */
+.caret-up::after {
+  display: inline-block;
+  border-top: 0;
+  border-right: 5px solid transparent; /* Replace with actual value of $caret-width */
+  border-bottom: 5px solid; /* Replace with actual value of $caret-width */
+  border-left: 5px solid transparent; /* Replace with actual value of $caret-width */
+  content: "";
+  margin-left: 5px; /* Replace with actual value of $caret-spacing */
+  vertical-align: middle; /* Replace with actual value of $caret-vertical-align */
+}
+
+/* Caret end */
+.caret-end::after {
+  display: inline-block;
+  border-top: 5px solid transparent; /* Replace with actual value of $caret-width */
+  border-right: 0;
+  border-bottom: 5px solid transparent; /* Replace with actual value of $caret-width */
+  border-left: 5px solid; /* Replace with actual value of $caret-width */
+  content: "";
+  margin-left: 5px; /* Replace with actual value of $caret-spacing */
+  vertical-align: middle; /* Replace with actual value of $caret-vertical-align */
+}
+
+/* Caret start */
+.caret-start::before {
+  display: inline-block;
+  border-top: 5px solid transparent; /* Replace with actual value of $caret-width */
+  border-right: 5px solid; /* Replace with actual value of $caret-width */
+  border-bottom: 5px solid transparent; /* Replace with actual value of $caret-width */
+  border-left: 0;
+  content: "";
+  margin-right: 5px; /* Replace with actual value of $caret-spacing */
+  vertical-align: middle; /* Replace with actual value of $caret-vertical-align */
+}

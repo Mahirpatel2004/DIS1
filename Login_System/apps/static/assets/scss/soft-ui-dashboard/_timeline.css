@@ -1,0 +1,117 @@
+/* Timeline */
+
+.timeline {
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--timeline-left); /* Replace with your custom property */
+    height: 100%;
+    /* border-right: var(--timeline-axis-width) solid var(--timeline-axis-color); */ /* Replace with your custom properties */
+}
+
+
+/* Timeline blocks */
+
+.timeline-block {
+    position: relative;
+}
+
+.timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.timeline-block:first-child {
+    margin-top: 0;
+}
+
+.timeline-block:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline steps */
+
+.timeline-step {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    /* width: $timeline-step-width; */ /* Replace with your value */
+    /* height: $timeline-step-height; */ /* Replace with your value */
+    /* border-radius: $timeline-step-radius; */ /* Replace with your value */
+    /* background: $timeline-step-bg; */ /* Replace with your value */
+    text-align: center;
+    /* transform: $timeline-step-transform; */ /* Replace with your value */
+    /* font-size: $font-size-base; */ /* Replace with your value */
+    /* font-weight: $font-weight-bold; */ /* Replace with your value */
+    z-index: 1;
+}
+
+.timeline-step svg,
+.timeline-step i {
+    /* line-height: $timeline-step-line-height; */ /* Replace with your value */
+}
+
+/* Timeline content and body */
+
+.timeline-content {
+    position: relative;
+    /* margin-left: $timeline-content-margin-left; */ /* Replace with your value */
+    /* padding-top: $timeline-content-padding-top; */ /* Replace with your value */
+    /* top: $timeline-content-top; */ /* Replace with your value */
+}
+
+.timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (min-width: 992px) {
+    .timeline:before {
+        left: 50%;
+        margin-left: -1px; /* Adjust as necessary */
+    }
+
+    .timeline-step {
+        left: 50%;
+    }
+
+    .timeline-content {
+        width: 38%; /* Adjust as necessary */
+    }
+
+    .timeline-block:nth-child(even) .timeline-content {
+        float: right;
+    }
+}
+
+/* One side timeline */
+
+.timeline-one-side:before {
+    /* left: $timeline-left; */ /* Replace with your value */
+}
+
+.timeline-one-side .timeline-step {
+    /* left: $timeline-left; */ /* Replace with your value */
+}
+
+.timeline-one-side .timeline-content {
+    width: auto;
+}
+
+@media (min-width: 992px) {
+    .timeline-one-side .timeline-content {
+        max-width: 30rem; /* Adjust as necessary */
+    }
+}
+
+.timeline-one-side .timeline-block:nth-child(even) .timeline-content {
+    float: none;
+}

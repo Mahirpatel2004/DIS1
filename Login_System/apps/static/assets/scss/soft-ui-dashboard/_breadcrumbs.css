@@ -1,0 +1,40 @@
+/* Breadcrumb Item */
+.breadcrumb-item {
+    font-size: var(--font-size-sm);
+}
+
+.breadcrumb-item.text-white::before {
+    color: #ffffff;
+}
+
+/* Breadcrumb Dark Theme */
+.breadcrumb-dark {
+    background-color: var(--breadcrumb-dark-bg);
+}
+
+.breadcrumb-dark .breadcrumb-item {
+    font-weight: 600;
+}
+
+.breadcrumb-dark .breadcrumb-item a {
+    color: var(--breadcrumb-dark-color);
+}
+
+.breadcrumb-dark .breadcrumb-item a:hover {
+    color: var(--breadcrumb-dark-hover-color);
+}
+
+.breadcrumb-dark .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--breadcrumb-dark-divider-color);
+}
+
+.breadcrumb-dark .breadcrumb-item.active {
+    color: var(--breadcrumb-dark-active-color);
+}
+
+/* Breadcrumb Links */
+.breadcrumb-links {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}

@@ -1,0 +1,151 @@
+.btn {
+  margin-bottom: 10px; /* Replace with actual value */
+  letter-spacing: 1px; /* Replace with actual value */
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Replace with actual value */
+  background-size: cover; /* Replace with actual value */
+  background-position-x: center; /* Replace with actual value */
+
+  border: 0; /* Simplified &:not([class*="btn-outline-"]) */
+
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Replace with actual value */
+    transform: scale(0.95); /* Replace with actual value */
+    opacity: 0.8; /* Replace with actual value */
+  }
+
+  &:hover:not(.btn-icon-only) {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Replace with actual value */
+    transform: translate(0, -2px); /* Replace with actual value */
+  }
+
+  &.bg-white:hover {
+    color: #333; /* Replace with actual value */
+  }
+
+  &.btn-link {
+    box-shadow: none;
+    font-weight: bold; /* Replace with actual value */
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &.btn-round {
+    border-radius: 5px; /* Replace with actual value */
+  }
+
+  &.btn-icon-only {
+    width: 40px; /* Replace with actual value */
+    height: 40px; /* Replace with actual value */
+    padding: 10px 20px; /* Replace with actual value */
+  }
+
+  &.btn-sm.btn-icon-only {
+    width: 30px; /* Replace with actual value */
+    height: 30px; /* Replace with actual value */
+    padding: 8px 16px; /* Replace with actual value */
+  }
+
+  &.btn-lg.btn-icon-only {
+    width: 50px; /* Replace with actual value */
+    height: 50px; /* Replace with actual value */
+    padding: 12px 24px; /* Replace with actual value */
+  }
+
+  &.btn-rounded {
+    border-radius: 5px; /* Replace with actual value */
+  }
+
+  &.btn-transparent {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+}
+
+/* Other parts of your original code have Sass-specific syntax and need adaptation for pure CSS */
+
+/* .btn-check and other classes with Sass mixins and variables need adaptation */
+
+/* Example of a converted part */
+.icon-move-right {
+  transition: transform 0.3s ease; /* Replace with actual value */
+}
+.icon-move-right:hover,
+.icon-move-right:focus {
+  transform: translateX(5px); /* Replace with actual value */
+}
+
+/* .icon-move-left */
+.icon-move-left i {
+  transition: transform 0.3s ease; /* Replace with actual transition values */
+}
+.icon-move-left:hover i,
+.icon-move-left:focus i {
+  transform: translateX(-5px); /* Replace with actual transform values */
+}
+
+/* @each $color, $value in $theme-colors */
+/* Example for .btn-primary and .btn.bg-gradient-primary */
+.btn-primary,
+.btn.bg-gradient-primary {
+  /* Replace $value with actual color value */
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-primary:hover,
+.btn.bg-gradient-primary:hover {
+  /* Replace $value with actual hover color value */
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+/* .btn-outline-#{$color} */
+.btn-outline-primary {
+  box-shadow: none;
+}
+.btn-outline-primary:hover:not(.active) {
+  background-color: transparent;
+  opacity: .75;
+  box-shadow: none;
+  color: #007bff; /* Replace with actual color value */
+}
+
+/* .btn-outline-white */
+.btn-outline-white {
+  border-color: rgba(255, 255, 255, .75); /* Replace with actual color value */
+  background: rgba(255, 255, 255, .1); /* Replace with actual color value */
+}
+
+/* @each $color, $value in $btn-font-colors */
+/* Example for .btn-primary and .btn.bg-gradient-primary */
+.btn-primary,
+.btn.bg-gradient-primary {
+  /* Replace $value with actual color value */
+  color: #ffffff;
+}
+.btn-primary:hover,
+.btn.bg-gradient-primary:hover {
+  /* Replace $value with actual hover color value */
+  color: #ffffff;
+}
+
+/* buttons box-shadow - Assuming it's commented out in the original Sass code */
+
+/* Example for .btn-primary and .btn.bg-gradient-primary */
+/*
+.btn-primary,
+.btn.bg-gradient-primary {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+.btn-primary:hover,
+.btn.bg-gradient-primary:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+*/
+
+/* Ensure all variables are replaced with actual values or placeholders as needed */

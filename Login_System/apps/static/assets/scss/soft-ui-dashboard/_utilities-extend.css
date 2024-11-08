@@ -1,0 +1,25 @@
+/* max-width classes */
+.max-width-small {
+  max-width: 300px !important;
+}
+
+.max-width-medium {
+  max-width: 600px !important;
+}
+
+.max-width-large {
+  max-width: 900px !important;
+}
+
+/* width classes */
+.width-small {
+  width: 300px !important;
+}
+
+.width-medium {
+  width: 600px !important;
+}
+
+.width-large {
+  width: 900px !important;
+}

@@ -1,0 +1,19 @@
+/* Resize anything */
+
+/* Resizable horizontally */
+.resizable-horizontal {
+  overflow: auto; /* Per CSS3 UI, `resize` only applies when `overflow` isn't `visible` */
+  resize: horizontal; /* Allow horizontal resizing */
+}
+
+/* Resizable vertically */
+.resizable-vertical {
+  overflow: auto; /* Per CSS3 UI, `resize` only applies when `overflow` isn't `visible` */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Resizable both ways */
+.resizable-both {
+  overflow: auto; /* Per CSS3 UI, `resize` only applies when `overflow` isn't `visible` */
+  resize: both; /* Allow both horizontal and vertical resizing */
+}

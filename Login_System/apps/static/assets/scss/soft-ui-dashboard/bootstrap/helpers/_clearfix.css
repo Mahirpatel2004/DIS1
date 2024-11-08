@@ -1,0 +1,7 @@
+/* Converted CSS for clearfix */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

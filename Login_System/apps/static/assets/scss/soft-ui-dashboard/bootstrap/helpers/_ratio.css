@@ -1,0 +1,31 @@
+/* Credit: Nicolas Gallagher and SUIT CSS. */
+
+/* Base `.ratio` class */
+.ratio {
+  position: relative;
+  width: 100%;
+}
+
+.ratio::before {
+  display: block;
+  content: "";
+}
+
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Aspect ratio classes */
+.ratio-4x3 {
+  --prefix-aspect-ratio: calc(3 / 4 * 100%);
+}
+
+.ratio-16x9 {
+  --prefix-aspect-ratio: calc(9 / 16 * 100%);
+}
+
+/* Repeat for other aspect ratios as needed */

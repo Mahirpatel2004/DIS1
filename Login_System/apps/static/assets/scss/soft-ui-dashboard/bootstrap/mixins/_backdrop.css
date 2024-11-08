@@ -1,0 +1,21 @@
+/* Shared between modals and offcanvases */
+
+.overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Example: Replace with actual backdrop background color */
+
+  /* Fade for backdrop */
+  opacity: 0; /* Default opacity */
+}
+
+.overlay-backdrop.fade {
+  opacity: 0;
+}
+
+.overlay-backdrop.show {
+  opacity: 0.5; /* Example: Replace with actual backdrop opacity */
+}

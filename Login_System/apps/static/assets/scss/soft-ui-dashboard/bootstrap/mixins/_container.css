@@ -1,0 +1,15 @@
+/* CSS equivalent of SCSS mixin make-container */
+:root {
+  --prefix-gutter-x: var(--container-padding-x, 0); /* Default value if $container-padding-x is not defined */
+  --prefix-gutter-y: 0;
+}
+
+/* Replace $prefix with your actual prefix if necessary */
+/* Example usage with .container class */
+.container {
+  width: 100%;
+  padding-right: calc(var(--prefix-gutter-x) * 1); /* stylelint-disable-line function-disallowed-list */
+  padding-left: calc(var(--prefix-gutter-x) * 1); /* stylelint-disable-line function-disallowed-list */
+  margin-right: auto;
+  margin-left: auto;
+}

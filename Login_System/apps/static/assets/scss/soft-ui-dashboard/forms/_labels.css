@@ -1,0 +1,9 @@
+/* Labels */
+label,
+.form-label {
+  font-size: 16px; /* Example font size, replace with your actual value */
+  font-weight: 400; /* Example font weight, replace with your actual value */
+  margin-bottom: 0.5rem; /* Example margin bottom, replace with your actual value */
+  color: #333; /* Example color, replace with your actual color */
+  margin-left: 0.5rem; /* Example margin left, replace with your actual value */
+}

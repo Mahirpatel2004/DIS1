@@ -1,0 +1,250 @@
+.dropup,
+.dropend,
+.dropdown,
+.dropstart,
+.dropup-center,
+.dropdown-center {
+  position: relative;
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+  /* Generate the caret automatically */
+  content: ""; /* Equivalent to @include caret() in SCSS */
+}
+
+/* The dropdown menu */
+.dropdown-menu {
+  /* CSS variables */
+  --bs-dropdown-min-width: 10rem; /* Replace with your actual value */
+  --bs-dropdown-padding-x: 1rem; /* Replace with your actual value */
+  --bs-dropdown-padding-y: 0.5rem; /* Replace with your actual value */
+  --bs-dropdown-spacer: 0.125rem; /* Replace with your actual value */
+  --bs-dropdown-font-size: 1rem; /* Replace with your actual value */
+  --bs-dropdown-color: #212529; /* Replace with your actual value */
+  --bs-dropdown-bg: #fff; /* Replace with your actual value */
+  --bs-dropdown-border-color: rgba(0, 0, 0, 0.15); /* Replace with your actual value */
+  --bs-dropdown-border-radius: 0.25rem; /* Replace with your actual value */
+  --bs-dropdown-border-width: 1px; /* Replace with your actual value */
+  --bs-dropdown-inner-border-radius: calc(0.25rem - 1px); /* Replace with your actual value */
+  --bs-dropdown-divider-bg: #e9ecef; /* Replace with your actual value */
+  --bs-dropdown-divider-margin-y: 0.5rem; /* Replace with your actual value */
+  --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Replace with your actual value */
+  --bs-dropdown-link-color: #212529; /* Replace with your actual value */
+  --bs-dropdown-link-hover-color: #16181b; /* Replace with your actual value */
+  --bs-dropdown-link-hover-bg: #f8f9fa; /* Replace with your actual value */
+  --bs-dropdown-link-active-color: #fff; /* Replace with your actual value */
+  --bs-dropdown-link-active-bg: #0d6efd; /* Replace with your actual value */
+  --bs-dropdown-link-disabled-color: #6c757d; /* Replace with your actual value */
+  --bs-dropdown-item-padding-x: 1rem; /* Replace with your actual value */
+  --bs-dropdown-item-padding-y: 0.25rem; /* Replace with your actual value */
+  --bs-dropdown-header-color: #6c757d; /* Replace with your actual value */
+  --bs-dropdown-header-padding-x: 1rem; /* Replace with your actual value */
+  --bs-dropdown-header-padding-y: 0.5rem; /* Replace with your actual value */
+
+  position: absolute;
+  z-index: 1000; /* Adjust if needed */
+  display: none; /* none by default, but block on "open" of the menu */
+  min-width: var(--bs-dropdown-min-width);
+  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+  margin: 0; /* Override default margin of ul */
+  font-size: var(--bs-dropdown-font-size);
+  color: var(--bs-dropdown-color);
+  text-align: left; /* Ensures proper alignment if parent has it changed (e.g., modal footer) */
+  list-style: none;
+  background-color: var(--bs-dropdown-bg);
+  background-clip: padding-box;
+  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+  border-radius: var(--bs-dropdown-border-radius);
+  box-shadow: var(--bs-dropdown-box-shadow);
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: 0;
+  margin-top: var(--bs-dropdown-spacer);
+}
+
+/* Responsive breakpoints */
+@media (min-width: 576px) {
+  .dropdown-menu-sm-start {
+    --bs-position: start;
+    right: auto;
+    left: 0;
+  }
+
+  .dropdown-menu-sm-end {
+    --bs-position: end;
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown-menu-md-start {
+    --bs-position: start;
+    right: auto;
+    left: 0;
+  }
+
+  .dropdown-menu-md-end {
+    --bs-position: end;
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .dropdown-menu-lg-start {
+    --bs-position: start;
+    right: auto;
+    left: 0;
+  }
+
+  .dropdown-menu-lg-end {
+    --bs-position: end;
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dropdown-menu-xl-start {
+    --bs-position: start;
+    right: auto;
+    left: 0;
+  }
+
+  .dropdown-menu-xl-end {
+    --bs-position: end;
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .dropdown-menu-xxl-start {
+    --bs-position: start;
+    right: auto;
+    left: 0;
+  }
+
+  .dropdown-menu-xxl-end {
+    --bs-position: end;
+    right: 0;
+    left: auto;
+  }
+}
+
+/* Dropup */
+.dropup .dropdown-menu[data-bs-popper] {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: var(--bs-dropdown-spacer);
+}
+
+/* Dropend */
+.dropend .dropdown-menu[data-bs-popper] {
+  top: 0;
+  right: auto;
+  left: 100%;
+  margin-top: 0;
+  margin-left: var(--bs-dropdown-spacer);
+}
+
+/* Dropstart */
+.dropstart .dropdown-menu[data-bs-popper] {
+  top: 0;
+  right: 100%;
+  left: auto;
+  margin-top: 0;
+  margin-right: var(--bs-dropdown-spacer); /* Replace with your actual variable */
+}
+
+.dropstart .dropdown-toggle {
+  /* Include caret(start) equivalent */
+  content: "";
+}
+
+/* Dividers */
+.dropdown-divider {
+  height: 0;
+  margin: var(--bs-dropdown-divider-margin-y) 0; /* Replace with your actual variable */
+  overflow: hidden;
+  border-top: 1px solid var(--bs-dropdown-divider-bg); /* Replace with your actual variable */
+  opacity: 1;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x); /* Replace with your actual variables */
+  clear: both;
+  font-weight: normal; /* Replace with your actual variable or value */
+  color: var(--bs-dropdown-link-color); /* Replace with your actual variable */
+  text-align: inherit;
+  text-decoration: none; /* Replace with your actual condition */
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    color: var(--bs-dropdown-link-hover-color); /* Replace with your actual variable */
+    text-decoration: none; /* Replace with your actual condition */
+    background-color: var(--bs-dropdown-link-hover-bg); /* Replace with your actual variable */
+  }
+
+  &.active,
+  &:active {
+    color: var(--bs-dropdown-link-active-color); /* Replace with your actual variable */
+    background-color: var(--bs-dropdown-link-active-bg); /* Replace with your actual variable */
+  }
+
+  &.disabled,
+  &:disabled {
+    color: var(--bs-dropdown-link-disabled-color); /* Replace with your actual variable */
+    pointer-events: none;
+    background-color: transparent;
+  }
+}
+
+/* Show dropdown menu */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Dropdown header */
+.dropdown-header {
+  display: block;
+  padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x); /* Replace with your actual variables */
+  margin-bottom: 0;
+  font-size: 0.875rem; /* Example, replace with your actual value */
+  color: var(--bs-dropdown-header-color); /* Replace with your actual variable */
+  white-space: nowrap;
+}
+
+/* Dropdown item text */
+.dropdown-item-text {
+  display: block;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x); /* Replace with your actual variables */
+  color: var(--bs-dropdown-link-color); /* Replace with your actual variable */
+}
+
+/* Dark dropdown */
+.dropdown-menu-dark {
+  --bs-dropdown-color: #343a40; /* Replace with your actual variable */
+  --bs-dropdown-bg: #343a40; /* Replace with your actual variable */
+  --bs-dropdown-border-color: rgba(0, 0, 0, 0.15); /* Replace with your actual variable */
+  --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Replace with your actual variable */
+  --bs-dropdown-link-color: #fff; /* Replace with your actual variable */
+  --bs-dropdown-link-hover-color: #e9ecef; /* Replace with your actual variable */
+  --bs-dropdown-divider-bg: #212529; /* Replace with your actual variable */
+  --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.1); /* Replace with your actual variable */
+  --bs-dropdown-link-active-color: #fff; /* Replace with your actual variable */
+  --bs-dropdown-link-active-bg: #0d6efd; /* Replace with your actual variable */
+  --bs-dropdown-link-disabled-color: #6c757d; /* Replace with your actual variable */
+  --bs-dropdown-header-color: #6c757d; /* Replace with your actual variable */
+}

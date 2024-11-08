@@ -1,0 +1,8 @@
+/* Animation Variables */
+:root {
+    --animation-name: fadeInBottom;
+    --animation-mode: both;
+    --animation-duration: 1.5s;
+    --transform-scale: scale(0.6);
+    --position-left: 18%;
+  }

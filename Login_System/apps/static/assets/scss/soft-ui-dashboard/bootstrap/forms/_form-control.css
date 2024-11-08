@@ -1,0 +1,145 @@
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem; /* replace with $input-padding-y $input-padding-x */
+  font-family: inherit; /* replace with $input-font-family */
+  font-size: 1rem; /* replace with $input-font-size */
+  font-weight: 400; /* replace with $input-font-weight */
+  line-height: 1.5; /* replace with $input-line-height */
+  color: #495057; /* replace with $input-color */
+  background-color: #fff; /* replace with $input-bg */
+  background-clip: padding-box;
+  border: 1px solid #ced4da; /* replace with $input-border-width solid $input-border-color */
+  appearance: none;
+  border-radius: 0.25rem; /* replace with $input-border-radius */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* replace with $input-box-shadow */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* replace with $input-transition */
+}
+
+.form-control[type="file"] {
+  overflow: hidden;
+}
+
+.form-control[type="file"]:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+
+.form-control:focus {
+  color: #495057; /* replace with $input-focus-color */
+  background-color: #fff; /* replace with $input-focus-bg */
+  border-color: #80bdff; /* replace with $input-focus-border-color */
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* replace with $input-focus-box-shadow */
+}
+
+.form-control::-webkit-date-and-time-value {
+  height: 1.5; /* replace with if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height) */
+}
+
+.form-control::placeholder {
+  color: #6c757d; /* replace with $input-placeholder-color */
+  opacity: 1;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  color: #6c757d; /* replace with $input-disabled-color */
+  background-color: #e9ecef; /* replace with $input-disabled-bg */
+  border-color: #ced4da; /* replace with $input-disabled-border-color */
+  opacity: 1;
+}
+
+.form-control::file-selector-button {
+  padding: 0.375rem 0.75rem; /* replace with $input-padding-y $input-padding-x */
+  margin: -0.375rem -0.75rem; /* replace with (-$input-padding-y) (-$input-padding-x) */
+  margin-inline-end: 0.75rem; /* replace with $input-padding-x */
+  color: #495057; /* replace with $form-file-button-color */
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef); /* replace with $form-file-button-bg */
+  pointer-events: none;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 1px; /* replace with $input-border-width */
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* replace with $btn-transition */
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: #e9ecef; /* replace with $form-file-button-hover-bg */
+}
+
+.form-control-plaintext {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0; /* replace with $input-padding-y 0 */
+  margin-bottom: 0;
+  line-height: 1.5; /* replace with $input-line-height */
+  color: #212529; /* replace with $input-plaintext-color */
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0; /* replace with $input-border-width 0 */
+}
+
+.form-control-plaintext.form-control-sm,
+.form-control-plaintext.form-control-lg {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.form-control-sm {
+  min-height: calc(1.5rem + 2px); /* replace with $input-height-sm */
+  padding: 0.25rem 0.5rem; /* replace with $input-padding-y-sm $input-padding-x-sm */
+  font-size: 0.875rem; /* replace with $input-font-size-sm */
+  border-radius: 0.2rem; /* replace with $input-border-radius-sm */
+}
+
+.form-control-sm::file-selector-button {
+  padding: 0.25rem 0.5rem; /* replace with $input-padding-y-sm $input-padding-x-sm */
+  margin: -0.25rem -0.5rem; /* replace with (-$input-padding-y-sm) (-$input-padding-x-sm) */
+  margin-inline-end: 0.5rem; /* replace with $input-padding-x-sm */
+}
+
+.form-control-lg {
+  min-height: calc(1.5rem + 2px); /* replace with $input-height-lg */
+  padding: 0.5rem 1rem; /* replace with $input-padding-y-lg $input-padding-x-lg */
+  font-size: 1.25rem; /* replace with $input-font-size-lg */
+  border-radius: 0.3rem; /* replace with $input-border-radius-lg */
+}
+
+.form-control-lg::file-selector-button {
+  padding: 0.5rem 1rem; /* replace with $input-padding-y-lg $input-padding-x-lg */
+  margin: -0.5rem -1rem; /* replace with (-$input-padding-y-lg) (-$input-padding-x-lg) */
+  margin-inline-end: 1rem; /* replace with $input-padding-x-lg */
+}
+
+textarea.form-control {
+  min-height: 38px; /* replace with $input-height */
+}
+
+textarea.form-control-sm {
+  min-height: 30px; /* replace with $input-height-sm */
+}
+
+textarea.form-control-lg {
+  min-height: 42px; /* replace with $input-height-lg */
+}
+
+.form-control-color {
+  width: 3rem; /* replace with $form-color-width */
+  height: auto;
+  padding: 0.375rem; /* replace with $input-padding-y */
+}
+
+.form-control-color:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+
+.form-control-color::-moz-color-swatch {
+  height: 1.5; /* replace with if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height) */
+  border-radius: 0.25rem; /* replace with $input-border-radius */
+}
+
+.form-control-color::-webkit-color-swatch {
+  height: 1.5; /* replace with if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height) */
+  border-radius: 0.25rem; /* replace with $input-border-radius */
+}

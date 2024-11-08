@@ -1,0 +1,17 @@
+/*!
+ * Bootstrap Reboot v5.2.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+
+/* Configuration */
+@import url("functions.css");
+@import url("variables.css");
+@import url("maps.css");
+@import url("mixins.css");
+
+/* Core Reboot */
+@import url("root.css");
+@import url("reboot.css");

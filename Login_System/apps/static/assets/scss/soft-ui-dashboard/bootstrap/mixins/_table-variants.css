@@ -1,0 +1,52 @@
+/* Table Variant */
+
+/* Primary state */
+.table-primary {
+  --bs-table-color: #ffffff; /* color-contrast(opaque(#ffffff, #007bff)) */
+  --bs-table-bg: #007bff;
+  --bs-table-border-color: #0056b3; /* mix(#ffffff, #007bff, 15%) */
+  --bs-table-striped-bg: #3399ff; /* mix(#ffffff, #007bff, 10%) */
+  --bs-table-striped-color: #ffffff; /* color-contrast(#3399ff) */
+  --bs-table-active-bg: #004085; /* mix(#ffffff, #007bff, 20%) */
+  --bs-table-active-color: #ffffff; /* color-contrast(#004085) */
+  --bs-table-hover-bg: #0056b3; /* mix(#ffffff, #007bff, 15%) */
+  --bs-table-hover-color: #ffffff; /* color-contrast(#0056b3) */
+
+  color: var(--bs-table-color);
+  background-color: var(--bs-table-bg);
+  border-color: var(--bs-table-border-color);
+}
+
+/* Secondary state */
+.table-secondary {
+  --bs-table-color: #ffffff; /* color-contrast(opaque(#ffffff, #6c757d)) */
+  --bs-table-bg: #6c757d;
+  --bs-table-border-color: #545b62; /* mix(#ffffff, #6c757d, 15%) */
+  --bs-table-striped-bg: #818a91; /* mix(#ffffff, #6c757d, 10%) */
+  --bs-table-striped-color: #ffffff; /* color-contrast(#818a91) */
+  --bs-table-active-bg: #494e52; /* mix(#ffffff, #6c757d, 20%) */
+  --bs-table-active-color: #ffffff; /* color-contrast(#494e52) */
+  --bs-table-hover-bg: #545b62; /* mix(#ffffff, #6c757d, 15%) */
+  --bs-table-hover-color: #ffffff; /* color-contrast(#545b62) */
+
+  color: var(--bs-table-color);
+  background-color: var(--bs-table-bg);
+  border-color: var(--bs-table-border-color);
+}
+
+/* Success state */
+.table-success {
+  --bs-table-color: #ffffff; /* color-contrast(opaque(#ffffff, #28a745)) */
+  --bs-table-bg: #28a745;
+  --bs-table-border-color: #218838; /* mix(#ffffff, #28a745, 15%) */
+  --bs-table-striped-bg: #4ac58f; /* mix(#ffffff, #28a745, 10%) */
+  --bs-table-striped-color: #ffffff; /* color-contrast(#4ac58f) */
+  --bs-table-active-bg: #1e7e34; /* mix(#ffffff, #28a745, 20%) */
+  --bs-table-active-color: #ffffff; /* color-contrast(#1e7e34) */
+  --bs-table-hover-bg: #218838; /* mix(#ffffff, #28a745, 15%) */
+  --bs-table-hover-color: #ffffff; /* color-contrast(#218838) */
+
+  color: var(--bs-table-color);
+  background-color: var(--bs-table-bg);
+  border-color: var(--bs-table-border-color);
+}

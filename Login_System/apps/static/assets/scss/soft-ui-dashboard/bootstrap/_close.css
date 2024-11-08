@@ -1,0 +1,39 @@
+/* Transparent background and border properties included for button version. */
+/* iOS requires the button element instead of an anchor tag. */
+/* If you want the anchor version, it requires `href="#"`. */
+
+.btn-close {
+  box-sizing: content-box;
+  width: 30px; /* Example width */
+  height: 30px; /* Example height */
+  padding: 5px 10px; /* Example padding */
+  color: #ffffff; /* Example color */
+  background: transparent url("data:image/svg+xml, ...") center / 30px auto no-repeat; /* Example SVG background */
+  border: 0; /* for button elements */
+  border-radius: 0.25rem; /* Example border radius */
+  opacity: 0.75; /* Example opacity */
+
+  /* Override <a>'s hover style */
+  &:hover {
+    color: #ffffff; /* Example hover color */
+    text-decoration: none;
+    opacity: 1; /* Example hover opacity */
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Example focus box-shadow */
+    opacity: 1; /* Example focus opacity */
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.5; /* Example disabled opacity */
+  }
+}
+
+.btn-close-white {
+  filter: brightness(0) invert(1); /* Example filter for white version */
+}

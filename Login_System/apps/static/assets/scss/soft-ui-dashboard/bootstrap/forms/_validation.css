@@ -1,0 +1,13 @@
+/* Converted CSS (manually expanded from SCSS @each loop and mixin) */
+
+/* Valid state */
+.is-valid {
+  border-color: green;
+  background-color: lightgreen;
+}
+
+/* Invalid state */
+.is-invalid {
+  border-color: red;
+  background-color: lightcoral;
+}

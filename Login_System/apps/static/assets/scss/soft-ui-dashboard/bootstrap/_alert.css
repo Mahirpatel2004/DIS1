@@ -1,0 +1,63 @@
+/* Base styles */
+
+.alert {
+  position: relative;
+  /* Replace with your actual values */
+  padding: var(--prefix-alert-padding-y) var(--prefix-alert-padding-x);
+  margin-bottom: var(--prefix-alert-margin-bottom);
+  color: var(--prefix-alert-color);
+  background-color: var(--prefix-alert-bg);
+  border: var(--prefix-alert-border);
+  border-radius: var(--prefix-alert-border-radius, 0);
+}
+
+.alert-heading {
+  color: inherit;
+}
+
+.alert-link {
+  font-weight: bold; /* Replace with your actual font-weight value */
+}
+
+.alert-dismissible {
+  padding-right: 20px; /* Replace with your actual padding-right value */
+}
+
+.alert-dismissible .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1051; /* Replace with your actual z-index value */
+  padding: 10px 15px; /* Replace with your actual padding values */
+}
+
+
+/* Contextual modifier classes for colorizing the alert */
+/* Replace with your actual values */
+.alert-success {
+  /* Replace with your actual values */
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.alert-info {
+  /* Replace with your actual values */
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+}
+
+.alert-warning {
+  /* Replace with your actual values */
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.alert-danger {
+  /* Replace with your actual values */
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}

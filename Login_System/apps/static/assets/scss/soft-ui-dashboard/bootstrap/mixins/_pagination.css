@@ -1,0 +1,22 @@
+/* Pagination */
+
+/* Example for small pagination size */
+.pagination-sm {
+  padding: 0.25rem 0.5rem; /* Example values for $padding-y and $padding-x */
+  font-size: 0.875rem; /* Example value for $font-size */
+  border-radius: 0.2rem; /* Example value for $border-radius */
+}
+
+/* Example for medium pagination size */
+.pagination-md {
+  padding: 0.5rem 1rem; /* Example values for $padding-y and $padding-x */
+  font-size: 1rem; /* Example value for $font-size */
+  border-radius: 0.25rem; /* Example value for $border-radius */
+}
+
+/* Example for large pagination size */
+.pagination-lg {
+  padding: 0.75rem 1.5rem; /* Example values for $padding-y and $padding-x */
+  font-size: 1.25rem; /* Example value for $font-size */
+  border-radius: 0.3rem; /* Example value for $border-radius */
+}

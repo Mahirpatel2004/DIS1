@@ -1,0 +1,28 @@
+/* Basic transitions */
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Transition with a longer duration */
+.transition-long {
+  transition: all 0.6s ease;
+}
+
+/* Transition with specific properties */
+.transition-opacity {
+  transition: opacity 0.3s ease;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+/* No transition for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .transition,
+  .transition-long,
+  .transition-opacity,
+  .transition-transform {
+    transition: none;
+  }
+}

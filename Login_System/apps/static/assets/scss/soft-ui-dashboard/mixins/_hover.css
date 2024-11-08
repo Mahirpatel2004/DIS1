@@ -1,0 +1,28 @@
+/* CSS approximation of @mixin hover */
+/* Usage: .element:hover { ...styles... } */
+.element:hover {
+  /* Insert styles inside here */
+}
+
+/* CSS approximation of @mixin hover-focus */
+/* Usage: .element:hover, .element:focus { ...styles... } */
+.element:hover,
+.element:focus {
+  /* Insert styles inside here */
+}
+
+/* CSS approximation of @mixin plain-hover-focus */
+/* Usage: .element, .element:hover, .element:focus { ...styles... } */
+.element,
+.element:hover,
+.element:focus {
+  /* Insert styles inside here */
+}
+
+/* CSS approximation of @mixin hover-focus-active */
+/* Usage: .element:hover, .element:focus, .element:active { ...styles... } */
+.element:hover,
+.element:focus,
+.element:active {
+  /* Insert styles inside here */
+}

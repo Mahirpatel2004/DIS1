@@ -1,0 +1,561 @@
+/* Bootstrap functions
+
+Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
+Ascending
+Used to evaluate Sass maps like our grid breakpoints. */
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null or unit($num) == "%" or unit($prev-num) == "%" {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+/* Starts at zero */
+/* Used to ensure the min-width of the lowest breakpoint starts at 0. */
+@mixin _assert-starts-at-zero($map, $map-name: "$grid-breakpoints") {
+  @if length($map) > 0 {
+    $values: map-values($map);
+    $first-value: nth($values, 1);
+    @if $first-value != 0 {
+      @warn "First breakpoint in #{$map-name} must start at 0, but starts at #{$first-value}.";
+    }
+  }
+}
+
+/* Colors */
+@function to-rgb($value) {
+  @return red($value), green($value), blue($value);
+}
+
+/* stylelint-disable scss/dollar-variable-pattern */
+@function rgba-css-var($identifier, $target) {
+  @if $identifier == "body" and $target == "bg" {
+    @return rgba(var(--#{$prefix}#{$identifier}-bg-rgb), var(--#{$prefix}#{$target}-opacity));
+  } @if $identifier == "body" and $target == "text" {
+    @return rgba(var(--#{$prefix}#{$identifier}-color-rgb), var(--#{$prefix}#{$target}-opacity));
+  } @else {
+    @return rgba(var(--#{$prefix}#{$identifier}-rgb), var(--#{$prefix}#{$target}-opacity));
+  }
+}
+
+@function map-loop($map, $func, $args...) {
+  $_map: ();
+
+  @each $key, $value in $map {
+    // allow to pass the $key and $value of the map as an function argument
+    $_args: ();
+    @each $arg in $args {
+      $_args: append($_args, if($arg == "$key", $key, if($arg == "$value", $value, $arg)));
+    }
+
+    $_map: map-merge($_map, ($key: call(get-function($func), $_args...)));
+  }
+
+  @return $_map;
+}
+/* stylelint-enable scss/dollar-variable-pattern */
+
+@function varify($list) {
+  $result: null;
+  @each $entry in $list {
+    $result: append($result, var(--#{$prefix}#{$entry}), space);
+  }
+  @return $result;
+}
+
+/* Internal Bootstrap function to turn maps into its negative variant. */
+/* It prefixes the keys with `n` and makes the value negative. */
+@function negativify-map($map) {
+  $result: ();
+  @each $key, $value in $map {
+    @if $key != 0 {
+      $result: map-merge($result, ("n" + $key: (-$value)));
+    }
+  }
+  @return $result;
+}
+
+/* Get multiple keys from a sass map */
+@function map-get-multiple($map, $values) {
+  $result: ();
+  @each $key, $value in $map {
+    @if (index($values, $key) != null) {
+      $result: map-merge($result, ($key: $value));
+    }
+  }
+  @return $result;
+}
+
+/* Merge multiple maps */
+@function map-merge-multiple($maps...) {
+  $merged-maps: ();
+
+  @each $map in $maps {
+    $merged-maps: map-merge($merged-maps, $map);
+  }
+  @return $merged-maps;
+}
+
+
+/* Replace `$search` with `$replace` in `$string`
+Used on our SVG icon backgrounds for custom forms.
+
+@author Hugo Giraudel
+@param {String} $string - Initial string
+@param {String} $search - Substring to replace
+@param {String} $replace ('') - New value
+@return {String} - Updated string */
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+/* See https://codepen.io/kevinweber/pen/dXWoRw */
+
+/* Requires the use of quotes around data URIs. */
+
+@function escape-svg($string) {
+  @if str-index($string, "data:image/svg+xml") {
+    @each $char, $encoded in $escaped-characters {
+      // Do not escape the url brackets
+      @if str-index($string, "url(") == 1 {
+        $string: url("#{str-replace(str-slice($string, 6, -3), $char, $encoded)}");
+      } @else {
+        $string: str-replace($string, $char, $encoded);
+      }
+    }
+  }
+
+  @return $string;
+}
+
+/* Color contrast */
+/* See https://github.com/twbs/bootstrap/pull/30168 */
+
+/* A list of pre-calculated numbers of pow(divide((divide($value, 255) + .055), 1.055), 2.4). (from 0 to 255) */
+/* stylelint-disable-next-line scss/dollar-variable-default, scss/dollar-variable-pattern */
+:root {
+  --luminance-1: .0008;
+  --luminance-2: .001;
+  --luminance-3: .0011;
+  --luminance-4: .0013;
+  --luminance-5: .0015;
+  --luminance-6: .0017;
+  --luminance-7: .002;
+  --luminance-8: .0022;
+  --luminance-9: .0025;
+  --luminance-10: .0027;
+  --luminance-11: .003;
+  --luminance-12: .0033;
+  --luminance-13: .0037;
+  --luminance-14: .004;
+  --luminance-15: .0044;
+  --luminance-16: .0048;
+  --luminance-17: .0052;
+  --luminance-18: .0056;
+  --luminance-19: .006;
+  --luminance-20: .0065;
+  --luminance-21: .007;
+  --luminance-22: .0075;
+  --luminance-23: .008;
+  --luminance-24: .0086;
+  --luminance-25: .0091;
+  --luminance-26: .0097;
+  --luminance-27: .0103;
+  --luminance-28: .011;
+  --luminance-29: .0116;
+  --luminance-30: .0123;
+  --luminance-31: .013;
+  --luminance-32: .0137;
+  --luminance-33: .0144;
+  --luminance-34: .0152;
+  --luminance-35: .016;
+  --luminance-36: .0168;
+  --luminance-37: .0176;
+  --luminance-38: .0185;
+  --luminance-39: .0194;
+  --luminance-40: .0203;
+  --luminance-41: .0212;
+  --luminance-42: .0222;
+  --luminance-43: .0232;
+  --luminance-44: .0242;
+  --luminance-45: .0252;
+  --luminance-46: .0262;
+  --luminance-47: .0273;
+  --luminance-48: .0284;
+  --luminance-49: .0296;
+  --luminance-50: .0307;
+  --luminance-51: .0319;
+  --luminance-52: .0331;
+  --luminance-53: .0343;
+  --luminance-54: .0356;
+  --luminance-55: .0369;
+  --luminance-56: .0382;
+  --luminance-57: .0395;
+  --luminance-58: .0409;
+  --luminance-59: .0423;
+  --luminance-60: .0437;
+  --luminance-61: .0452;
+  --luminance-62: .0467;
+  --luminance-63: .0482;
+  --luminance-64: .0497;
+  --luminance-65: .0513;
+  --luminance-66: .0529;
+  --luminance-67: .0545;
+  --luminance-68: .0561;
+  --luminance-69: .0578;
+  --luminance-70: .0595;
+  --luminance-71: .0612;
+  --luminance-72: .063;
+  --luminance-73: .0648;
+  --luminance-74: .0666;
+  --luminance-75: .0685;
+  --luminance-76: .0704;
+  --luminance-77: .0723;
+  --luminance-78: .0742;
+  --luminance-79: .0762;
+  --luminance-80: .0782;
+  --luminance-81: .0802;
+  --luminance-82: .0823;
+  --luminance-83: .0844;
+  --luminance-84: .0865;
+  --luminance-85: .0887;
+  --luminance-86: .0908;
+  --luminance-87: .0931;
+  --luminance-88: .0953;
+  --luminance-89: .0976;
+  --luminance-90: .0999;
+  --luminance-91: .1022;
+  --luminance-92: .1046;
+  --luminance-93: .107;
+  --luminance-94: .1095;
+  --luminance-95: .1119;
+  --luminance-96: .1144;
+  --luminance-97: .117;
+  --luminance-98: .1195;
+  --luminance-99: .1221;
+  --luminance-100: .1248;
+  --luminance-101: .1274;
+  --luminance-102: .1301;
+  --luminance-103: .1329;
+  --luminance-104: .1356;
+  --luminance-105: .1384;
+  --luminance-106: .1413;
+  --luminance-107: .1441;
+  --luminance-108: .147;
+  --luminance-109: .15;
+  --luminance-110: .1529;
+  --luminance-111: .1559;
+  --luminance-112: .159;
+  --luminance-113: .162;
+  --luminance-114: .1651;
+  --luminance-115: .1683;
+  --luminance-116: .1714;
+  --luminance-117: .1746;
+  --luminance-118: .1779;
+  --luminance-119: .1812;
+  --luminance-120: .1845;
+  --luminance-121: .1878;
+  --luminance-122: .1912;
+  --luminance-123: .1946;
+  --luminance-124: .1981;
+  --luminance-125: .2016;
+  --luminance-126: .2051;
+  --luminance-127: .2086;
+  --luminance-128: .2122;
+  --luminance-129: .2159;
+  --luminance-130: .2195;
+  --luminance-131: .2232;
+  --luminance-132: .227;
+  --luminance-133: .2307;
+  --luminance-134: .2346;
+  --luminance-135: .2384;
+  --luminance-136: .2423;
+  --luminance-137: .2462;
+  --luminance-138: .2502;
+  --luminance-139: .2542;
+  --luminance-140: .2582;
+  --luminance-141: .2623;
+  --luminance-142: .2664;
+  --luminance-143: .2705;
+  --luminance-144: .2747;
+  --luminance-145: .2789;
+  --luminance-146: .2831;
+  --luminance-147: .2874;
+  --luminance-148: .2918;
+  --luminance-149: .2961;
+  --luminance-150: .3005;
+  --luminance-151: .305;
+  --luminance-152: .3095;
+  --luminance-153: .314;
+  --luminance-154: .3185;
+  --luminance-155: .3231;
+  --luminance-156: .3278;
+  --luminance-157: .3325;
+  --luminance-158: .3372;
+  --luminance-159: .3419;
+  --luminance-160: .3467;
+  --luminance-161: .3515;
+  --luminance-162: .3564;
+  --luminance-163: .3613;
+  --luminance-164: .3663;
+  --luminance-165: .3712;
+  --luminance-166: .3763;
+  --luminance-167: .3813;
+  --luminance-168: .3864;
+  --luminance-169: .3916;
+  --luminance-170: .3968;
+  --luminance-171: .402;
+  --luminance-172: .4072;
+  --luminance-173: .4125;
+  --luminance-174: .4179;
+  --luminance-175: .4233;
+  --luminance-176: .4287;
+  --luminance-177: .4342;
+  --luminance-178: .4397;
+  --luminance-179: .4452;
+  --luminance-180: .4508;
+  --luminance-181: .4564;
+  --luminance-182: .4621;
+  --luminance-183: .4678;
+  --luminance-184: .4735;
+  --luminance-185: .4793;
+  --luminance-186: .4851;
+  --luminance-187: .491;
+  --luminance-188: .4969;
+  --luminance-189: .5029;
+  --luminance-190: .5089;
+  --luminance-191: .5149;
+  --luminance-192: .521;
+  --luminance-193: .5271;
+  --luminance-194: .5333;
+  --luminance-195: .5395;
+  --luminance-196: .5457;
+  --luminance-197: .552;
+  --luminance-198: .5583;
+  --luminance-199: .5647;
+  --luminance-200: .5711;
+  --luminance-201: .5776;
+  --luminance-202: .5841;
+  --luminance-203: .5906;
+  --luminance-204: .5972;
+  --luminance-205: .6038;
+  --luminance-206: .6105;
+  --luminance-207: .6172;
+  --luminance-208: .624;
+  --luminance-209: .6308;
+  --luminance-210: .6376;
+  --luminance-211: .6445;
+  --luminance-212: .6514;
+  --luminance-213: .6584;
+  --luminance-214: .6654;
+  --luminance-215: .6724;
+  --luminance-216: .6795;
+  --luminance-217: .6867;
+  --luminance-218: .6939;
+  --luminance-219: .7011;
+  --luminance-220: .7084;
+  --luminance-221: .7157;
+  --luminance-222: .7231;
+  --luminance-223: .7305;
+  --luminance-224: .7379;
+  --luminance-225: .7454;
+  --luminance-226: .7529;
+  --luminance-227: .7605;
+  --luminance-228: .7682;
+  --luminance-229: .7758;
+  --luminance-230: .7835;
+  --luminance-231: .7913;
+  --luminance-232: .7991;
+  --luminance-233: .807;
+  --luminance-234: .8148;
+  --luminance-235: .8228;
+  --luminance-236: .8308;
+  --luminance-237: .8388;
+  --luminance-238: .8469;
+  --luminance-239: .855;
+  --luminance-240: .8632;
+  --luminance-241: .8714;
+  --luminance-242: .8796;
+  --luminance-243: .8879;
+  --luminance-244: .8963;
+  --luminance-245: .9047;
+  --luminance-246: .9131;
+  --luminance-247: .9216;
+  --luminance-248: .9301;
+  --luminance-249: .9387;
+  --luminance-250: .9473;
+  --luminance-251: .956;
+  --luminance-252: .9647;
+  --luminance-253: .9734;
+  --luminance-254: .9823;
+  --luminance-255: .9911;
+  --luminance-256: 1;
+}
+
+@function color-contrast($background, $color-contrast-dark: $color-contrast-dark, $color-contrast-light: $color-contrast-light, $min-contrast-ratio: $min-contrast-ratio) {
+  $foregrounds: $color-contrast-light, $color-contrast-dark, $white, $black;
+  $max-ratio: 0;
+  $max-ratio-color: null;
+
+  @each $color in $foregrounds {
+    $contrast-ratio: contrast-ratio($background, $color);
+    @if $contrast-ratio > $min-contrast-ratio {
+      @return $color;
+    } @else if $contrast-ratio > $max-ratio {
+      $max-ratio: $contrast-ratio;
+      $max-ratio-color: $color;
+    }
+  }
+
+  @warn "Found no color leading to #{$min-contrast-ratio}:1 contrast ratio against #{$background}...";
+
+  @return $max-ratio-color;
+}
+
+@function contrast-ratio($background, $foreground: $color-contrast-light) {
+  $l1: luminance($background);
+  $l2: luminance(opaque($background, $foreground));
+
+  @return if($l1 > $l2, divide($l1 + .05, $l2 + .05), divide($l2 + .05, $l1 + .05));
+}
+
+/* Return WCAG2.0 relative luminance */
+/* See https://www.w3.org/WAI/GL/wiki/Relative_luminance */
+/* See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests */
+@function luminance($color) {
+  $rgb: (
+    "r": red($color),
+    "g": green($color),
+    "b": blue($color)
+  );
+
+  @each $name, $value in $rgb {
+    $value: if(divide($value, 255) < .03928, divide(divide($value, 255), 12.92), nth($_luminance-list, $value + 1));
+    $rgb: map-merge($rgb, ($name: $value));
+  }
+
+  @return (map-get($rgb, "r") * .2126) + (map-get($rgb, "g") * .7152) + (map-get($rgb, "b") * .0722);
+}
+
+/* Return opaque color */
+/* opaque(#fff, rgba(0, 0, 0, .5)) => #808080 */
+@function opaque($background, $foreground) {
+  @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100);
+}
+
+/* scss-docs-start color-functions */
+/* Tint a color: mix a color with white */
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+/* Shade a color: mix a color with black */
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+
+/* Shade the color if the weight is positive, else tint it */
+@function shift-color($color, $weight) {
+  @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
+}
+/* scss-docs-end color-functions */
+
+ /* Return valid calc */
+@function add($value1, $value2, $return-calc: true) {
+  @if $value1 == null {
+    @return $value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 + $value2;
+  }
+
+  @return if($return-calc == true, calc(#{$value1} + #{$value2}), $value1 + unquote(" + ") + $value2);
+}
+
+@function subtract($value1, $value2, $return-calc: true) {
+  @if $value1 == null and $value2 == null {
+    @return null;
+  }
+
+  @if $value1 == null {
+    @return -$value2;
+  }
+
+  @if $value2 == null {
+    @return $value1;
+  }
+
+  @if type-of($value1) == number and type-of($value2) == number and comparable($value1, $value2) {
+    @return $value1 - $value2;
+  }
+
+  @if type-of($value2) != number {
+    $value2: unquote("(") + $value2 + unquote(")");
+  }
+
+  @return if($return-calc == true, calc(#{$value1} - #{$value2}), $value1 + unquote(" - ") + $value2);
+}
+
+@function divide($dividend, $divisor, $precision: 10) {
+  $sign: if($dividend > 0 and $divisor > 0 or $dividend < 0 and $divisor < 0, 1, -1);
+  $dividend: abs($dividend);
+  $divisor: abs($divisor);
+  @if $dividend == 0 {
+    @return 0;
+  }
+  @if $divisor == 0 {
+    @error "Cannot divide by 0";
+  }
+  $remainder: $dividend;
+  $result: 0;
+  $factor: 10;
+  @while ($remainder > 0 and $precision >= 0) {
+    $quotient: 0;
+    @while ($remainder >= $divisor) {
+      $remainder: $remainder - $divisor;
+      $quotient: $quotient + 1;
+    }
+    $result: $result * 10 + $quotient;
+    $factor: $factor * .1;
+    $remainder: $remainder * 10;
+    $precision: $precision - 1;
+    @if ($precision < 0 and $remainder >= $divisor * 5) {
+      $result: $result + 1;
+    }
+  }
+  $result: $result * $factor * $sign;
+  $dividend-unit: unit($dividend);
+  $divisor-unit: unit($divisor);
+  $unit-map: (
+    "px": 1px,
+    "rem": 1rem,
+    "em": 1em,
+    "%": 1%
+  );
+  @if ($dividend-unit != $divisor-unit and map-has-key($unit-map, $dividend-unit)) {
+    $result: $result * map-get($unit-map, $dividend-unit);
+  }
+  @return $result;
+}

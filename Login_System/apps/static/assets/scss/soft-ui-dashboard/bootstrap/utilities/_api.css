@@ -1,0 +1,51 @@
+/* Example CSS for different breakpoints and utilities */
+
+/* Base styles for utilities (adjust as needed) */
+.m-10px {
+  margin: 10px;
+}
+.m-20px {
+  margin: 20px;
+}
+.fw-bold {
+  font-weight: bold;
+}
+
+/* Media queries for different breakpoints */
+@media (min-width: 576px) {
+  .m-md-10px {
+    margin: 10px;
+  }
+  .m-md-20px {
+    margin: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .m-lg-10px {
+    margin: 10px;
+  }
+  .m-lg-20px {
+    margin: 20px;
+  }
+}
+
+/* Example of RFS rescaling */
+@media (min-width: 1200px) {
+  .m-xl-10px {
+    margin: 10px;
+  }
+  .m-xl-20px {
+    margin: 20px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .m-print-10px {
+    margin: 10px;
+  }
+  .m-print-20px {
+    margin: 20px;
+  }
+}

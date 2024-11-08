@@ -1,0 +1,35 @@
+/* Responsive images (ensure images don't scale beyond their parents) */
+.img-fluid {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image thumbnails */
+.img-thumbnail {
+  padding: 0.25rem; /* Example padding */
+  background-color: #fff; /* Example background color */
+  border: 1px solid #ccc; /* Example border */
+  border-radius: 0.25rem; /* Example border radius */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Example box shadow */
+
+  /* Keep them at most 100% wide */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Figures */
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem; /* Example margin */
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 1rem; /* Example font size */
+  color: #333; /* Example color */
+}

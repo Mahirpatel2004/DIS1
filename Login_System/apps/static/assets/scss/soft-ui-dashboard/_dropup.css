@@ -1,0 +1,39 @@
+.dropup .dropdown-menu {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Example box-shadow, replace with your value */
+  transition: all 0.3s; /* Example transition, replace with your value */
+  cursor: pointer;
+  top: auto !important;
+  bottom: 100% !important;
+  margin-bottom: 10px !important; /* Example margin-bottom, replace with your value */
+  display: block;
+  opacity: 0;
+  transform-origin: center bottom; /* Example transform-origin, replace with your value */
+  pointer-events: none;
+  transform: translateY(10px); /* Example transform, replace with your value */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform, box-shadow;
+}
+
+.dropup .dropdown-menu.show {
+  pointer-events: auto;
+  transform: translateY(0); /* Example transform, replace with your value */
+  opacity: 1;
+
+  &:after {
+    bottom: -8px; /* Example bottom position, replace with your value */
+  }
+}
+
+.dropup .dropdown-menu:after {
+  font-family: "FontAwesome";
+  content: "\f0d7"; /* Example content, replace with your FontAwesome icon */
+  position: absolute;
+  z-index: -1;
+  bottom: 8px; /* Example bottom position, replace with your value */
+  left: 10px; /* Example left position, replace with your value */
+  right: auto;
+  font-size: 14px; /* Example font-size, replace with your value */
+  color: #ffffff; /* Example color, replace with your value */
+  transition: all 0.3s; /* Example transition, replace with your value */
+}

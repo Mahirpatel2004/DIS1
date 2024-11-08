@@ -1,0 +1,52 @@
+/*!
+ * Bootstrap v5.2.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+/* Configuration */
+@import url("functions.css");
+@import url("variables.css");
+@import url("maps.css");
+@import url("mixins.css");
+@import url("utilities.css");
+
+/* Layout & components */
+@import url("root.css");
+@import url("reboot.css");
+@import url("type.css");
+@import url("images.css");
+@import url("containers.css");
+@import url("grid.css");
+@import url("tables.css");
+@import url("forms.css");
+@import url("buttons.css");
+@import url("transitions.css");
+@import url("dropdown.css");
+@import url("button-group.css");
+@import url("nav.css");
+@import url("navbar.css");
+@import url("card.css");
+@import url("accordion.css");
+@import url("breadcrumb.css");
+@import url("pagination.css");
+@import url("badge.css");
+@import url("alert.css");
+@import url("progress.css");
+@import url("list-group.css");
+@import url("close.css");
+@import url("toasts.css");
+@import url("modal.css");
+@import url("tooltip.css");
+@import url("popover.css");
+@import url("carousel.css");
+@import url("spinners.css");
+@import url("offcanvas.css");
+@import url("placeholders.css");
+
+/* Helpers */
+@import url("helpers.css");
+
+/* Utilities */
+@import url("utilities/api.css");

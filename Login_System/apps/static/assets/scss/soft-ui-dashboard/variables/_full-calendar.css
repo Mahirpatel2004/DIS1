@@ -1,0 +1,16 @@
+.fc-event-title {
+    --padding-y: 0.2rem;
+    --padding-x: 0.3rem;
+    padding: var(--padding-y) var(--padding-x);
+  }
+  
+  .fc-daygrid-event {
+    --border-radius: 0.35rem;
+    border-radius: var(--border-radius);
+  }
+  
+  .fc-theme-standard-dark {
+    --border-color: rgba(var(--secondary), 0.3);
+    border-color: var(--border-color);
+  }
+  

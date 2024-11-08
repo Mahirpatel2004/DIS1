@@ -1,0 +1,11 @@
+/* Tilt Animation */
+.tilt {
+  -webkit-transform-style: preserve-3d; /* or flat */
+  transform-style: preserve-3d; /* or flat */
+}
+
+.tilt .up {
+  -webkit-transform: rotateX(5deg) rotateY(5deg); /* Example tilt transform */
+  transform: rotateX(5deg) rotateY(5deg) !important; /* Example tilt transform */
+  transition: transform 0.3s ease; /* Example transition */
+}

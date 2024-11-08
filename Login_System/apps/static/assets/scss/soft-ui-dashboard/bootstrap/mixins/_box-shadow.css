@@ -1,0 +1,14 @@
+/* CSS for box-shadow */
+
+.element {
+  /* Apply box-shadow directly */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* You would need to manually duplicate variations if needed */
+
+.element-custom {
+  /* Apply custom box-shadow */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 
+              0 0 20px rgba(0, 255, 0, 0.5);
+}

@@ -1,0 +1,28 @@
+.form-switch .form-check-input {
+  border: 1px solid #dddddd; /* Example color, replace with your actual color */
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1); /* Example color, replace with your actual color */
+  height: 20px; /* Example value, replace with your actual value */
+
+  &:after {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Example transition values, replace with your actual transition settings */
+    content: "";
+    width: 18px; /* Example value, replace with your actual value */
+    height: 18px; /* Example value, replace with your actual value */
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ffffff; /* Example color, replace with your actual color */
+    transform: translateX(-20px); /* Example value, replace with your actual value */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Example shadow, replace with your actual shadow */
+    top: 1px; /* Example value, replace with your actual value */
+  }
+
+  &:checked:after {
+    transform: translateX(0); /* Example value, replace with your actual value */
+  }
+
+  &:checked {
+    border-color: rgba(0, 0, 0, 0.95); /* Example color, replace with your actual color */
+    background-color: rgba(0, 0, 0, 0.95); /* Example color, replace with your actual color */
+  }
+}

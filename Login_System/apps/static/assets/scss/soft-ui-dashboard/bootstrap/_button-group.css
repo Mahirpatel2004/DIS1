@@ -1,0 +1,96 @@
+/* Make the div behave like a button */
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle; /* match .btn alignment given font-size hack above */
+}
+
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+/* Bring the hover, focused, and "active" buttons to the front to overlay the borders properly */
+.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:focus + .btn,
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+  z-index: 1;
+}
+
+/* Optional: Group multiple button groups together for a toolbar */
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.btn-toolbar .input-group {
+  width: auto;
+}
+
+/* Sizing */
+.btn-group-sm > .btn {
+  /* Define small button size */
+}
+
+.btn-group-lg > .btn {
+  /* Define large button size */
+}
+
+/* Split button dropdowns */
+.dropdown-toggle-split {
+  /* Style for split dropdown buttons */
+}
+
+.btn-sm + .dropdown-toggle-split {
+  /* Adjust split dropdown buttons for small buttons */
+}
+
+.btn-lg + .dropdown-toggle-split {
+  /* Adjust split dropdown buttons for large buttons */
+}
+
+/* The clickable button for toggling the menu */
+.btn-group.show .dropdown-toggle {
+  /* Style for toggleable dropdown buttons */
+}
+
+.btn-group.show .dropdown-toggle.btn-link {
+  /* Style for toggleable dropdown buttons with .btn-link class */
+}
+
+/* Vertical button groups */
+.btn-group-vertical {
+  /* Style for vertical button groups */
+}
+
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group {
+  width: 100%;
+}
+
+.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) {
+  margin-top: -1px; /* Adjust for border */
+}
+
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0; /* Adjust rounded corners */
+  border-bottom-left-radius: 0; /* Adjust rounded corners */
+}
+
+.btn-group-vertical > .btn ~ .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0; /* Adjust rounded corners */
+  border-top-right-radius: 0; /* Adjust rounded corners */
+}

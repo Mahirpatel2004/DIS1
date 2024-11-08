@@ -1,0 +1,95 @@
+.my-mx-xs {
+  --my-margin: 10px;
+}
+.my-mx-sm {
+  --my-margin: 20px;
+}
+.my-mx-md {
+  --my-margin: 30px;
+}
+.my-mx-lg {
+  --my-margin: 40px;
+}
+.my-mx-xl {
+  --my-margin: 50px;
+}
+
+.my-mx-xs:hover {
+  --my-margin: 10px;
+}
+.my-mx-sm:hover {
+  --my-margin: 20px;
+}
+.my-mx-md:hover {
+  --my-margin: 30px;
+}
+.my-mx-lg:hover {
+  --my-margin: 40px;
+}
+.my-mx-xl:hover {
+  --my-margin: 50px;
+}
+
+.my-mx-xs:focus {
+  --my-margin: 10px;
+}
+.my-mx-sm:focus {
+  --my-margin: 20px;
+}
+.my-mx-md:focus {
+  --my-margin: 30px;
+}
+.my-mx-lg:focus {
+  --my-margin: 40px;
+}
+.my-mx-xl:focus {
+  --my-margin: 50px;
+}
+
+.my-px-xs {
+  padding: 10px;
+}
+.my-px-sm {
+  padding: 20px;
+}
+.my-px-md {
+  padding: 30px;
+}
+.my-px-lg {
+  padding: 40px;
+}
+.my-px-xl {
+  padding: 50px;
+}
+
+.my-px-xs:hover {
+  padding: 10px;
+}
+.my-px-sm:hover {
+  padding: 20px;
+}
+.my-px-md:hover {
+  padding: 30px;
+}
+.my-px-lg:hover {
+  padding: 40px;
+}
+.my-px-xl:hover {
+  padding: 50px;
+}
+
+.my-px-xs:focus {
+  padding: 10px;
+}
+.my-px-sm:focus {
+  padding: 20px;
+}
+.my-px-md:focus {
+  padding: 30px;
+}
+.my-px-lg:focus {
+  padding: 40px;
+}
+.my-px-xl:focus {
+  padding: 50px;
+}

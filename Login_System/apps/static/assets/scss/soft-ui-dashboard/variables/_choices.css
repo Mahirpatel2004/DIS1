@@ -1,0 +1,25 @@
+.choices {
+    box-shadow: var(--dropdown-box-shadow);
+    border-radius: 0.5rem;
+    animation: choices-animation 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: var(--dropdown-transition);
+    transform: perspective(999px) rotateX(-10deg) translateZ(0) translate3d(0px, 37px, 0px) !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .choices-show {
+    transform: perspective(999px) rotateX(0deg) translateZ(0) translate3d(0, 37px, 5px) !important;
+  }
+  
+  @keyframes choices-animation {
+    from {
+      transform: perspective(999px) rotateX(-10deg) translateZ(0) translate3d(0px, 37px, 0px);
+    }
+    to {
+      transform: perspective(999px) rotateX(0deg) translateZ(0) translate3d(0, 37px, 5px);
+    }
+  }
+  

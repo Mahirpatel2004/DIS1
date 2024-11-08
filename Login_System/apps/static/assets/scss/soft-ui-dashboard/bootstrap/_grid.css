@@ -1,0 +1,23 @@
+/* Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  box-sizing: border-box;
+  flex: 1 0 0%; /* Adjust as needed for your layout */
+}
+
+/* Grid (if CSS Grid is enabled) */
+.grid {
+  display: grid;
+  /* Example values, replace with your dynamic values or fixed values */
+  grid-template-rows: repeat(var(--prefix-rows, 1), 1fr);
+  grid-template-columns: repeat(var(--prefix-columns, 12), 1fr);
+  gap: var(--prefix-gap, 1rem); /* Example gap value */
+}
+
+/* Grid Columns (if grid classes are enabled) */
+/* Common styles for small and large grid columns */
+/* Include the styles you'd apply to grid columns here */

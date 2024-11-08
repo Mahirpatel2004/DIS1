@@ -1,0 +1,8 @@
+/* CSS equivalent of SCSS mixin color-scheme */
+@media (prefers-color-scheme: dark) {
+  /* Place your styles for dark mode here */
+}
+
+@media (prefers-color-scheme: light) {
+  /* Place your styles for light mode here */
+}

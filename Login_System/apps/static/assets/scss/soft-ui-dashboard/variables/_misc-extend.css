@@ -1,0 +1,104 @@
+/* Text Border */
+.text-border {
+    --bg-color: rgba(var(--secondary), 0.5);
+    --bg-color-before: linear-gradient(90deg, transparent, rgba(117, 117, 117, 0.4), rgba(117, 117, 117, 0.4));
+    --bg-color-after: linear-gradient(90deg, rgba(117, 117, 117, 0.4), rgba(117, 117, 117, 0.4), transparent);
+    --display: inline-block;
+    --width: 30%;
+    --height: 1px;
+    --position: relative;
+    --vertical-align: middle;
+    --before-right: 0.5em;
+    --before-ml: -50%;
+    --after-left: var(--before-right);
+    --after-mr: var(--before-ml);
+  
+    display: var(--display);
+    width: var(--width);
+    height: var(--height);
+    position: var(--position);
+    vertical-align: var(--vertical-align);
+    background-color: var(--bg-color);
+  
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: var(--height);
+      background: var(--bg-color-before);
+    }
+  
+    &::before {
+      right: var(--before-right);
+      margin-left: var(--before-ml);
+    }
+  
+    &::after {
+      left: var(--after-left);
+      margin-right: var(--after-mr);
+      background: var(--bg-color-after);
+    }
+  }
+  
+  /* Header Shapes */
+  .shape-1 {
+    width: 55%;
+    left: 15%;
+  }
+  
+  .shape-2 {
+    width: 35%;
+    left: 20%;
+  }
+  
+  .shape-3 {
+    width: 50%;
+    left: -28rem;
+  }
+  
+  .shape-img-1 {
+    right: 7%;
+    width: 36%;
+    margin-top: 12%;
+  }
+  
+  .shape-img-2 {
+    left: 24%;
+    width: 27%;
+    margin-top: 10%;
+  }
+  
+  /* Coming Soon page */
+  .coming-soon {
+    transform: rotate(20deg);
+  }
+  
+  /* Tilt Animation */
+  .tilt {
+    --transform-style: preserve-3d;
+    --up-transform: translateZ(50px) scale(0.7);
+    --up-transition: all 0.5s;
+  
+    transform-style: var(--transform-style);
+    transition: var(--up-transition);
+  
+    &:hover {
+      transform: var(--up-transform);
+    }
+  }
+  
+  /* Round Slider */
+  .round-slider {
+    --m-width: 200px;
+    --scale-m-width: 300px;
+    --transition: all 0.5s ease-out 0s;
+  
+    width: var(--m-width);
+    transition: var(--transition);
+  
+    &.scaled {
+      width: var(--scale-m-width);
+    }
+  }
+  

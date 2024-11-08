@@ -1,0 +1,9 @@
+\/* Popover Styles */
+.popover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Example value for box-shadow */
+}
+
+/* Popover Header Styles */
+.popover .popover-header {
+  font-weight: 600;
+}
